@@ -1,0 +1,29 @@
+name: Block productive packages
+
+on:
+  pull_request:
+    branches:
+      - 2025/develop
+
+jobs:
+  block-productive-packages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout pull request
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reject changes in productive packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="${{ github.event.pull_request.base.sha }}"
+          changed="$(git diff --name-only "$base" HEAD)"
+          blocked="$(printf '%s\n' "$changed" | grep -E '^(SANICOSTCOREPRO|SANICOSTCUSTOMINTEGRATION)/' || true)"
+          if [ -n "$blocked" ]; then
+            echo "SANICOSTCOREPRO and SANICOSTCUSTOMINTEGRATION cannot be changed on 2025/develop:"
+            printf '%s\n' "$blocked"
+            exit 1
+          fi
+          echo "No changes in SANICOSTCOREPRO or SANICOSTCUSTOMINTEGRATION."
