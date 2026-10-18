@@ -1,0 +1,74 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ValidationActivity_DEV
+Bundle-ManifestVersion: 2
+SAP-ArtifactTrait: 
+Import-Package:  org.springframework.transaction.support, org.springfram
+ ework.jdbc.datasource, com.sap.esb.camel.http.ahc.configurer;version="[
+ 1,2)", com.sap.it.nm.security, com.sap.esb.secure.parameter.impl, com.s
+ ap.it.nm.concurrent, com.sap.esb.camel.route.policy, org.mozilla.javasc
+ ript, org.codehaus.groovy.reflection, org.codehaus.groovy.runtime.calls
+ ite, org.codehaus.groovy.runtime.typehandling, org.codehaus.groovy.runt
+ ime, groovy.lang, org.codehaus.groovy.jsr223, com.sap.gateway.ip.core.c
+ ustomdev.util, com.sap.gateway.ip.core.customdev.logging, com.sap.gatew
+ ay.ip.core.customdev.processor, com.sap.esb.monitoring.cxf.response.log
+ , com.sap.esb.monitoring.cxf.runtime.feature, com.sap.it.op.agent.trace
+ .cxf, com.sap.esb.size.limiter, com.sap.esb.camel.webservice.endpoint.c
+ onfigurer, com.sap.esb.webservice.security.crypto.api, com.sap.esb.webs
+ ervice.policy.alternative.selector, org.apache.cxf.ws.security.wss4j, o
+ rg.apache.wss4j.common.crypto, javax.security.auth.callback, com.sap.it
+ .iflow.model.runtime, com.sap.it.iflow.model, com.sap.sod.utils.idoc.so
+ ap.interceptors, com.sap.sod.utils.idoc.soap.processors, com.sap.sod.ut
+ ils.idoc.soap, com.sap.sod.utils.soap.processors, com.sap.sod.utils.soa
+ p, com.sap.sod.utils.encoding.processors, com.sap.sod.utils.cxf.interce
+ ptors, com.sap.esb.camel.jdbc.inprogress.repository, com.sap.esb.camel.
+ jdbc.idempotency.repository, com.sap.esb.camel.webservice.cxfbinding, c
+ om.sap.esb.camel.mpl.access, com.sap.esb.camel.eip.splitter, com.sap.es
+ b.camel.xmljson, com.sap.it.op.ed, com.sap.it.op.agent.ed.plugins.camel
+ .api, com.sap.esb.webservice.authorization.supplier.api, org.apache.cxf
+ .interceptor.security, net.sf.saxon.xpath, net.sf.saxon,com.sap.esb.app
+ lication.services.cxf.interceptor,com.sap.esb.security,com.sap.it.op.ag
+ ent.api,com.sap.it.op.agent.collector.camel,com.sap.it.op.agent.collect
+ or.cxf,com.sap.it.op.agent.mpl,javax.jms,javax.jws,javax.wsdl,javax.xml
+ .bind.annotation,javax.xml.namespace,javax.xml.ws,org.apache.camel;vers
+ ion="2.8",org.apache.camel.builder;version="2.8",org.apache.camel.build
+ er.xml;version="2.8",org.apache.camel.component.cxf,org.apache.camel.mo
+ del;version="2.8",org.apache.camel.processor;version="2.8",org.apache.c
+ amel.processor.aggregate;version="2.8",org.apache.camel.spring.spi;vers
+ ion="2.8",org.apache.commons.logging,org.apache.cxf.binding,org.apache.
+ cxf.binding.soap,org.apache.cxf.binding.soap.spring,org.apache.cxf.bus,
+ org.apache.cxf.bus.resource,org.apache.cxf.bus.spring,org.apache.cxf.bu
+ slifecycle,org.apache.cxf.catalog,org.apache.cxf.configuration.jsse;ver
+ sion="2.5",org.apache.cxf.configuration.spring,org.apache.cxf.endpoint,
+ org.apache.cxf.headers,org.apache.cxf.interceptor,org.apache.cxf.manage
+ ment.counters;version="2.5",org.apache.cxf.message,org.apache.cxf.phase
+ ,org.apache.cxf.resource,org.apache.cxf.service.factory,org.apache.cxf.
+ service.model,org.apache.cxf.transport,org.apache.cxf.transport.common.
+ gzip,org.apache.cxf.transport.http,org.apache.cxf.transport.http.policy
+ ,org.apache.cxf.workqueue,org.apache.cxf.ws.rm.persistence,org.apache.c
+ xf.wsdl11,org.osgi.framework;version="1.6.0",org.slf4j;version="1.6",or
+ g.springframework.beans.factory.config;version="3.0",com.sap.esb.camel.
+ security.cms,org.apache.camel.spi,com.sap.esb.webservice.audit.log,com.
+ sap.esb.camel.endpoint.configurator.api,com.sap.esb.camel.jdbc.idempote
+ ncy.reorg,javax.sql,org.apache.camel.processor.idempotent.jdbc,org.osgi
+ .service.blueprint;version="[1.0.0,2.0.0)"
+Require-Capability: sap-HTTP;resolution:=optional,sap-HTTPS;resolution:=
+ optional
+SAP-RuntimeProfile: iflmap
+Bundle-Name: ValidationActivity_DEV
+Bundle-Version: 1.0.12
+Bundle-ClassPath: .,/src/main/resources/lib/json-simple-1.1.jar,/lib/jso
+ n-simple-1.1.jar
+SAP-NodeType: IFLMAP
+SAP-BundleType: IntegrationFlow
+Import-Service:  com.sap.esb.camel.endpoint.configurator.api.EndpointCon
+ figurator;multiple:=false;filter="(endpointType=SFTP)",com.sap.esb.webs
+ ervice.audit.log.AuditLogger,com.sap.esb.security.KeyManagerFactory;mul
+ tiple:=false,com.sap.esb.security.TrustManagerFactory;multiple:=false,j
+ avax.sql.DataSource;multiple:=false;filter="(dataSourceName=default)",o
+ rg.apache.cxf.ws.rm.persistence.RMStore;multiple:=false,com.sap.esb.cam
+ el.security.cms.SignatureSplitter;multiple:=false
+Origin-Bundle-Name: ValidationActivity_DEV
+Origin-Bundle-SymbolicName: ValidationActivity_DEV
+Origin-Bundle-Version: 1.0.11
+Origin-ModifiedDate: 1751880532211
+

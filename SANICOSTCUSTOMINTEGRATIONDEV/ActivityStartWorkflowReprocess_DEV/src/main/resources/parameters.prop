@@ -1,0 +1,10 @@
+#Sun Oct 18 08:59:36 UTC 2026
+Address=/ActivityStartWorkflowReprocess_DEV
+CREDENTIALS_SCP=
+URL_WF=https\://spa-api-gateway-bpi-eu-prod.cfapps.eu10.hana.ondemand.com
+address_token=https\://sanicostdemo.authentication.eu10.hana.ondemand.com/oauth/token
+api-key-reprocesss=bsCQSVHpsFS0EstQ-QXNjPacmxmrXniQ
+credential_name_token=CloudPlatform_DEV
+enviromentBPA=develop
+query_token=grant_type\=client_credentials
+tokenIRPAEnviroment=ZjGzbbxcR34ENHkSqpEZsMhU8-D0z66x

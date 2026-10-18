@@ -1,0 +1,10 @@
+#Sun Oct 18 08:59:46 UTC 2026
+HANA_BD=HanaDataBase
+HANA_DB=
+Sender=
+System=
+Sytem=
+URL_HANA=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_HCI=https\://dbsystema76e164cb.hana.ondemand.com
+ValidationActivity=ValidationActivity_DEV
+credential_name=Sanicost_oAuth_Dev

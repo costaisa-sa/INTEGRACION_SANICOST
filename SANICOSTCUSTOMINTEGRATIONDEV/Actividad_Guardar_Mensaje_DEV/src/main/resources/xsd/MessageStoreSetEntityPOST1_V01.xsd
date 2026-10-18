@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="entry">
+        <xs:complexType>
+            <xs:sequence>
+				<xs:element name="content">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="1" maxOccurs="unbounded" name="properties">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element nillable="false" maxOccurs="1" name="ActivityCodExt">
+											<xs:simpleType>
+												<xs:restriction base="xs:string" xmlns="">
+													<xs:maxLength value="30"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element nillable="true" minOccurs="0" maxOccurs="1" name="LINEA">
+											<xs:simpleType>
+												<xs:restriction base="xs:string" xmlns="">
+													<xs:maxLength value="4"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element nillable="true" minOccurs="0" maxOccurs="1" name="EPISODIO">
+											<xs:simpleType>
+												<xs:restriction base="xs:string" xmlns="">
+													<xs:maxLength value="35"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element nillable="true" minOccurs="0" maxOccurs="1" name="NHC">
+											<xs:simpleType>
+												<xs:restriction base="xs:string" xmlns="">
+													<xs:maxLength value="10"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element nillable="true" minOccurs="0" maxOccurs="1" name="ENTIDAD">
+											<xs:simpleType>
+												<xs:restriction base="xs:string" xmlns="">
+													<xs:maxLength value="10"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element type="xs:dateTime" nillable="true" minOccurs="0" maxOccurs="1" name="FECHAHORA" xmlns=""/>
+										<xs:element nillable="true" minOccurs="0" maxOccurs="1" name="PRESTACION">
+											<xs:simpleType>
+												<xs:restriction base="xs:string" xmlns="">
+													<xs:maxLength value="20"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element nillable="true" minOccurs="0" maxOccurs="1" name="EQM_REAL">
+											<xs:simpleType>
+												<xs:restriction base="xs:string" xmlns="">
+													<xs:maxLength value="8"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element nillable="true" minOccurs="0" maxOccurs="1" name="DOC_REAL">
+											<xs:simpleType>
+												<xs:restriction base="xs:string" xmlns="">
+													<xs:maxLength value="10"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element nillable="true" minOccurs="0" maxOccurs="1" name="UPO">
+											<xs:simpleType>
+												<xs:restriction base="xs:string" xmlns="">
+													<xs:maxLength value="5"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>				
+</xs:schema>

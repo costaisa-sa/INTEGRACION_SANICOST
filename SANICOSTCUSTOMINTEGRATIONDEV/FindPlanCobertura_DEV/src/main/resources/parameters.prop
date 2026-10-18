@@ -1,0 +1,7 @@
+#Sun Oct 18 08:59:25 UTC 2026
+FindPlanCobertura=FindPlanCobertura_DEV
+FindPlanCoberturaAddress=
+HANA_BD=Sanicost_oAuth_Dev
+HANA_CREDENTIALS=HanaDataBase_PRD
+System=_DEV
+URL_HANA=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/

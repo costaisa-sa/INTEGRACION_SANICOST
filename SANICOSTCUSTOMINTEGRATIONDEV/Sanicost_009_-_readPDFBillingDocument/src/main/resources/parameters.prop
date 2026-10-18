@@ -1,0 +1,11 @@
+#Sun Oct 18 08:59:24 UTC 2026
+<URL_ERP>=https\://dbsystema76e164cb.hana.ondemand.com/
+<url_api>=https\://my301787-api.s4hana.ondemand.com/
+Address=readPDFBillingDocument
+CREDENTIALS_HANA=Sanicost_oAuth_Dev
+HanaDataBase=Sanicost_oAuth_Dev
+System=TestRefSys
+URL_HANA=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_HOST=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/
+enviroment=test
+user_s4=my301787

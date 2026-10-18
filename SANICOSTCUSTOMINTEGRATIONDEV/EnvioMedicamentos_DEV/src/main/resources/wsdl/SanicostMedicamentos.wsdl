@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://sanicost.com/integracion/medicamentos" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://sanicost.com/integracion/medicamentos">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://sanicost.com/integracion/medicamentos">
+			<xsd:element name="MedicamentoRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="MTART" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="MATNR" type="xsd:string" minOccurs="1"/>
+						<xsd:element name="MAKTG" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="EAN11" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="PF_SAPR3" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="COD_SCS" type="xsd:string" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="MedicamentoResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="ESTADO" type="xsd:string"/>
+						<xsd:element name="MENSAJE" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="MedicamentoRequestMessage">
+		<wsdl:part name="parameters" element="tns:MedicamentoRequest"/>
+	</wsdl:message>
+	<wsdl:message name="MedicamentoResponseMessage">
+		<wsdl:part name="parameters" element="tns:MedicamentoResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="MedicamentoPortType">
+		<wsdl:operation name="ProcesarMedicamento">
+			<wsdl:input message="tns:MedicamentoRequestMessage"/>
+			<wsdl:output message="tns:MedicamentoResponseMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="MedicamentoBinding" type="tns:MedicamentoPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="ProcesarMedicamento">
+			<soap:operation soapAction="http://sanicost.com/integracion/medicamentos/ProcesarMedicamento"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="MedicamentoService">
+		<wsdl:port name="MedicamentoPort" binding="tns:MedicamentoBinding">
+			<soap:address location="http://cpi-determinara-esta-url-en-runtime"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

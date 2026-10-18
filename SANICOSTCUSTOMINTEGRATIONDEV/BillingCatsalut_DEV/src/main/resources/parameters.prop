@@ -1,0 +1,8 @@
+#Sun Oct 18 08:59:22 UTC 2026
+BillingDocumentAddress=BillingDocument
+HANA_BD=HanaDataBase
+HCI=HCILocal
+HanaDataBase=HanaDataBase_PRD
+System=_DEV
+URL_HCI=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_Y=https\://y100030-iflmap.hcisbp.eu1.hana.ondemand.com

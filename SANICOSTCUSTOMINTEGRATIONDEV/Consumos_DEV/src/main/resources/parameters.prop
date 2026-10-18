@@ -1,0 +1,19 @@
+#Sun Oct 18 08:59:29 UTC 2026
+ActividadConsumosAddress=Actividad_Consumos
+ActivityStartWorkflowReprocessAddress=ActivityStartWorkflowReprocess
+CPILocal=
+CPI_LOCAL=https\://sanicostdemo.it-cpi018-rt.cfapps.eu10-003.hana.ondemand.com/http/
+CREDENTIALS_HANA=HanaDataBase_PRD
+CREDENTIALS_HCI=HCILocal
+CREDENTIALS_NAME=
+HANA_BD=Sanicost_oAuth_Dev
+HCILocal=HCILocal
+System=_DEV
+URL_API=https\://bpmworkflowruntimea2d6007ea-a76e164cb.hana.ondemand.com
+URL_HANA=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_HCI=https\://y100030-iflmap.hcisbp.eu1.hana.ondemand.com
+address_token=https\://sanicostdemo.authentication.eu10.hana.ondemand.com/oauth/token
+credencial_name_token=
+enviromentBPA=environmentId\=develop
+query_token=grant_type\=client_credentials
+tokenIRPAEnviroment=ZjGzbbxcR34ENHkSqpEZsMhU8-D0z66x

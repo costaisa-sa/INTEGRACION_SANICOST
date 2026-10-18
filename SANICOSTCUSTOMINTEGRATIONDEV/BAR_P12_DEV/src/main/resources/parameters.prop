@@ -1,0 +1,10 @@
+#Sun Oct 18 08:59:23 UTC 2026
+ActivityStartWorkflowReprocessAddress=ActivityStartWorkflowReprocess
+CPILocal=
+CPI_LOCAL=https\://sanicostdemo.it-cpi018-rt.cfapps.eu10-003.hana.ondemand.com/http/
+CREDENTIALS=HCILocal
+CodificacionEpisodiosHospitalizadosAddress=Codificacion_Episodios_Hospitalizados
+CodificacionIntervencionesAddress=Codificacion_Intervenciones
+HCILocal=HCILocal
+System=_DEV
+URL_HCI=https\://y100030-iflmap.hcisbp.eu1.hana.ondemand.com

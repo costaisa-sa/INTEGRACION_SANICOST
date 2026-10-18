@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:element name="BillingDocument">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ID" type="xs:string"/>
+				<xs:element minOccurs="0" name="ReferenceDocument" type="xs:string"/>
+				<xs:element minOccurs="0" name="CreationDateTime" type="xs:dateTime"/>
+				<xs:element maxOccurs="unbounded" minOccurs="0" name="BillableDocumentItem">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" name="ReferenceDocumentItem" type="xs:unsignedByte"/>
+							<xs:element minOccurs="0" name="SalesOrganization" type="xs:string"/>
+							<xs:element minOccurs="0" name="DistributionChannel" type="xs:string"/>
+							<xs:element minOccurs="0" name="Division" type="xs:string"/>
+							<xs:element minOccurs="0" name="BillingDocumentDate" type="xs:date"/>
+							<xs:element minOccurs="0" name="SoldToParty" type="xs:string"/>
+							<xs:element minOccurs="0" name="BillToParty" type="xs:string"/>
+							<xs:element minOccurs="0" name="PayerParty" type="xs:string"/>
+							<xs:element minOccurs="0" name="PlanCoberturaID" type="xs:string"/>
+							<xs:element minOccurs="0" name="Material" type="xs:string"/>
+							<xs:element minOccurs="0" name="Plant" type="xs:unsignedShort"/>
+							<xs:element minOccurs="0" name="Quantity" type="xs:decimal"/>
+							<xs:element maxOccurs="unbounded" minOccurs="0" name="PricingElement">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" name="ConditionType" type="xs:string"/>
+										<xs:element minOccurs="0" name="ConditionRateValue" type="xs:decimal"/>
+										<xs:element minOccurs="0" name="ConditionQuantity" type="xs:unsignedByte"/>
+										<xs:element minOccurs="0" name="ConditionCurrency" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="ProfitCenter" type="xs:string"/>
+							<xs:element minOccurs="0" name="YY1_SDHISTORIA" type="xs:unsignedInt"/>
+							<xs:element minOccurs="0" name="YY1_SDPACIENTE" type="xs:string"/>
+							<xs:element minOccurs="0" name="YY1_SDFECHAACTIVIDAD" type="xs:date"/>
+							<xs:element minOccurs="0" name="YY1_CODIGO_MEDICO" type="xs:unsignedInt"/>
+							<xs:element minOccurs="0" name="PMP0Price" type="xs:decimal"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="ReferenceDocumentLogicalSystem" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,7 @@
+#Sun Oct 18 08:59:34 UTC 2026
+CREDENTIALS_HANA=HanaDataBase_PRD
+CalculateGaranteNHC=CalculateGaranteNHC_DEV
+CalculateGaranteNHCAddress=
+HANA_BD=Sanicost_oAuth_Dev
+System=_DEV
+URL_HANA=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
