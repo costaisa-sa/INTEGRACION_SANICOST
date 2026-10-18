@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Modificacion_Ingreso_scc_DEV
 Bundle-Name: Modificacion_Ingreso_scc_DEV
-Bundle-Version: 1.0.7
+Bundle-Version: 1.0.8
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -40,7 +40,7 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  multiple:=false,com.sap.esb.camel.security.cms.SignatureSplitter;multip
  le:=false
 Origin-Bundle-Name: Modificacion_Ingreso_scc_DEV
-Origin-Bundle-Version: 1.0.6
+Origin-Bundle-Version: 1.0.7
 Origin-Bundle-SymbolicName: Modificacion_Ingreso_scc_DEV
-Origin-ModifiedDate: 1742472829120
+Origin-ModifiedDate: 1761577074876
 

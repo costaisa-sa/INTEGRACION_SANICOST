@@ -60,6 +60,90 @@
         <bpmn2:participant id="Participant_Process_7" ifl:type="IntegrationProcess" name="ACK Error" processRef="Process_7">
             <bpmn2:extensionElements/>
         </bpmn2:participant>
+        <bpmn2:messageFlow id="MessageFlow_36" name="HTTPS" sourceRef="Participant_1" targetRef="StartEvent_2">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>ComponentType</key>
+                    <value>HTTPS</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>Description</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>maximumBodySize</key>
+                    <value>40</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ComponentNS</key>
+                    <value>sap</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.5</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>urlPath</key>
+                    <value>/{{IntercambioCamas}}</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>Name</key>
+                    <value>HTTPS</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>TransportProtocolVersion</key>
+                    <value>1.5.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ComponentSWCVName</key>
+                    <value>external</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>system</key>
+                    <value>Sender</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>xsrfProtection</key>
+                    <value>0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>TransportProtocol</key>
+                    <value>HTTPS</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::AdapterVariant/cname::sap:HTTPS/tp::HTTPS/mp::None/direction::Sender/version::1.5.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>userRole</key>
+                    <value>ESBMessaging.send</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>senderAuthType</key>
+                    <value>RoleBased</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>MessageProtocol</key>
+                    <value>None</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>MessageProtocolVersion</key>
+                    <value>1.5.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ComponentSWCVId</key>
+                    <value>1.5.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>direction</key>
+                    <value>Sender</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>clientCertificates</key>
+                    <value/>
+                </ifl:property>
+            </bpmn2:extensionElements>
+        </bpmn2:messageFlow>
         <bpmn2:messageFlow id="MessageFlow_35" name="HTTP" sourceRef="ServiceTask_17" targetRef="Participant_20">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -228,90 +312,6 @@
                 </ifl:property>
             </bpmn2:extensionElements>
         </bpmn2:messageFlow>
-        <bpmn2:messageFlow id="MessageFlow_36" name="HTTPS" sourceRef="Participant_1" targetRef="StartEvent_2">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>ComponentType</key>
-                    <value>HTTPS</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>Description</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>maximumBodySize</key>
-                    <value>40</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentNS</key>
-                    <value>sap</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.5</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>urlPath</key>
-                    <value>/{{IntercambioCamas}}</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>Name</key>
-                    <value>HTTPS</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>TransportProtocolVersion</key>
-                    <value>1.5.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentSWCVName</key>
-                    <value>external</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>system</key>
-                    <value>Sender</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>xsrfProtection</key>
-                    <value>0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>TransportProtocol</key>
-                    <value>HTTPS</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::AdapterVariant/cname::sap:HTTPS/tp::HTTPS/mp::None/direction::Sender/version::1.5.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>userRole</key>
-                    <value>ESBMessaging.send</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>senderAuthType</key>
-                    <value>RoleBased</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>MessageProtocol</key>
-                    <value>None</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>MessageProtocolVersion</key>
-                    <value>1.5.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentSWCVId</key>
-                    <value>1.5.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>direction</key>
-                    <value>Sender</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>clientCertificates</key>
-                    <value/>
-                </ifl:property>
-            </bpmn2:extensionElements>
-        </bpmn2:messageFlow>
     </bpmn2:collaboration>
     <bpmn2:process id="Process_1" name="Integration Process">
         <bpmn2:extensionElements>
@@ -453,20 +453,6 @@
             <bpmn2:incoming>SequenceFlow_32</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_18</bpmn2:outgoing>
         </bpmn2:serviceTask>
-        <bpmn2:startEvent id="StartEvent_2" name="Start">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::MessageStartEvent/version::1.0</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
-            <bpmn2:messageEventDefinition/>
-        </bpmn2:startEvent>
         <bpmn2:endEvent id="EndEvent_2" name="End">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -515,6 +501,20 @@
             <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_6</bpmn2:outgoing>
         </bpmn2:callActivity>
+        <bpmn2:startEvent id="StartEvent_2" name="Start">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::MessageStartEvent/version::1.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
+            <bpmn2:messageEventDefinition/>
+        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_31" name="ChangingBedsMapping">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -551,8 +551,8 @@
         </bpmn2:callActivity>
         <bpmn2:sequenceFlow id="SequenceFlow_30" sourceRef="CallActivity_29" targetRef="CallActivity_31"/>
         <bpmn2:sequenceFlow id="SequenceFlow_18" sourceRef="ServiceTask_17" targetRef="EndEvent_2"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="StartEvent_2" targetRef="CallActivity_5"/>
         <bpmn2:sequenceFlow id="SequenceFlow_6" sourceRef="CallActivity_5" targetRef="CallActivity_29"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="StartEvent_2" targetRef="CallActivity_5"/>
         <bpmn2:sequenceFlow id="SequenceFlow_32" sourceRef="CallActivity_31" targetRef="ServiceTask_17"/>
     </bpmn2:process>
     <bpmn2:process id="Process_7" name="ACK Error">
@@ -578,19 +578,6 @@
                 <value>From Calling Process</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:startEvent id="StartEvent_8" name="Start 1">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_12</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:endEvent id="EndEvent_9" name="End 1">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -638,8 +625,21 @@
             <bpmn2:incoming>SequenceFlow_12</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_13</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:sequenceFlow id="SequenceFlow_12" sourceRef="StartEvent_8" targetRef="CallActivity_11"/>
+        <bpmn2:startEvent id="StartEvent_8" name="Start 1">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_12</bpmn2:outgoing>
+        </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_13" sourceRef="CallActivity_11" targetRef="EndEvent_9"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_12" sourceRef="StartEvent_8" targetRef="CallActivity_11"/>
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
         <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">
@@ -730,13 +730,13 @@
                 <di:waypoint x="-134.0" xsi:type="dc:Point" y="465.0"/>
                 <di:waypoint x="-12.0" xsi:type="dc:Point" y="465.0"/>
             </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="MessageFlow_36" id="BPMNEdge_MessageFlow_36" sourceElement="BPMNShape_Participant_1" targetElement="BPMNShape_StartEvent_2">
+                <di:waypoint x="-22.0" xsi:type="dc:Point" y="174.0"/>
+                <di:waypoint x="308.0" xsi:type="dc:Point" y="158.0"/>
+            </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="MessageFlow_35" id="BPMNEdge_MessageFlow_35" sourceElement="BPMNShape_ServiceTask_17" targetElement="BPMNShape_Participant_20">
                 <di:waypoint x="818.5" xsi:type="dc:Point" y="158.0"/>
                 <di:waypoint x="818.5" xsi:type="dc:Point" y="459.0"/>
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="MessageFlow_36" id="BPMNEdge_MessageFlow_36" sourceElement="BPMNShape_Participant_1" targetElement="BPMNShape_StartEvent_2">
-                <di:waypoint x="-22.0" xsi:type="dc:Point" y="174.0"/>
-                <di:waypoint x="292.5" xsi:type="dc:Point" y="158.0"/>
             </bpmndi:BPMNEdge>
         </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>

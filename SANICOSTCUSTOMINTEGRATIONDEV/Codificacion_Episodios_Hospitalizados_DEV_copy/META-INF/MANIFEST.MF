@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Codificacion_Episodios_Hospitalizados_DEV_copy
 Bundle-Name: Codificacion_DEV
-Bundle-Version: 1.0.38
+Bundle-Version: 1.0.37
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -39,11 +39,11 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  er="(dataSourceName=default)",org.apache.cxf.ws.rm.persistence.RMStore;
  multiple:=false,com.sap.esb.camel.security.cms.SignatureSplitter;multip
  le:=false
-Origin-Bundle-Name: Codificacion_Episodios_Hospitalizados_DEV_copy
-Origin-Bundle-Version: 1.0.30
+Origin-Bundle-Name: Codificacion_DEV
+Origin-Bundle-Version: 1.0.36
 Origin-Bundle-SymbolicName: Codificacion_Episodios_Hospitalizados_DEV_co
  py
-Origin-ModifiedDate: 1751554117482
+Origin-ModifiedDate: 1761568315673
 Require-Capability: scriptcollection.Sanicost_000_-_CROSS_Custom_Headers
  ;resolution:=optional;bundleType:String="ScriptCollection";source:Strin
  g="reference"

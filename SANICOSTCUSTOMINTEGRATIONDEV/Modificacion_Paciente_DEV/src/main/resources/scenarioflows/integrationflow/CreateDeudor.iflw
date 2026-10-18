@@ -1488,7 +1488,7 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_10642_1785392664574" xsi:type="bpmn2:tFormalExpression">not(//DocSanitarioID)</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_10642_1791376950366" xsi:type="bpmn2:tFormalExpression">not(//DocSanitarioID)</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_10640" name="Route 2" sourceRef="ExclusiveGateway_10636" targetRef="CallActivity_10639">
             <bpmn2:extensionElements>
@@ -2443,7 +2443,7 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_10625_1785392664577" xsi:type="bpmn2:tFormalExpression">not(//DocSanitarioID)</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_10625_1791376950370" xsi:type="bpmn2:tFormalExpression">not(//DocSanitarioID)</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_10623" name="Route 2" sourceRef="ExclusiveGateway_10619" targetRef="CallActivity_10622">
             <bpmn2:extensionElements>
@@ -2640,7 +2640,7 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_1058_1785392664578" xsi:type="bpmn2:tFormalExpression">${property.NUSS} = ''</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_1058_1791376950371" xsi:type="bpmn2:tFormalExpression">${property.NUSS} = ''</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_1090" name="Route 3" sourceRef="ExclusiveGateway_1030" targetRef="CallActivity_1089">
             <bpmn2:extensionElements>
@@ -3131,7 +3131,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>propertyTable</key>
-                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;//TipoDocSanitario&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;TipoDocSanitario&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;//ID&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;ID&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;//TipoDocSanitario&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;TipoDocSanitario&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
                 </ifl:property>
                 <ifl:property>
                     <key>headerTable</key>
@@ -3617,7 +3617,7 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_1116_1785392664582" xsi:type="bpmn2:tFormalExpression">${property.SNS} = ''</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_1116_1791376950374" xsi:type="bpmn2:tFormalExpression">${property.SNS} = ''</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_1119" name="Route 2" sourceRef="ExclusiveGateway_1113" targetRef="CallActivity_1118">
             <bpmn2:extensionElements>
@@ -4051,7 +4051,7 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_1100_1785392664584" xsi:type="bpmn2:tFormalExpression">${property.CIP} = ''</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_1100_1791376950376" xsi:type="bpmn2:tFormalExpression">${property.CIP} = ''</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_1097" sourceRef="StartEvent_1093" targetRef="CallActivity_1096"/>
         <bpmn2:sequenceFlow id="SequenceFlow_1105" sourceRef="CallActivity_1099" targetRef="EndEvent_1094"/>

@@ -1,5 +1,7 @@
-#
-#Sun Oct 18 09:21:38 UTC 2026
+#Sun Oct 18 08:59:15 UTC 2026
 HANA_BD=Sanicost_oAuth_Dev
 ModifyDeudorBasic=ModifyDeudorBasic_DEV
-URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
+System=_DEV
+URL_ERP=https\://my301787.s4hana.ondemand.com\:443
+URL_HANA=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
+URL_SCP=https\://dbsystema76e164cb.hana.ondemand.com

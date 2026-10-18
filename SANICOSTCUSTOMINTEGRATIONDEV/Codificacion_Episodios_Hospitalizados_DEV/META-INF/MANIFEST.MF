@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Codificacion_Episodios_Hospitalizados_DEV
 Bundle-Name: Codificacion_Episodios_Hospitalizados_DEV
-Bundle-Version: 1.0.30
+Bundle-Version: 1.0.32
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -42,5 +42,5 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
 Origin-Bundle-Name: Codificacion_Episodios_Hospitalizados_DEV
 Origin-Bundle-Version: 1.0.30
 Origin-Bundle-SymbolicName: Codificacion_Episodios_Hospitalizados_DEV
-Origin-ModifiedDate: 1751554117482
+Origin-ModifiedDate: 1751880532646
 

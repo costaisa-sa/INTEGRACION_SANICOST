@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
-	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
 		<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
 	</edmx:Reference>
-	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
 		<edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
 	</edmx:Reference>
 	<edmx:DataServices m:DataServiceVersion="2.0">
-		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="zsc_sciactivitiesService">
-			<Annotation xmlns="http://docs.oasis-open.org/odata/ns/edm" Term="Core.Links">
+		<Schema Namespace="zsc_sciactivitiesService" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<Annotation Term="Core.Links" xmlns="http://docs.oasis-open.org/odata/ns/edm">
 				<Collection>
 					<Record>
 						<PropertyValue Property="rel" String="author"/>
@@ -16,706 +17,706 @@
 				</Collection>
 			</Annotation>
 			<EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
-				<EntitySet EntityType="zsc_sciactivitiesService.Activities" Name="Activities"/>
-				<EntitySet EntityType="zsc_sciactivitiesService.ActivitiesEntity" Name="ActivitiesEntity"/>
+				<EntitySet Name="Activities" EntityType="zsc_sciactivitiesService.Activities"/>
+				<EntitySet Name="ActivitiesEntity" EntityType="zsc_sciactivitiesService.ActivitiesEntity"/>
 			</EntityContainer>
 			<EntityType Name="Activities">
 				<Key>
 					<PropertyRef Name="ActivityID"/>
 				</Key>
-				<Property MaxLength="50" Name="ActivityID" Nullable="false" Type="Edm.String"/>
-				<Property MaxLength="30" Name="ActivityCodExt" Type="Edm.String"/>
-				<Property MaxLength="35" Name="EpisodioID" Type="Edm.String"/>
-				<Property MaxLength="35" Name="ProcesoID" Type="Edm.String"/>
-				<Property MaxLength="20" Name="AsociadoID" Type="Edm.String"/>
-				<Property MaxLength="1" Name="Status" Type="Edm.String"/>
-				<Property MaxLength="6" Name="CodErrorFacID" Type="Edm.String"/>
-				<Property MaxLength="20" Name="InfoOriginID" Type="Edm.String"/>
+				<Property Name="ActivityID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+				<Property Name="ActivityCodExt" Type="Edm.String" MaxLength="30"/>
+				<Property Name="EpisodioID" Type="Edm.String" MaxLength="35"/>
+				<Property Name="ProcesoID" Type="Edm.String" MaxLength="35"/>
+				<Property Name="AsociadoID" Type="Edm.String" MaxLength="20"/>
+				<Property Name="Status" Type="Edm.String" MaxLength="1"/>
+				<Property Name="CodErrorFacID" Type="Edm.String" MaxLength="6"/>
+				<Property Name="InfoOriginID" Type="Edm.String" MaxLength="20"/>
 				<Property Name="InfoOriginType" Type="Edm.Int32"/>
-				<Property MaxLength="4" Name="EventTypeMsg" Type="Edm.String"/>
-				<Property MaxLength="4" Name="Version" Type="Edm.String"/>
-				<Property MaxLength="10" Name="DocumentoVentasID" Type="Edm.String"/>
+				<Property Name="EventTypeMsg" Type="Edm.String" MaxLength="4"/>
+				<Property Name="Version" Type="Edm.String" MaxLength="4"/>
+				<Property Name="DocumentoVentasID" Type="Edm.String" MaxLength="10"/>
 				<Property Name="PosicionDocumentoVentasID" Type="Edm.Int32"/>
-				<Property MaxLength="10" Name="FacturaVentasID" Type="Edm.String"/>
+				<Property Name="FacturaVentasID" Type="Edm.String" MaxLength="10"/>
 				<Property Name="PosicionFacturaID" Type="Edm.Int32"/>
 				<Property Name="ModiManualmente" Type="Edm.Int32"/>
-				<Property MaxLength="20" Name="Referencia" Type="Edm.String"/>
+				<Property Name="Referencia" Type="Edm.String" MaxLength="20"/>
 				<Property Name="SinIdentificacion" Type="Edm.Int32"/>
-				<Property MaxLength="20" Name="PrestacionExtID" Type="Edm.String"/>
-				<Property MaxLength="60" Name="DescPrestaExt" Type="Edm.String"/>
-				<Property MaxLength="10" Name="PlanCoberturaID" Type="Edm.String"/>
-				<Property MaxLength="4" Name="TipoPrestacionID" Type="Edm.String"/>
-				<Property MaxLength="20" Name="DiagnosticoID" Type="Edm.String"/>
-				<Property MaxLength="20" Name="ProcPrincipalID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="TipoProcedimID" Type="Edm.String"/>
-				<Property MaxLength="15" Name="ProcSecundarioID" Type="Edm.String"/>
-				<Property MaxLength="2" Name="TipoAnestesiaID" Type="Edm.String"/>
-				<Property MaxLength="20" Name="Autorizacion" Type="Edm.String"/>
+				<Property Name="PrestacionExtID" Type="Edm.String" MaxLength="20"/>
+				<Property Name="DescPrestaExt" Type="Edm.String" MaxLength="60"/>
+				<Property Name="PlanCoberturaID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="TipoPrestacionID" Type="Edm.String" MaxLength="4"/>
+				<Property Name="DiagnosticoID" Type="Edm.String" MaxLength="20"/>
+				<Property Name="ProcPrincipalID" Type="Edm.String" MaxLength="20"/>
+				<Property Name="TipoProcedimID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="ProcSecundarioID" Type="Edm.String" MaxLength="15"/>
+				<Property Name="TipoAnestesiaID" Type="Edm.String" MaxLength="2"/>
+				<Property Name="Autorizacion" Type="Edm.String" MaxLength="20"/>
 				<Property Name="FechaAutorizacion" Type="Edm.DateTimeOffset"/>
-				<Property MaxLength="10" Name="GFH" Type="Edm.String"/>
-				<Property MaxLength="20" Name="CodigoTratamientoID" Type="Edm.String"/>
-				<Property Name="Cantidad" Precision="10" Scale="3" Type="Edm.Decimal"/>
-				<Property MaxLength="18" Name="ProductID" Type="Edm.String"/>
-				<Property MaxLength="25" Name="CodigoSanitario" Type="Edm.String"/>
+				<Property Name="GFH" Type="Edm.String" MaxLength="10"/>
+				<Property Name="CodigoTratamientoID" Type="Edm.String" MaxLength="20"/>
+				<Property Name="Cantidad" Type="Edm.Decimal" Precision="10" Scale="3"/>
+				<Property Name="ProductID" Type="Edm.String" MaxLength="18"/>
+				<Property Name="CodigoSanitario" Type="Edm.String" MaxLength="25"/>
 				<Property Name="FechaHoraInicio" Type="Edm.DateTimeOffset"/>
 				<Property Name="FechaHoraFin" Type="Edm.DateTimeOffset"/>
 				<Property Name="NumDiasAnteriores" Type="Edm.Int32"/>
-				<Property MaxLength="6" Name="DestinoID" Type="Edm.String"/>
-				<Property MaxLength="2" Name="MotivoAltaID" Type="Edm.String"/>
-				<Property MaxLength="2" Name="MotivoIngresoID" Type="Edm.String"/>
-				<Property MaxLength="18" Name="NumeroPoliza" Type="Edm.String"/>
+				<Property Name="DestinoID" Type="Edm.String" MaxLength="6"/>
+				<Property Name="MotivoAltaID" Type="Edm.String" MaxLength="2"/>
+				<Property Name="MotivoIngresoID" Type="Edm.String" MaxLength="2"/>
+				<Property Name="NumeroPoliza" Type="Edm.String" MaxLength="18"/>
 				<Property Name="FechaAccidente" Type="Edm.DateTimeOffset"/>
-				<Property MaxLength="35" Name="TitularSeguro" Type="Edm.String"/>
-				<Property MaxLength="35" Name="MarcaModelo" Type="Edm.String"/>
-				<Property MaxLength="10" Name="Matricula" Type="Edm.String"/>
-				<Property MaxLength="35" Name="NombreConductor" Type="Edm.String"/>
-				<Property MaxLength="35" Name="NombreEmpresa" Type="Edm.String"/>
-				<Property MaxLength="4" Name="SituacionID" Type="Edm.String"/>
-				<Property MaxLength="8" Name="ServicioRealizadorID" Type="Edm.String"/>
-				<Property MaxLength="8" Name="ServicioSolicitadoID" Type="Edm.String"/>
-				<Property MaxLength="8" Name="ServicioPeticionarioID" Type="Edm.String"/>
-				<Property MaxLength="4" Name="Center" Type="Edm.String"/>
-				<Property MaxLength="5" Name="UPorigenID" Type="Edm.String"/>
-				<Property MaxLength="5" Name="UPrealID" Type="Edm.String"/>
-				<Property MaxLength="5" Name="UPdestinoID" Type="Edm.String"/>
-				<Property MaxLength="2" Name="RegionEconomicaID" Type="Edm.String"/>
-				<Property MaxLength="5" Name="UPterritorID" Type="Edm.String"/>
-				<Property MaxLength="5" Name="UPasignadaID" Type="Edm.String"/>
-				<Property MaxLength="4" Name="ControlHabitacion" Type="Edm.String"/>
-				<Property MaxLength="2" Name="Habitacion" Type="Edm.String"/>
-				<Property MaxLength="4" Name="Cama" Type="Edm.String"/>
-				<Property MaxLength="2" Name="TipoCamaID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="PacienteExtID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="DeudorID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="MedicoResponsableID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="MedicoRealizadorID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="MedicoSolicitanteID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="MedicoAutofacturaID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="CirujanoJefeID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="AyudanteCirujano1ID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="AyudanteCirujano2ID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="AnestesistaID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="InstrumentistaID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="Circulante" Type="Edm.String"/>
-				<Property MaxLength="10" Name="ConvenioID" Type="Edm.String"/>
+				<Property Name="TitularSeguro" Type="Edm.String" MaxLength="35"/>
+				<Property Name="MarcaModelo" Type="Edm.String" MaxLength="35"/>
+				<Property Name="Matricula" Type="Edm.String" MaxLength="10"/>
+				<Property Name="NombreConductor" Type="Edm.String" MaxLength="35"/>
+				<Property Name="NombreEmpresa" Type="Edm.String" MaxLength="35"/>
+				<Property Name="SituacionID" Type="Edm.String" MaxLength="4"/>
+				<Property Name="ServicioRealizadorID" Type="Edm.String" MaxLength="8"/>
+				<Property Name="ServicioSolicitadoID" Type="Edm.String" MaxLength="8"/>
+				<Property Name="ServicioPeticionarioID" Type="Edm.String" MaxLength="8"/>
+				<Property Name="Center" Type="Edm.String" MaxLength="4"/>
+				<Property Name="UPorigenID" Type="Edm.String" MaxLength="5"/>
+				<Property Name="UPrealID" Type="Edm.String" MaxLength="5"/>
+				<Property Name="UPdestinoID" Type="Edm.String" MaxLength="5"/>
+				<Property Name="RegionEconomicaID" Type="Edm.String" MaxLength="2"/>
+				<Property Name="UPterritorID" Type="Edm.String" MaxLength="5"/>
+				<Property Name="UPasignadaID" Type="Edm.String" MaxLength="5"/>
+				<Property Name="ControlHabitacion" Type="Edm.String" MaxLength="4"/>
+				<Property Name="Habitacion" Type="Edm.String" MaxLength="2"/>
+				<Property Name="Cama" Type="Edm.String" MaxLength="4"/>
+				<Property Name="TipoCamaID" Type="Edm.String" MaxLength="2"/>
+				<Property Name="PacienteExtID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="DeudorID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="MedicoResponsableID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="MedicoRealizadorID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="MedicoSolicitanteID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="MedicoAutofacturaID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="CirujanoJefeID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="AyudanteCirujano1ID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="AyudanteCirujano2ID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="AnestesistaID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="InstrumentistaID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="Circulante" Type="Edm.String" MaxLength="10"/>
+				<Property Name="ConvenioID" Type="Edm.String" MaxLength="10"/>
 				<Property Name="ClausulaID" Type="Edm.Int32"/>
-				<Property MaxLength="10" Name="AgrupacionID" Type="Edm.String"/>
-				<Property MaxLength="2" Name="TipoFacturacID" Type="Edm.String"/>
-				<Property MaxLength="2" Name="ClasifEconomicaID" Type="Edm.String"/>
-				<Property Name="Importe" Precision="15" Scale="4" Type="Edm.Decimal"/>
-				<Property MaxLength="50" Name="ParentID" Type="Edm.String"/>
-				<Property MaxLength="35" Name="NumeroAsistencia" Type="Edm.String"/>
-				<Property MaxLength="35" Name="CMBDH" Type="Edm.String"/>
+				<Property Name="AgrupacionID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="TipoFacturacID" Type="Edm.String" MaxLength="2"/>
+				<Property Name="ClasifEconomicaID" Type="Edm.String" MaxLength="2"/>
+				<Property Name="Importe" Type="Edm.Decimal" Precision="15" Scale="4"/>
+				<Property Name="ParentID" Type="Edm.String" MaxLength="50"/>
+				<Property Name="NumeroAsistencia" Type="Edm.String" MaxLength="35"/>
+				<Property Name="CMBDH" Type="Edm.String" MaxLength="35"/>
 				<Property Name="ProformaID" Type="Edm.Int32"/>
-				<Property MaxLength="20" Name="Procedencia" Type="Edm.String"/>
-                <Property MaxLength="20" Name="Destino" Type="Edm.String"/>
+				<Property Name="Procedencia" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Destino" Type="Edm.String" MaxLength="20"/>
 			</EntityType>
 			<EntityType Name="ActivitiesEntity">
 				<Key>
 					<PropertyRef Name="ActivityID"/>
 				</Key>
-				<Property MaxLength="50" Name="ActivityID" Nullable="false" Type="Edm.String"/>
-				<Property MaxLength="30" Name="ActivityCodExt" Type="Edm.String"/>
-				<Property MaxLength="50" Name="ParentID" Type="Edm.String"/>
-				<Property MaxLength="35" Name="EpisodioID" Type="Edm.String"/>
-				<Property MaxLength="35" Name="ProcesoID" Type="Edm.String"/>
-				<Property MaxLength="20" Name="AsociadoID" Type="Edm.String"/>
-				<Property MaxLength="1" Name="Status" Type="Edm.String"/>
-				<Property MaxLength="6" Name="CodErrorFacID" Type="Edm.String"/>
-				<Property MaxLength="20" Name="InfoOriginID" Type="Edm.String"/>
+				<Property Name="ActivityID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+				<Property Name="ActivityCodExt" Type="Edm.String" MaxLength="30"/>
+				<Property Name="ParentID" Type="Edm.String" MaxLength="50"/>
+				<Property Name="EpisodioID" Type="Edm.String" MaxLength="35"/>
+				<Property Name="ProcesoID" Type="Edm.String" MaxLength="35"/>
+				<Property Name="AsociadoID" Type="Edm.String" MaxLength="20"/>
+				<Property Name="Status" Type="Edm.String" MaxLength="1"/>
+				<Property Name="CodErrorFacID" Type="Edm.String" MaxLength="6"/>
+				<Property Name="InfoOriginID" Type="Edm.String" MaxLength="20"/>
 				<Property Name="InfoOriginType" Type="Edm.Int32"/>
-				<Property MaxLength="4" Name="EventTypeMsg" Type="Edm.String"/>
-				<Property MaxLength="4" Name="Version" Type="Edm.String"/>
-				<Property MaxLength="10" Name="DocumentoVentasID" Type="Edm.String"/>
+				<Property Name="EventTypeMsg" Type="Edm.String" MaxLength="4"/>
+				<Property Name="Version" Type="Edm.String" MaxLength="4"/>
+				<Property Name="DocumentoVentasID" Type="Edm.String" MaxLength="10"/>
 				<Property Name="PosicionDocumentoVentasID" Type="Edm.Int32"/>
-				<Property MaxLength="10" Name="FacturaVentasID" Type="Edm.String"/>
+				<Property Name="FacturaVentasID" Type="Edm.String" MaxLength="10"/>
 				<Property Name="PosicionFacturaID" Type="Edm.Int32"/>
 				<Property Name="ModiManualmente" Type="Edm.Int32"/>
-				<Property MaxLength="20" Name="PrestacionExtID" Type="Edm.String"/>
-				<Property MaxLength="60" Name="DescPrestaExt" Type="Edm.String"/>
-				<Property MaxLength="10" Name="PlanCoberturaID" Type="Edm.String"/>
-				<Property MaxLength="4" Name="TipoPrestacionID" Type="Edm.String"/>
-				<Property MaxLength="20" Name="DiagnosticoID" Type="Edm.String"/>
-				<Property MaxLength="15" Name="ProcPrincipalID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="TipoProcedimID" Type="Edm.String"/>
-				<Property MaxLength="15" Name="ProcSecundarioID" Type="Edm.String"/>
-				<Property MaxLength="2" Name="TipoAnestesiaID" Type="Edm.String"/>
-				<Property MaxLength="20" Name="Autorizacion" Type="Edm.String"/>
+				<Property Name="PrestacionExtID" Type="Edm.String" MaxLength="20"/>
+				<Property Name="DescPrestaExt" Type="Edm.String" MaxLength="60"/>
+				<Property Name="PlanCoberturaID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="TipoPrestacionID" Type="Edm.String" MaxLength="4"/>
+				<Property Name="DiagnosticoID" Type="Edm.String" MaxLength="20"/>
+				<Property Name="ProcPrincipalID" Type="Edm.String" MaxLength="15"/>
+				<Property Name="TipoProcedimID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="ProcSecundarioID" Type="Edm.String" MaxLength="15"/>
+				<Property Name="TipoAnestesiaID" Type="Edm.String" MaxLength="2"/>
+				<Property Name="Autorizacion" Type="Edm.String" MaxLength="20"/>
 				<Property Name="FechaAutorizacion" Type="Edm.DateTimeOffset"/>
-				<Property MaxLength="10" Name="GFH" Type="Edm.String"/>
-				<Property MaxLength="20" Name="CodigoTratamientoID" Type="Edm.String"/>
-				<Property Name="Cantidad" Precision="10" Scale="3" Type="Edm.Decimal"/>
-				<Property MaxLength="18" Name="ProductID" Type="Edm.String"/>
+				<Property Name="GFH" Type="Edm.String" MaxLength="10"/>
+				<Property Name="CodigoTratamientoID" Type="Edm.String" MaxLength="20"/>
+				<Property Name="Cantidad" Type="Edm.Decimal" Precision="10" Scale="3"/>
+				<Property Name="ProductID" Type="Edm.String" MaxLength="18"/>
 				<Property Name="FechaHoraInicio" Type="Edm.DateTimeOffset"/>
 				<Property Name="FechaHoraFin" Type="Edm.DateTimeOffset"/>
 				<Property Name="NumDiasAnteriores" Type="Edm.Int32"/>
-				<Property MaxLength="6" Name="DestinoID" Type="Edm.String"/>
-				<Property MaxLength="2" Name="MotivoAltaID" Type="Edm.String"/>
-				<Property MaxLength="2" Name="MotivoIngresoID" Type="Edm.String"/>
-				<Property MaxLength="18" Name="NumeroPoliza" Type="Edm.String"/>
+				<Property Name="DestinoID" Type="Edm.String" MaxLength="6"/>
+				<Property Name="MotivoAltaID" Type="Edm.String" MaxLength="2"/>
+				<Property Name="MotivoIngresoID" Type="Edm.String" MaxLength="2"/>
+				<Property Name="NumeroPoliza" Type="Edm.String" MaxLength="18"/>
 				<Property Name="FechaAccidente" Type="Edm.DateTimeOffset"/>
-				<Property MaxLength="35" Name="TitularSeguro" Type="Edm.String"/>
-				<Property MaxLength="35" Name="MarcaModelo" Type="Edm.String"/>
-				<Property MaxLength="10" Name="Matricula" Type="Edm.String"/>
-				<Property MaxLength="35" Name="NombreConductor" Type="Edm.String"/>
-				<Property MaxLength="35" Name="NombreEmpresa" Type="Edm.String"/>
-				<Property MaxLength="4" Name="SituacionID" Type="Edm.String"/>
-				<Property MaxLength="8" Name="ServicioRealizadorID" Type="Edm.String"/>
-				<Property MaxLength="8" Name="ServicioSolicitadoID" Type="Edm.String"/>
-				<Property MaxLength="8" Name="ServicioPeticionarioID" Type="Edm.String"/>
-				<Property MaxLength="4" Name="Center" Type="Edm.String"/>
-				<Property MaxLength="5" Name="UPorigenID" Type="Edm.String"/>
-				<Property MaxLength="5" Name="UPrealID" Type="Edm.String"/>
-				<Property MaxLength="5" Name="UPdestinoID" Type="Edm.String"/>
-				<Property MaxLength="2" Name="RegionEconomicaID" Type="Edm.String"/>
-				<Property MaxLength="5" Name="UPterritorID" Type="Edm.String"/>
-				<Property MaxLength="5" Name="UPasignadaID" Type="Edm.String"/>
-				<Property MaxLength="4" Name="ControlHabitacion" Type="Edm.String"/>
-				<Property MaxLength="2" Name="Habitacion" Type="Edm.String"/>
-				<Property MaxLength="4" Name="Cama" Type="Edm.String"/>
-				<Property MaxLength="2" Name="TipoCamaID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="PacienteExtID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="DeudorID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="MedicoResponsableID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="MedicoRealizadorID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="MedicoSolicitanteID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="MedicoAutofacturaID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="CirujanoJefeID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="AyudanteCirujano1ID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="AyudanteCirujano2ID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="AnestesistaID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="InstrumentistaID" Type="Edm.String"/>
-				<Property MaxLength="10" Name="Circulante" Type="Edm.String"/>
-				<Property MaxLength="10" Name="ConvenioID" Type="Edm.String"/>
+				<Property Name="TitularSeguro" Type="Edm.String" MaxLength="35"/>
+				<Property Name="MarcaModelo" Type="Edm.String" MaxLength="35"/>
+				<Property Name="Matricula" Type="Edm.String" MaxLength="10"/>
+				<Property Name="NombreConductor" Type="Edm.String" MaxLength="35"/>
+				<Property Name="NombreEmpresa" Type="Edm.String" MaxLength="35"/>
+				<Property Name="SituacionID" Type="Edm.String" MaxLength="4"/>
+				<Property Name="ServicioRealizadorID" Type="Edm.String" MaxLength="8"/>
+				<Property Name="ServicioSolicitadoID" Type="Edm.String" MaxLength="8"/>
+				<Property Name="ServicioPeticionarioID" Type="Edm.String" MaxLength="8"/>
+				<Property Name="Center" Type="Edm.String" MaxLength="4"/>
+				<Property Name="UPorigenID" Type="Edm.String" MaxLength="5"/>
+				<Property Name="UPrealID" Type="Edm.String" MaxLength="5"/>
+				<Property Name="UPdestinoID" Type="Edm.String" MaxLength="5"/>
+				<Property Name="RegionEconomicaID" Type="Edm.String" MaxLength="2"/>
+				<Property Name="UPterritorID" Type="Edm.String" MaxLength="5"/>
+				<Property Name="UPasignadaID" Type="Edm.String" MaxLength="5"/>
+				<Property Name="ControlHabitacion" Type="Edm.String" MaxLength="4"/>
+				<Property Name="Habitacion" Type="Edm.String" MaxLength="2"/>
+				<Property Name="Cama" Type="Edm.String" MaxLength="4"/>
+				<Property Name="TipoCamaID" Type="Edm.String" MaxLength="2"/>
+				<Property Name="PacienteExtID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="DeudorID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="MedicoResponsableID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="MedicoRealizadorID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="MedicoSolicitanteID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="MedicoAutofacturaID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="CirujanoJefeID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="AyudanteCirujano1ID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="AyudanteCirujano2ID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="AnestesistaID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="InstrumentistaID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="Circulante" Type="Edm.String" MaxLength="10"/>
+				<Property Name="ConvenioID" Type="Edm.String" MaxLength="10"/>
 				<Property Name="ClausulaID" Type="Edm.Int32"/>
-				<Property MaxLength="10" Name="AgrupacionID" Type="Edm.String"/>
-				<Property MaxLength="2" Name="TipoFacturacID" Type="Edm.String"/>
-				<Property MaxLength="2" Name="ClasifEconomicaID" Type="Edm.String"/>
-				<Property Name="Importe" Precision="15" Scale="4" Type="Edm.Decimal"/>
-				<Property MaxLength="20" Name="Referencia" Type="Edm.String"/>
-				<Property MaxLength="25" Name="CodigoSanitario" Type="Edm.String"/>
+				<Property Name="AgrupacionID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="TipoFacturacID" Type="Edm.String" MaxLength="2"/>
+				<Property Name="ClasifEconomicaID" Type="Edm.String" MaxLength="2"/>
+				<Property Name="Importe" Type="Edm.Decimal" Precision="15" Scale="4"/>
+				<Property Name="Referencia" Type="Edm.String" MaxLength="20"/>
+				<Property Name="CodigoSanitario" Type="Edm.String" MaxLength="25"/>
 				<Property Name="SinIdentificacion" Type="Edm.Int32"/>
-				<Property MaxLength="35" Name="NumeroAsistencia" Type="Edm.String"/>
-				<Property MaxLength="35" Name="CMBDH" Type="Edm.String"/>
+				<Property Name="NumeroAsistencia" Type="Edm.String" MaxLength="35"/>
+				<Property Name="CMBDH" Type="Edm.String" MaxLength="35"/>
 				<Property Name="ProformaID" Type="Edm.Int32"/>
-				<Property MaxLength="20" Name="Procedencia" Type="Edm.String"/>
-                <Property MaxLength="20" Name="Destino" Type="Edm.String"/>
+				<Property Name="Procedencia" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Destino" Type="Edm.String" MaxLength="20"/>
 			</EntityType>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ActivityID">
-				<Annotation String="ActivityID: ActivityID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ActivityID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ActivityID: ActivityID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ActivityCodExt">
-				<Annotation String="ActivityCodExt: ActivityCodExt" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ActivityCodExt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ActivityCodExt: ActivityCodExt"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/EpisodioID">
-				<Annotation String="EpisodioID: EpisodioID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/EpisodioID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="EpisodioID: EpisodioID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ProcesoID">
-				<Annotation String="ProcesoID: ProcesoID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ProcesoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ProcesoID: ProcesoID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/AsociadoID">
-				<Annotation String="AsociadoID: AsociadoID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/AsociadoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="AsociadoID: AsociadoID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/Status">
-				<Annotation String="Status: Status" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/Status" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="Status: Status"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/CodErrorFacID">
-				<Annotation String="CodErrorFacID: CodErrorFacID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/CodErrorFacID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CodErrorFacID: CodErrorFacID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/InfoOriginID">
-				<Annotation String="InfoOriginID: InfoOriginID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/InfoOriginID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="InfoOriginID: InfoOriginID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/InfoOriginType">
-				<Annotation String="InfoOriginType: InfoOriginType" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/InfoOriginType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="InfoOriginType: InfoOriginType"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/EventTypeMsg">
-				<Annotation String="EventTypeMsg: EventTypeMsg" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/EventTypeMsg" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="EventTypeMsg: EventTypeMsg"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/Version">
-				<Annotation String="Version: Version" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/Version" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="Version: Version"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/DocumentoVentasID">
-				<Annotation String="DocumentoVentasID: DocumentoVentasID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/DocumentoVentasID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="DocumentoVentasID: DocumentoVentasID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/PosicionDocumentoVentasID">
-				<Annotation String="PosicionDocumentoVentasID: PosicionDocumentoVentasID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/PosicionDocumentoVentasID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="PosicionDocumentoVentasID: PosicionDocumentoVentasID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/FacturaVentasID">
-				<Annotation String="FacturaVentasID: FacturaVentasID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/FacturaVentasID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="FacturaVentasID: FacturaVentasID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/PosicionFacturaID">
-				<Annotation String="PosicionFacturaID: PosicionFacturaID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/PosicionFacturaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="PosicionFacturaID: PosicionFacturaID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ModiManualmente">
-				<Annotation String="ModiManualmente: ModiManualmente" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ModiManualmente" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ModiManualmente: ModiManualmente"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/Referencia">
-				<Annotation String="Referencia: Referencia" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/Referencia" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="Referencia: Referencia"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/SinIdentificacion">
-				<Annotation String="SinIdentificacion: SinIdentificacion" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/SinIdentificacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="SinIdentificacion: SinIdentificacion"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/PrestacionExtID">
-				<Annotation String="PrestacionExtID: PrestacionExtID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/PrestacionExtID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="PrestacionExtID: PrestacionExtID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/DescPrestaExt">
-				<Annotation String="DescPrestaExt: DescPrestaExt" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/DescPrestaExt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="DescPrestaExt: DescPrestaExt"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/PlanCoberturaID">
-				<Annotation String="PlanCoberturaID: PlanCoberturaID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/PlanCoberturaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="PlanCoberturaID: PlanCoberturaID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/TipoPrestacionID">
-				<Annotation String="TipoPrestacionID: TipoPrestacionID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/TipoPrestacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="TipoPrestacionID: TipoPrestacionID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/DiagnosticoID">
-				<Annotation String="DiagnosticoID: DiagnosticoID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/DiagnosticoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="DiagnosticoID: DiagnosticoID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ProcPrincipalID">
-				<Annotation String="ProcPrincipalID: ProcPrincipalID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ProcPrincipalID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ProcPrincipalID: ProcPrincipalID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/TipoProcedimID">
-				<Annotation String="TipoProcedimID: TipoProcedimID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/TipoProcedimID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="TipoProcedimID: TipoProcedimID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ProcSecundarioID">
-				<Annotation String="ProcSecundarioID: ProcSecundarioID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ProcSecundarioID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ProcSecundarioID: ProcSecundarioID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/TipoAnestesiaID">
-				<Annotation String="TipoAnestesiaID: TipoAnestesiaID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/TipoAnestesiaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="TipoAnestesiaID: TipoAnestesiaID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/Autorizacion">
-				<Annotation String="Autorizacion: Autorizacion" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/Autorizacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="Autorizacion: Autorizacion"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/FechaAutorizacion">
-				<Annotation String="FechaAutorizacion: FechaAutorizacion" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/FechaAutorizacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="FechaAutorizacion: FechaAutorizacion"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/GFH">
-				<Annotation String="GFH: GFH" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/GFH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="GFH: GFH"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/CodigoTratamientoID">
-				<Annotation String="CodigoTratamientoID: CodigoTratamientoID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/CodigoTratamientoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CodigoTratamientoID: CodigoTratamientoID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/Cantidad">
-				<Annotation String="Cantidad: Cantidad" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/Cantidad" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="Cantidad: Cantidad"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ProductID">
-				<Annotation String="ProductID: ProductID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ProductID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ProductID: ProductID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/CodigoSanitario">
-				<Annotation String="CodigoSanitario: CodigoSanitario" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/CodigoSanitario" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CodigoSanitario: CodigoSanitario"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/FechaHoraInicio">
-				<Annotation String="FechaHoraInicio: FechaHoraInicio" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/FechaHoraInicio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="FechaHoraInicio: FechaHoraInicio"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/FechaHoraFin">
-				<Annotation String="FechaHoraFin: FechaHoraFin" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/FechaHoraFin" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="FechaHoraFin: FechaHoraFin"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/NumDiasAnteriores">
-				<Annotation String="NumDiasAnteriores: NumDiasAnteriores" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/NumDiasAnteriores" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="NumDiasAnteriores: NumDiasAnteriores"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/DestinoID">
-				<Annotation String="DestinoID: DestinoID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/DestinoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="DestinoID: DestinoID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/MotivoAltaID">
-				<Annotation String="MotivoAltaID: MotivoAltaID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/MotivoAltaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MotivoAltaID: MotivoAltaID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/MotivoIngresoID">
-				<Annotation String="MotivoIngresoID: MotivoIngresoID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/MotivoIngresoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MotivoIngresoID: MotivoIngresoID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/NumeroPoliza">
-				<Annotation String="NumeroPoliza: NumeroPoliza" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/NumeroPoliza" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="NumeroPoliza: NumeroPoliza"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/FechaAccidente">
-				<Annotation String="FechaAccidente: FechaAccidente" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/FechaAccidente" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="FechaAccidente: FechaAccidente"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/TitularSeguro">
-				<Annotation String="TitularSeguro: TitularSeguro" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/TitularSeguro" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="TitularSeguro: TitularSeguro"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/MarcaModelo">
-				<Annotation String="MarcaModelo: MarcaModelo" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/MarcaModelo" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MarcaModelo: MarcaModelo"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/Matricula">
-				<Annotation String="Matricula: Matricula" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/Matricula" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="Matricula: Matricula"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/NombreConductor">
-				<Annotation String="NombreConductor: NombreConductor" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/NombreConductor" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="NombreConductor: NombreConductor"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/NombreEmpresa">
-				<Annotation String="NombreEmpresa: NombreEmpresa" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/NombreEmpresa" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="NombreEmpresa: NombreEmpresa"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/SituacionID">
-				<Annotation String="SituacionID: SituacionID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/SituacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="SituacionID: SituacionID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ServicioRealizadorID">
-				<Annotation String="ServicioRealizadorID: ServicioRealizadorID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ServicioRealizadorID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ServicioRealizadorID: ServicioRealizadorID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ServicioSolicitadoID">
-				<Annotation String="ServicioSolicitadoID: ServicioSolicitadoID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ServicioSolicitadoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ServicioSolicitadoID: ServicioSolicitadoID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ServicioPeticionarioID">
-				<Annotation String="ServicioPeticionarioID: ServicioPeticionarioID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ServicioPeticionarioID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ServicioPeticionarioID: ServicioPeticionarioID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/Center">
-				<Annotation String="Center: Center" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/Center" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="Center: Center"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/UPorigenID">
-				<Annotation String="UPorigenID: UPorigenID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/UPorigenID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="UPorigenID: UPorigenID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/UPrealID">
-				<Annotation String="UPrealID: UPrealID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/UPrealID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="UPrealID: UPrealID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/UPdestinoID">
-				<Annotation String="UPdestinoID: UPdestinoID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/UPdestinoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="UPdestinoID: UPdestinoID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/RegionEconomicaID">
-				<Annotation String="RegionEconomicaID: RegionEconomicaID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/RegionEconomicaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="RegionEconomicaID: RegionEconomicaID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/UPterritorID">
-				<Annotation String="UPterritorID: UPterritorID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/UPterritorID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="UPterritorID: UPterritorID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/UPasignadaID">
-				<Annotation String="UPasignadaID: UPasignadaID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/UPasignadaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="UPasignadaID: UPasignadaID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ControlHabitacion">
-				<Annotation String="ControlHabitacion: ControlHabitacion" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ControlHabitacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ControlHabitacion: ControlHabitacion"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/Habitacion">
-				<Annotation String="Habitacion: Habitacion" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/Habitacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="Habitacion: Habitacion"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/Cama">
-				<Annotation String="Cama: Cama" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/Cama" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="Cama: Cama"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/TipoCamaID">
-				<Annotation String="TipoCamaID: TipoCamaID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/TipoCamaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="TipoCamaID: TipoCamaID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/PacienteExtID">
-				<Annotation String="PacienteExtID: PacienteExtID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/PacienteExtID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="PacienteExtID: PacienteExtID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/DeudorID">
-				<Annotation String="DeudorID: DeudorID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/DeudorID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="DeudorID: DeudorID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/MedicoResponsableID">
-				<Annotation String="MedicoResponsableID: MedicoResponsableID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/MedicoResponsableID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MedicoResponsableID: MedicoResponsableID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/MedicoRealizadorID">
-				<Annotation String="MedicoRealizadorID: MedicoRealizadorID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/MedicoRealizadorID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MedicoRealizadorID: MedicoRealizadorID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/MedicoSolicitanteID">
-				<Annotation String="MedicoSolicitanteID: MedicoSolicitanteID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/MedicoSolicitanteID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MedicoSolicitanteID: MedicoSolicitanteID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/MedicoAutofacturaID">
-				<Annotation String="MedicoAutofacturaID: MedicoAutofacturaID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/MedicoAutofacturaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MedicoAutofacturaID: MedicoAutofacturaID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/CirujanoJefeID">
-				<Annotation String="CirujanoJefeID: CirujanoJefeID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/CirujanoJefeID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CirujanoJefeID: CirujanoJefeID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/AyudanteCirujano1ID">
-				<Annotation String="AyudanteCirujano1ID: AyudanteCirujano1ID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/AyudanteCirujano1ID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="AyudanteCirujano1ID: AyudanteCirujano1ID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/AyudanteCirujano2ID">
-				<Annotation String="AyudanteCirujano2ID: AyudanteCirujano2ID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/AyudanteCirujano2ID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="AyudanteCirujano2ID: AyudanteCirujano2ID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/AnestesistaID">
-				<Annotation String="AnestesistaID: AnestesistaID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/AnestesistaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="AnestesistaID: AnestesistaID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/InstrumentistaID">
-				<Annotation String="InstrumentistaID: InstrumentistaID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/InstrumentistaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="InstrumentistaID: InstrumentistaID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/Circulante">
-				<Annotation String="Circulante: Circulante" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/Circulante" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="Circulante: Circulante"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ConvenioID">
-				<Annotation String="ConvenioID: ConvenioID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ConvenioID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ConvenioID: ConvenioID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ClausulaID">
-				<Annotation String="ClausulaID: ClausulaID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ClausulaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ClausulaID: ClausulaID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/AgrupacionID">
-				<Annotation String="AgrupacionID: AgrupacionID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/AgrupacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="AgrupacionID: AgrupacionID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/TipoFacturacID">
-				<Annotation String="TipoFacturacID: TipoFacturacID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/TipoFacturacID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="TipoFacturacID: TipoFacturacID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ClasifEconomicaID">
-				<Annotation String="ClasifEconomicaID: ClasifEconomicaID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ClasifEconomicaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ClasifEconomicaID: ClasifEconomicaID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/Importe">
-				<Annotation String="Importe: Importe" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/Importe" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="Importe: Importe"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ParentID">
-				<Annotation String="ParentID: ParentID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ParentID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ParentID: ParentID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/NumeroAsistencia">
-				<Annotation String="NumeroAsistencia: NumeroAsistencia" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/NumeroAsistencia" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="NumeroAsistencia: NumeroAsistencia"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/CMBDH">
-				<Annotation String="CMBDH: CMBDH" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/CMBDH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CMBDH: CMBDH"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/ProformaID">
-				<Annotation String="ProformaID: ProformaID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/ProformaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ProformaID: ProformaID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/Procedencia">
-                <Annotation String="Procedencia: Procedencia" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.Activities/Procedencia" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Procedencia: Procedencia"/>
             </Annotations>
-            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.Activities/Destino">
-                <Annotation String="Destino: Destino" Term="Common.Label"/>
+            <Annotations Target="zsc_sciactivitiesService.Activities/Destino" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Destino: Destino"/>
             </Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ActivityID">
-				<Annotation String="ACTIVITYID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ActivityID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ACTIVITYID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ActivityCodExt">
-				<Annotation String="ACTIVITYCODEXT" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ActivityCodExt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ACTIVITYCODEXT"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ParentID">
-				<Annotation String="PARENTID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ParentID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="PARENTID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/EpisodioID">
-				<Annotation String="EPISODIOID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/EpisodioID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="EPISODIOID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ProcesoID">
-				<Annotation String="PROCESOID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ProcesoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="PROCESOID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/AsociadoID">
-				<Annotation String="ASOCIADOID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/AsociadoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ASOCIADOID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/Status">
-				<Annotation String="STATUS" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/Status" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="STATUS"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/CodErrorFacID">
-				<Annotation String="CODERRORFACID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/CodErrorFacID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CODERRORFACID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/InfoOriginID">
-				<Annotation String="INFOORIGINID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/InfoOriginID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="INFOORIGINID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/InfoOriginType">
-				<Annotation String="INFOORIGINTYPE" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/InfoOriginType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="INFOORIGINTYPE"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/EventTypeMsg">
-				<Annotation String="EVENTTYPEMSG" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/EventTypeMsg" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="EVENTTYPEMSG"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/Version">
-				<Annotation String="VERSION" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/Version" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="VERSION"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/DocumentoVentasID">
-				<Annotation String="DOCUMENTOVENTASID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/DocumentoVentasID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="DOCUMENTOVENTASID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/PosicionDocumentoVentasID">
-				<Annotation String="POSICIONDOCUMENTOVENTASID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/PosicionDocumentoVentasID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="POSICIONDOCUMENTOVENTASID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/FacturaVentasID">
-				<Annotation String="FACTURAVENTASID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/FacturaVentasID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="FACTURAVENTASID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/PosicionFacturaID">
-				<Annotation String="POSICIONFACTURAID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/PosicionFacturaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="POSICIONFACTURAID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ModiManualmente">
-				<Annotation String="MODIMANUALMENTE" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ModiManualmente" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MODIMANUALMENTE"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/PrestacionExtID">
-				<Annotation String="PRESTACIONEXTID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/PrestacionExtID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="PRESTACIONEXTID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/DescPrestaExt">
-				<Annotation String="DESCPRESTAEXT" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/DescPrestaExt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="DESCPRESTAEXT"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/PlanCoberturaID">
-				<Annotation String="PLANCOBERTURAID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/PlanCoberturaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="PLANCOBERTURAID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/TipoPrestacionID">
-				<Annotation String="TIPOPRESTACIONID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/TipoPrestacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="TIPOPRESTACIONID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/DiagnosticoID">
-				<Annotation String="DIAGNOSTICOID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/DiagnosticoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="DIAGNOSTICOID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ProcPrincipalID">
-				<Annotation String="PROCPRINCIPALID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ProcPrincipalID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="PROCPRINCIPALID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/TipoProcedimID">
-				<Annotation String="TIPOPROCEDIMID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/TipoProcedimID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="TIPOPROCEDIMID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ProcSecundarioID">
-				<Annotation String="PROCSECUNDARIOID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ProcSecundarioID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="PROCSECUNDARIOID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/TipoAnestesiaID">
-				<Annotation String="TIPOANESTESIAID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/TipoAnestesiaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="TIPOANESTESIAID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/Autorizacion">
-				<Annotation String="AUTORIZACION" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/Autorizacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="AUTORIZACION"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/FechaAutorizacion">
-				<Annotation String="FECHAAUTORIZACION" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/FechaAutorizacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="FECHAAUTORIZACION"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/GFH">
-				<Annotation String="GFH" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/GFH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="GFH"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/CodigoTratamientoID">
-				<Annotation String="CODIGOTRATAMIENTOID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/CodigoTratamientoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CODIGOTRATAMIENTOID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/Cantidad">
-				<Annotation String="CANTIDAD" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/Cantidad" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CANTIDAD"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ProductID">
-				<Annotation String="PRODUCTID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ProductID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="PRODUCTID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/FechaHoraInicio">
-				<Annotation String="FECHAHORAINICIO" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/FechaHoraInicio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="FECHAHORAINICIO"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/FechaHoraFin">
-				<Annotation String="FECHAHORAFIN" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/FechaHoraFin" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="FECHAHORAFIN"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/NumDiasAnteriores">
-				<Annotation String="NUMDIASANTERIORES" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/NumDiasAnteriores" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="NUMDIASANTERIORES"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/DestinoID">
-				<Annotation String="DESTINOID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/DestinoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="DESTINOID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/MotivoAltaID">
-				<Annotation String="MOTIVOALTAID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/MotivoAltaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MOTIVOALTAID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/MotivoIngresoID">
-				<Annotation String="MOTIVOINGRESOID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/MotivoIngresoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MOTIVOINGRESOID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/NumeroPoliza">
-				<Annotation String="NUMEROPOLIZA" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/NumeroPoliza" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="NUMEROPOLIZA"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/FechaAccidente">
-				<Annotation String="FECHAACCIDENTE" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/FechaAccidente" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="FECHAACCIDENTE"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/TitularSeguro">
-				<Annotation String="TITULARSEGURO" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/TitularSeguro" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="TITULARSEGURO"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/MarcaModelo">
-				<Annotation String="MARCAMODELO" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/MarcaModelo" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MARCAMODELO"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/Matricula">
-				<Annotation String="MATRICULA" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/Matricula" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MATRICULA"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/NombreConductor">
-				<Annotation String="NOMBRECONDUCTOR" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/NombreConductor" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="NOMBRECONDUCTOR"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/NombreEmpresa">
-				<Annotation String="NOMBREEMPRESA" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/NombreEmpresa" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="NOMBREEMPRESA"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/SituacionID">
-				<Annotation String="SITUACIONID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/SituacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="SITUACIONID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ServicioRealizadorID">
-				<Annotation String="SERVICIOREALIZADORID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ServicioRealizadorID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="SERVICIOREALIZADORID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ServicioSolicitadoID">
-				<Annotation String="SERVICIOSOLICITADOID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ServicioSolicitadoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="SERVICIOSOLICITADOID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ServicioPeticionarioID">
-				<Annotation String="SERVICIOPETICIONARIOID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ServicioPeticionarioID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="SERVICIOPETICIONARIOID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/Center">
-				<Annotation String="CENTER" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/Center" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CENTER"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/UPorigenID">
-				<Annotation String="UPORIGENID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/UPorigenID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="UPORIGENID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/UPrealID">
-				<Annotation String="UPREALID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/UPrealID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="UPREALID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/UPdestinoID">
-				<Annotation String="UPDESTINOID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/UPdestinoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="UPDESTINOID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/RegionEconomicaID">
-				<Annotation String="REGIONECONOMICAID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/RegionEconomicaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="REGIONECONOMICAID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/UPterritorID">
-				<Annotation String="UPTERRITORID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/UPterritorID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="UPTERRITORID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/UPasignadaID">
-				<Annotation String="UPASIGNADAID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/UPasignadaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="UPASIGNADAID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ControlHabitacion">
-				<Annotation String="CONTROLHABITACION" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ControlHabitacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CONTROLHABITACION"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/Habitacion">
-				<Annotation String="HABITACION" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/Habitacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="HABITACION"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/Cama">
-				<Annotation String="CAMA" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/Cama" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CAMA"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/TipoCamaID">
-				<Annotation String="TIPOCAMAID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/TipoCamaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="TIPOCAMAID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/PacienteExtID">
-				<Annotation String="PACIENTEEXTID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/PacienteExtID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="PACIENTEEXTID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/DeudorID">
-				<Annotation String="DEUDORID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/DeudorID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="DEUDORID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/MedicoResponsableID">
-				<Annotation String="MEDICORESPONSABLEID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/MedicoResponsableID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MEDICORESPONSABLEID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/MedicoRealizadorID">
-				<Annotation String="MEDICOREALIZADORID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/MedicoRealizadorID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MEDICOREALIZADORID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/MedicoSolicitanteID">
-				<Annotation String="MEDICOSOLICITANTEID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/MedicoSolicitanteID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MEDICOSOLICITANTEID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/MedicoAutofacturaID">
-				<Annotation String="MEDICOAUTOFACTURAID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/MedicoAutofacturaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="MEDICOAUTOFACTURAID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/CirujanoJefeID">
-				<Annotation String="CIRUJANOJEFEID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/CirujanoJefeID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CIRUJANOJEFEID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/AyudanteCirujano1ID">
-				<Annotation String="AYUDANTECIRUJANO1ID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/AyudanteCirujano1ID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="AYUDANTECIRUJANO1ID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/AyudanteCirujano2ID">
-				<Annotation String="AYUDANTECIRUJANO2ID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/AyudanteCirujano2ID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="AYUDANTECIRUJANO2ID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/AnestesistaID">
-				<Annotation String="ANESTESISTAID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/AnestesistaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ANESTESISTAID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/InstrumentistaID">
-				<Annotation String="INSTRUMENTISTAID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/InstrumentistaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="INSTRUMENTISTAID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/Circulante">
-				<Annotation String="CIRCULANTE" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/Circulante" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CIRCULANTE"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ConvenioID">
-				<Annotation String="CONVENIOID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ConvenioID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CONVENIOID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ClausulaID">
-				<Annotation String="CLAUSULAID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ClausulaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CLAUSULAID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/AgrupacionID">
-				<Annotation String="AGRUPACIONID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/AgrupacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="AGRUPACIONID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/TipoFacturacID">
-				<Annotation String="TIPOFACTURACID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/TipoFacturacID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="TIPOFACTURACID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ClasifEconomicaID">
-				<Annotation String="CLASIFECONOMICAID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ClasifEconomicaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CLASIFECONOMICAID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/Importe">
-				<Annotation String="IMPORTE" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/Importe" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="IMPORTE"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/Referencia">
-				<Annotation String="REFERENCIA" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/Referencia" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="REFERENCIA"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/CodigoSanitario">
-				<Annotation String="CODIGOSANITARIO" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/CodigoSanitario" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CODIGOSANITARIO"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/SinIdentificacion">
-				<Annotation String="SINIDENTIFICACION" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/SinIdentificacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="SINIDENTIFICACION"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/NumeroAsistencia">
-				<Annotation String="NUMEROASISTENCIA" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/NumeroAsistencia" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="NUMEROASISTENCIA"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/CMBDH">
-				<Annotation String="CMBDH: CMBDH" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/CMBDH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="CMBDH: CMBDH"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/ProformaID">
-				<Annotation String="ProformaID: ProformaID" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/ProformaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Common.Label" String="ProformaID: ProformaID"/>
 			</Annotations>
-			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/Procedencia">
-                <Annotation String="Procedencia: Procedencia" Term="Common.Label"/>
+			<Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/Procedencia" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Procedencia: Procedencia"/>
             </Annotations>
-            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="zsc_sciactivitiesService.ActivitiesEntity/Destino">
-                <Annotation String="Destino: Destino" Term="Common.Label"/>
+            <Annotations Target="zsc_sciactivitiesService.ActivitiesEntity/Destino" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Destino: Destino"/>
             </Annotations>
 		</Schema>
 	</edmx:DataServices>

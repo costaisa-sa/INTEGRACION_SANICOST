@@ -1,7 +1,11 @@
-#
-#Sun Oct 18 09:21:08 UTC 2026
+#Sun Oct 18 08:59:51 UTC 2026
+Certificate_S4=
 CreateDeudorBasic=CreateDeudorBasic_DEV
+S4=
 S4HANA=Sanicost_oAuth_Dev
+System=
 URL_ERP=https\://my301787.s4hana.ondemand.com\:443
-URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
+URL_HANA=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
+URL_SCP=https\://dbsystema76e164cb.hana.ondemand.com
 USER_S4=CloudPlatform_DEV
+certificate_s4=

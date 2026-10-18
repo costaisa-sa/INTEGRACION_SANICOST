@@ -208,7 +208,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>credentialName</key>
-                    <value>{{CPILocal}}</value>
+                    <value>{{HCILocal}}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>httpErrorResponseCodes</key>

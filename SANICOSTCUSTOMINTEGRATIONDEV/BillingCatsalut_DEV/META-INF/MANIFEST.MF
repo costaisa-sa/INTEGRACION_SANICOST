@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: BillingCatsalut_DEV
 Bundle-Name: BillingCatsalut_DEV
-Bundle-Version: 1.0.5
+Bundle-Version: 1.0.6
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -42,5 +42,5 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
 Origin-Bundle-Name: BillingCatsalut_DEV
 Origin-Bundle-Version: 1.0.5
 Origin-Bundle-SymbolicName: BillingCatsalut_DEV
-Origin-ModifiedDate: 1751879570926
+Origin-ModifiedDate: 1751880532580
 

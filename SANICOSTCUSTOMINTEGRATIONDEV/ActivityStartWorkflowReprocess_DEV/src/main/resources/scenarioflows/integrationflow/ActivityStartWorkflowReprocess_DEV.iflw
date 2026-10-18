@@ -151,7 +151,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>system</key>
-                    <value>Receiver1</value>
+                    <value>GetToken</value>
                 </ifl:property>
                 <ifl:property>
                     <key>authenticationMethod</key>
@@ -375,7 +375,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>system</key>
-                    <value>Receiver2</value>
+                    <value>CreateInstance</value>
                 </ifl:property>
                 <ifl:property>
                     <key>authenticationMethod</key>
@@ -439,20 +439,6 @@
                 <value>Required</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:startEvent id="StartEvent_2" name="Start">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::MessageStartEvent/version::1.0</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
-            <bpmn2:messageEventDefinition/>
-        </bpmn2:startEvent>
         <bpmn2:endEvent id="EndEvent_2" name="End">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -467,32 +453,6 @@
             <bpmn2:incoming>SequenceFlow_19</bpmn2:incoming>
             <bpmn2:messageEventDefinition/>
         </bpmn2:endEvent>
-        <bpmn2:callActivity id="CallActivity_18" name="Create workflow reprocess">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>processId</key>
-                    <value>Process_7</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>ProcessCallElement</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>subActivityType</key>
-                    <value>NonLoopingProcess</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_6</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_19</bpmn2:outgoing>
-        </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_5" name="Save context">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -527,9 +487,49 @@
             <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_6</bpmn2:outgoing>
         </bpmn2:callActivity>
+        <bpmn2:startEvent id="StartEvent_2" name="Start">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::MessageStartEvent/version::1.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
+            <bpmn2:messageEventDefinition/>
+        </bpmn2:startEvent>
+        <bpmn2:callActivity id="CallActivity_18" name="Create workflow reprocess">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>processId</key>
+                    <value>Process_7</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>ProcessCallElement</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>NonLoopingProcess</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_6</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_19</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:sequenceFlow id="SequenceFlow_6" sourceRef="CallActivity_5" targetRef="CallActivity_18"/>
         <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="StartEvent_2" targetRef="CallActivity_5"/>
         <bpmn2:sequenceFlow id="SequenceFlow_19" sourceRef="CallActivity_18" targetRef="EndEvent_2"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_6" sourceRef="CallActivity_5" targetRef="CallActivity_18"/>
     </bpmn2:process>
     <bpmn2:process id="Process_7" name="Create workflow reprocess">
         <bpmn2:extensionElements>
@@ -554,19 +554,6 @@
                 <value>From Calling Process</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:startEvent id="StartEvent_8" name="Start 1">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_10</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_34440872" name="Groovy Script 1">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -662,32 +649,6 @@
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_34440866</bpmn2:incoming>
         </bpmn2:endEvent>
-        <bpmn2:callActivity id="CallActivity_15" name="Get Worfklow CSRF Token">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>processId</key>
-                    <value>Process_11</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>ProcessCallElement</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>subActivityType</key>
-                    <value>NonLoopingProcess</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_10</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_16</bpmn2:outgoing>
-        </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_34440863" name="Set contenido reprocess">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -725,12 +686,51 @@
             <bpmn2:incoming>SequenceFlow_34440861</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_34440864</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:sequenceFlow id="SequenceFlow_10" sourceRef="StartEvent_8" targetRef="CallActivity_15"/>
+        <bpmn2:startEvent id="StartEvent_8" name="Start 1">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_10</bpmn2:outgoing>
+        </bpmn2:startEvent>
+        <bpmn2:callActivity id="CallActivity_15" name="Get Worfklow CSRF Token">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>processId</key>
+                    <value>Process_11</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>ProcessCallElement</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>NonLoopingProcess</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_10</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_16</bpmn2:outgoing>
+        </bpmn2:callActivity>
         <bpmn2:sequenceFlow id="SequenceFlow_34440873" sourceRef="CallActivity_34440872" targetRef="ServiceTask_34440865"/>
         <bpmn2:sequenceFlow id="SequenceFlow_34440861" sourceRef="CallActivity_34440860" targetRef="CallActivity_34440863"/>
         <bpmn2:sequenceFlow id="SequenceFlow_34440866" sourceRef="ServiceTask_34440865" targetRef="EndEvent_9"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_16" sourceRef="CallActivity_15" targetRef="CallActivity_34440860"/>
         <bpmn2:sequenceFlow id="SequenceFlow_34440864" sourceRef="CallActivity_34440863" targetRef="CallActivity_34440872"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_10" sourceRef="StartEvent_8" targetRef="CallActivity_15"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_16" sourceRef="CallActivity_15" targetRef="CallActivity_34440860"/>
     </bpmn2:process>
     <bpmn2:process id="Process_11" name="Get Worfklow CSRF Token">
         <bpmn2:extensionElements>
@@ -755,19 +755,6 @@
                 <value>From Calling Process</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:startEvent id="StartEvent_12" name="Start 2">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_14</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:serviceTask id="ServiceTask_27" name="Get Token">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -867,10 +854,23 @@
             <bpmn2:incoming>SequenceFlow_22</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_25</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:sequenceFlow id="SequenceFlow_14" sourceRef="StartEvent_12" targetRef="CallActivity_21"/>
+        <bpmn2:startEvent id="StartEvent_12" name="Start 2">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_14</bpmn2:outgoing>
+        </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_28" sourceRef="ServiceTask_27" targetRef="EndEvent_13"/>
         <bpmn2:sequenceFlow id="SequenceFlow_22" sourceRef="CallActivity_21" targetRef="CallActivity_24"/>
         <bpmn2:sequenceFlow id="SequenceFlow_25" sourceRef="CallActivity_24" targetRef="ServiceTask_27"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_14" sourceRef="StartEvent_12" targetRef="CallActivity_21"/>
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
         <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">

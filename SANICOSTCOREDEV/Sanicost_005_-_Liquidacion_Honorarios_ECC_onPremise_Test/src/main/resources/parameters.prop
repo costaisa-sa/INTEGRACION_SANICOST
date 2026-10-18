@@ -1,9 +1,10 @@
-#Sun Oct 18 09:20:45 UTC 2026
+#Sun Oct 18 08:43:01 UTC 2026
 Adddress=LiquidacionHonorarios
 CREDENTIALS=my301787
 Credential_name=my301787
 CredentialsHana=Sanicost_oAuth_Dev
 S4HANA=my301787
-URL_DB=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
+URL_DB=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
 URL_HOST=https\://my301787-api.s4hana.ondemand.com
+credential_name=my301787
 enviroment=test
