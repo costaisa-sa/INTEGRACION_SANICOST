@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Ingreso_Paciente_DEV
-Bundle-Name: Ingreso_Paciente_DEV_old
-Bundle-Version: 1.0.26
+Bundle-Name: Ingreso_Paciente_DEV
+Bundle-Version: 1.0.29
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -40,7 +40,10 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  multiple:=false,com.sap.esb.camel.security.cms.SignatureSplitter;multip
  le:=false
 Origin-Bundle-Name: Ingreso_Paciente_DEV
-Origin-Bundle-Version: 1.0.25
+Origin-Bundle-Version: 1.0.20
 Origin-Bundle-SymbolicName: Ingreso_Paciente_DEV
-Origin-ModifiedDate: 1761568419325
+Origin-ModifiedDate: 1751614507957
+Require-Capability: scriptcollection.Sanicost_000_-_CROSS_Custom_Headers
+ ;resolution:=optional;bundleType:String="ScriptCollection";source:Strin
+ g="reference"
 

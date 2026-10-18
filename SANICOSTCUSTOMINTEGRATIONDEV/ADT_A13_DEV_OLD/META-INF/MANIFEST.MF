@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: ADT_A13_DEV_OLD
 Bundle-Name: ADT_A13_DEV_OLD
-Bundle-Version: 1.0.6
+Bundle-Version: 1.0.5
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -42,5 +42,5 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
 Origin-Bundle-Name: ADT_A13_DEV_OLD
 Origin-Bundle-Version: 1.0.5
 Origin-Bundle-SymbolicName: ADT_A13_DEV_OLD
-Origin-ModifiedDate: 1754047589891
+Origin-ModifiedDate: 1750859195540
 

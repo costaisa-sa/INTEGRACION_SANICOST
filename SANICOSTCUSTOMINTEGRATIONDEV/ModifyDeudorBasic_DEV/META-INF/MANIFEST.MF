@@ -41,6 +41,6 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  le:=false
 Origin-Bundle-Name: ModifyDeudorBasic_DEV
 Origin-Bundle-SymbolicName: ModifyDeudorBasic_DEV
-Origin-Bundle-Version: 1.0.16
-Origin-ModifiedDate: 1761577129940
+Origin-Bundle-Version: 1.0.15
+Origin-ModifiedDate: 1751623244256
 

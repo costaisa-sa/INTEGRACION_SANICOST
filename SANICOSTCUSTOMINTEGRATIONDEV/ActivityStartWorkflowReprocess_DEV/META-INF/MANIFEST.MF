@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: ActivityStartWorkflowReprocess_DEV; singleton:=true
 Bundle-Name: ActivityStartWorkflowReprocess_DEV
-Bundle-Version: 1.0.7
+Bundle-Version: 1.0.6
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -42,5 +42,5 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
 Origin-Bundle-Name: ActivityStartWorkflowReprocess_DEV
 Origin-Bundle-SymbolicName: ActivityStartWorkflowReprocess_DEV
 Origin-Bundle-Version: 1.0.6
-Origin-ModifiedDate: 1751880532544
+Origin-ModifiedDate: 1749113544666
 

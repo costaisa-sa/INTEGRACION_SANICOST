@@ -95,7 +95,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>urlPath</key>
-                    <value>/{{environment}}{{address}}</value>
+                    <value>{{address}}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>Name</key>
@@ -375,7 +375,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>httpAddressWithoutQuery</key>
-                    <value>{{URL_HANA}}odata/v2/mantconvenios/nomenclatorImportHCI</value>
+                    <value>{{URL_HANA}}mantconvenios/nomenclatorImportHCI</value>
                 </ifl:property>
             </bpmn2:extensionElements>
         </bpmn2:messageFlow>
@@ -399,7 +399,7 @@
                 <value>Required</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:callActivity id="CallActivity_594687" name="Get Version">
+        <bpmn2:callActivity id="CallActivity_594687" name="Get Convenio">
             <bpmn2:extensionElements>
                 <ifl:property>
                     <key>scriptFunction</key>
@@ -426,6 +426,8 @@
                     <value>script2.groovy</value>
                 </ifl:property>
             </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_594688</bpmn2:outgoing>
         </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_7" name="Groovy TXT-&gt;XML">
             <bpmn2:extensionElements>
@@ -494,7 +496,7 @@
                     <value>MIME Multipart Message Decode</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
+            <bpmn2:incoming>SequenceFlow_594688</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_594686</bpmn2:outgoing>
         </bpmn2:callActivity>
         <bpmn2:startEvent id="StartEvent_2" name="Start">
@@ -557,7 +559,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>jsonNamespaceMapping</key>
-                    <value>&lt;row&gt;&lt;cell&gt;&lt;/cell&gt;&lt;cell&gt;&lt;/cell&gt;&lt;/row&gt;</value>
+                    <value/>
                 </ifl:property>
                 <ifl:property>
                     <key>componentVersion</key>
@@ -577,7 +579,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>useNamespaces</key>
-                    <value>false</value>
+                    <value>true</value>
                 </ifl:property>
                 <ifl:property>
                     <key>jsonNamespaceSeparator</key>
@@ -587,9 +589,10 @@
             <bpmn2:incoming>SequenceFlow_8</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_7530982</bpmn2:outgoing>
         </bpmn2:callActivity>
+        <bpmn2:sequenceFlow id="SequenceFlow_594688" sourceRef="CallActivity_594687" targetRef="CallActivity_594685"/>
         <bpmn2:sequenceFlow id="SequenceFlow_8" sourceRef="CallActivity_7" targetRef="CallActivity_7530981"/>
         <bpmn2:sequenceFlow id="SequenceFlow_594686" sourceRef="CallActivity_594685" targetRef="CallActivity_7"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="StartEvent_2" targetRef="CallActivity_594685"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="StartEvent_2" targetRef="CallActivity_594687"/>
         <bpmn2:sequenceFlow id="SequenceFlow_594697" sourceRef="CallActivity_594696" targetRef="EndEvent_2"/>
         <bpmn2:sequenceFlow id="SequenceFlow_7530982" sourceRef="CallActivity_7530981" targetRef="CallActivity_594696"/>
     </bpmn2:process>
@@ -693,12 +696,12 @@
                 </ifl:property>
                 <ifl:property>
                     <key>headerTable</key>
-                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;application/json; charset=utf-8&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;Content-Type&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;utf-8&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;charset&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;application/json&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;Content-Type&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Delete&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;$name=CamelHttpQuery&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
                 </ifl:property>
                 <ifl:property>
                     <key>wrapContent</key>
                     <value>{
-"VersionID" : "${property.VersionID}",
+"ConvenioID" : "${property.ConvenioID}",
 "NomenclatorList" : ${property.Data_Nomenclator} 
 }</value>
                 </ifl:property>
@@ -856,22 +859,22 @@
                 <dc:Bounds height="60.0" width="120.0" x="437.0" y="375.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_594687" id="BPMNShape_CallActivity_594687">
-                <dc:Bounds height="60.0" width="100.0" x="398.0" y="206.0"/>
+                <dc:Bounds height="60.0" width="100.0" x="402.0" y="142.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_1" id="BPMNShape_Participant_1">
-                <dc:Bounds height="140.0" width="100.0" x="96.0" y="85.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="CallActivity_594685" id="BPMNShape_CallActivity_594685">
-                <dc:Bounds height="60.0" width="100.0" x="517.0" y="130.0"/>
+                <dc:Bounds height="140.0" width="100.0" x="89.0" y="108.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_594696" id="BPMNShape_CallActivity_594696">
-                <dc:Bounds height="60.0" width="100.0" x="958.0" y="136.0"/>
+                <dc:Bounds height="60.0" width="100.0" x="1165.0" y="142.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_594685" id="BPMNShape_CallActivity_594685">
+                <dc:Bounds height="60.0" width="100.0" x="542.0" y="142.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="EndEvent_594707" id="BPMNShape_EndEvent_594707">
                 <dc:Bounds height="32.0" width="32.0" x="763.0" y="626.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_7530981" id="BPMNShape_CallActivity_7530981">
-                <dc:Bounds height="60.0" width="100.0" x="808.0" y="130.0"/>
+                <dc:Bounds height="60.0" width="100.0" x="824.0" y="142.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="StartEvent_594690" id="BPMNShape_StartEvent_594690">
                 <dc:Bounds height="32.0" width="32.0" x="365.0" y="389.0"/>
@@ -880,16 +883,16 @@
                 <dc:Bounds height="60.0" width="100.0" x="1302.0" y="380.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="EndEvent_2" id="BPMNShape_EndEvent_2">
-                <dc:Bounds height="32.0" width="32.0" x="1127.0" y="144.0"/>
+                <dc:Bounds height="32.0" width="32.0" x="1326.0" y="156.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_594727" id="BPMNShape_CallActivity_594727">
                 <dc:Bounds height="60.0" width="100.0" x="898.0" y="380.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="StartEvent_2" id="BPMNShape_StartEvent_2">
-                <dc:Bounds height="32.0" width="32.0" x="351.0" y="144.0"/>
+                <dc:Bounds height="32.0" width="32.0" x="350.0" y="156.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_7" id="BPMNShape_CallActivity_7">
-                <dc:Bounds height="60.0" width="100.0" x="663.0" y="130.0"/>
+                <dc:Bounds height="60.0" width="100.0" x="674.0" y="142.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_594709" id="BPMNShape_CallActivity_594709">
                 <dc:Bounds height="60.0" width="100.0" x="443.0" y="612.0"/>
@@ -901,7 +904,7 @@
                 <dc:Bounds height="32.0" width="32.0" x="1515.0" y="394.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_Process_1" id="BPMNShape_Participant_Process_1">
-                <dc:Bounds height="291.0" width="927.0" x="316.0" y="-5.0"/>
+                <dc:Bounds height="167.0" width="1127.0" x="315.0" y="87.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="StartEvent_594706" id="BPMNShape_StartEvent_594706">
                 <dc:Bounds height="32.0" width="32.0" x="351.0" y="626.0"/>
@@ -925,25 +928,29 @@
                 <di:waypoint x="1352.2974828375286" xsi:type="dc:Point" y="410.0"/>
                 <di:waypoint x="1531.2974828375286" xsi:type="dc:Point" y="410.0"/>
             </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_7530982" id="BPMNEdge_SequenceFlow_7530982" sourceElement="BPMNShape_CallActivity_7530981" targetElement="BPMNShape_CallActivity_594696">
+                <di:waypoint x="874.0" xsi:type="dc:Point" y="172.0"/>
+                <di:waypoint x="1215.0" xsi:type="dc:Point" y="172.0"/>
+            </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_8" id="BPMNEdge_SequenceFlow_8" sourceElement="BPMNShape_CallActivity_7" targetElement="BPMNShape_CallActivity_7530981">
-                <di:waypoint x="713.0" xsi:type="dc:Point" y="160.0"/>
-                <di:waypoint x="858.0" xsi:type="dc:Point" y="160.0"/>
+                <di:waypoint x="724.0" xsi:type="dc:Point" y="172.0"/>
+                <di:waypoint x="874.0" xsi:type="dc:Point" y="172.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_594686" id="BPMNEdge_SequenceFlow_594686" sourceElement="BPMNShape_CallActivity_594685" targetElement="BPMNShape_CallActivity_7">
-                <di:waypoint x="567.2974828375286" xsi:type="dc:Point" y="160.0"/>
-                <di:waypoint x="713.2974828375286" xsi:type="dc:Point" y="160.0"/>
+                <di:waypoint x="592.2974828375286" xsi:type="dc:Point" y="172.0"/>
+                <di:waypoint x="724.2974828375286" xsi:type="dc:Point" y="172.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_594697" id="BPMNEdge_SequenceFlow_594697" sourceElement="BPMNShape_CallActivity_594696" targetElement="BPMNShape_EndEvent_2">
-                <di:waypoint x="1008.2974828375286" xsi:type="dc:Point" y="163.0"/>
-                <di:waypoint x="1143.2974828375286" xsi:type="dc:Point" y="163.0"/>
+                <di:waypoint x="1215.2974828375286" xsi:type="dc:Point" y="172.0"/>
+                <di:waypoint x="1342.2974828375286" xsi:type="dc:Point" y="172.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_3" id="BPMNEdge_SequenceFlow_3" sourceElement="BPMNShape_StartEvent_2" targetElement="BPMNShape_CallActivity_594685">
-                <di:waypoint x="367.2974828375286" xsi:type="dc:Point" y="160.0"/>
-                <di:waypoint x="517.5" xsi:type="dc:Point" y="160.0"/>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_594688" id="BPMNEdge_SequenceFlow_594688" sourceElement="BPMNShape_CallActivity_594687" targetElement="BPMNShape_CallActivity_594685">
+                <di:waypoint x="452.2974828375286" xsi:type="dc:Point" y="172.0"/>
+                <di:waypoint x="592.2974828375286" xsi:type="dc:Point" y="172.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_7530982" id="BPMNEdge_SequenceFlow_7530982" sourceElement="BPMNShape_CallActivity_7530981" targetElement="BPMNShape_CallActivity_594696">
-                <di:waypoint x="858.0" xsi:type="dc:Point" y="163.0"/>
-                <di:waypoint x="1008.0" xsi:type="dc:Point" y="163.0"/>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_3" id="BPMNEdge_SequenceFlow_3" sourceElement="BPMNShape_StartEvent_2" targetElement="BPMNShape_CallActivity_594687">
+                <di:waypoint x="366.2974828375286" xsi:type="dc:Point" y="172.0"/>
+                <di:waypoint x="452.2974828375286" xsi:type="dc:Point" y="172.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_594708" id="BPMNEdge_SequenceFlow_594708" sourceElement="BPMNShape_StartEvent_594706" targetElement="BPMNShape_CallActivity_594709">
                 <di:waypoint x="383.0" xsi:type="dc:Point" y="642.0"/>
@@ -958,8 +965,8 @@
                 <di:waypoint x="763.0" xsi:type="dc:Point" y="642.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="MessageFlow_10" id="BPMNEdge_MessageFlow_10" sourceElement="BPMNShape_Participant_1" targetElement="BPMNShape_StartEvent_2">
-                <di:waypoint x="146.0" xsi:type="dc:Point" y="157.5"/>
-                <di:waypoint x="367.0" xsi:type="dc:Point" y="157.5"/>
+                <di:waypoint x="139.0" xsi:type="dc:Point" y="175.0"/>
+                <di:waypoint x="366.0" xsi:type="dc:Point" y="175.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="MessageFlow_594716" id="BPMNEdge_MessageFlow_594716" sourceElement="BPMNShape_ServiceTask_594712" targetElement="BPMNShape_Participant_594715">
                 <di:waypoint x="653.0" xsi:type="dc:Point" y="642.0"/>

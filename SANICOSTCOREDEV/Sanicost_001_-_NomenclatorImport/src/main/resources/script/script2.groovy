@@ -16,20 +16,11 @@ The methods available are:
        public void clearSoapHeaders()
  */
 import com.sap.gateway.ip.core.customdev.util.Message;
-//import java.util.HashMap;
+import java.util.HashMap;
 def Message processData(Message message) {
     String sHTTPQuery = message.getHeaders()["CamelHttpQuery"];
-    String sVersionID = null;
-    if (sHTTPQuery != null && !sHTTPQuery.trim().isEmpty()) {
-        sVersionID = sHTTPQuery.substring(sHTTPQuery.indexOf("=")+1);
-    } else {
-        sVersionID = '';
-    }
-    message.setProperty("VersionID",sVersionID);
-    
-    //byte[] bodyBytes = message.getBody(byte[].class);
-    //String content = new String(bodyBytes, "Windows-1252");
-    //message.setBody(content.getBytes("UTF-8"));
+    String sConvenioID = sHTTPQuery.substring(sHTTPQuery.indexOf("=")+1);
+    message.setProperty("ConvenioID",sConvenioID);
     
     return message;
 }

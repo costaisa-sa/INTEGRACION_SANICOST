@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Protesis_DEV
 Bundle-Name: Protesis_DEV
-Bundle-Version: 1.0.29
+Bundle-Version: 1.0.30
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -40,9 +40,9 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  multiple:=false,com.sap.esb.camel.security.cms.SignatureSplitter;multip
  le:=false
 Origin-Bundle-Name: Protesis_DEV
-Origin-Bundle-Version: 1.0.28
+Origin-Bundle-Version: 1.0.21
 Origin-Bundle-SymbolicName: Protesis_DEV
-Origin-ModifiedDate: 1761577156308
+Origin-ModifiedDate: 1751551723154
 Require-Capability: scriptcollection.Sanicost_000_-_CROSS_Custom_Headers
  ;resolution:=optional;bundleType:String="ScriptCollection";source:Strin
  g="reference"

@@ -1,15 +1,15 @@
 #
-#Sun Oct 18 08:59:35 UTC 2026
+#Sun Oct 18 09:21:29 UTC 2026
 ActividadConsumos=Actividad_Consumos_DEV
 ActividadConsumosAddress=
-CPILocal=
-CPI_LOCAL=https\://sanicostdemo.it-cpi018-rt.cfapps.eu10-003.hana.ondemand.com/http/
+CPILocal=CPILocal
+CPI_LOCAL=https\://chv-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
 CREDENTIALS_HANA=HanaDataBase_PRD
 CREDENTIALS_HCI=HCILocal
 FindPlanCoberturaAddress=FindPlanCobertura
 HANA_BD=Sanicost_oAuth_Dev
 HCILocal=HCILocal
 System=_DEV
-URL_HANA=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
 URL_HCI=https\://fpuigvert-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com
 ValidationActivityAddress=ValidationActivity

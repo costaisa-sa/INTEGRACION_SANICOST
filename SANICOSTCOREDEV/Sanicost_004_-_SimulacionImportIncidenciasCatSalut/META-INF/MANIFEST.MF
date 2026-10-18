@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Sanicost_004_-_SimulacionImportIncidenciasCatSalut
-Bundle-Version: 1.0.6
+Bundle-Version: 1.0.7
 Bundle-Name: Sanicost_004 - SimulacionImportIncidenciasCatSalut Test
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
@@ -43,6 +43,6 @@ Origin-Bundle-Name: Sanicost_004 - SimulacionImportIncidenciasCatSalut T
  est
 Origin-Bundle-SymbolicName: Sanicost_004_-_SimulacionImportIncidenciasCa
  tSalut
-Origin-Bundle-Version: 1.0.6
-Origin-ModifiedDate: 1751964854067
+Origin-Bundle-Version: 1.0.3
+Origin-ModifiedDate: 1727432759027
 

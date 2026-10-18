@@ -69,7 +69,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>address</key>
-                    <value>/{{enviroment}}/{{Address}}</value>
+                    <value>{{Address}}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>maximumBodySize</key>

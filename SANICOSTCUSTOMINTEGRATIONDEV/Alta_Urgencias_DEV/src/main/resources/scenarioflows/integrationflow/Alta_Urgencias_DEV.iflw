@@ -205,7 +205,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>credentialName</key>
-                    <value>{{HCILocal}}</value>
+                    <value>{{CPILocal}}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>httpErrorResponseCodes</key>
@@ -455,6 +455,20 @@
             <bpmn2:incoming>SequenceFlow_7774752</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_7774743</bpmn2:outgoing>
         </bpmn2:serviceTask>
+        <bpmn2:startEvent id="StartEvent_2" name="Start">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::MessageStartEvent/version::1.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
+            <bpmn2:messageEventDefinition/>
+        </bpmn2:startEvent>
         <bpmn2:endEvent id="EndEvent_2" name="End">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -503,20 +517,6 @@
             <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_7774749</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:startEvent id="StartEvent_2" name="Start">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::MessageStartEvent/version::1.0</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
-            <bpmn2:messageEventDefinition/>
-        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_7774751" name="ADT_A03 To ADT_A01">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -552,8 +552,8 @@
             <bpmn2:outgoing>SequenceFlow_7774752</bpmn2:outgoing>
         </bpmn2:callActivity>
         <bpmn2:sequenceFlow id="SequenceFlow_7774743" sourceRef="ServiceTask_7774742" targetRef="EndEvent_2"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_7774749" sourceRef="CallActivity_7774748" targetRef="CallActivity_7774751"/>
         <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="StartEvent_2" targetRef="CallActivity_7774748"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_7774749" sourceRef="CallActivity_7774748" targetRef="CallActivity_7774751"/>
         <bpmn2:sequenceFlow id="SequenceFlow_7774752" sourceRef="CallActivity_7774751" targetRef="ServiceTask_7774742"/>
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
@@ -631,7 +631,7 @@
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="MessageFlow_7774760" id="BPMNEdge_MessageFlow_7774760" sourceElement="BPMNShape_Participant_1" targetElement="BPMNShape_StartEvent_2">
                 <di:waypoint x="-34.0" xsi:type="dc:Point" y="194.0"/>
-                <di:waypoint x="211.0" xsi:type="dc:Point" y="154.0"/>
+                <di:waypoint x="195.5" xsi:type="dc:Point" y="154.0"/>
             </bpmndi:BPMNEdge>
         </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
