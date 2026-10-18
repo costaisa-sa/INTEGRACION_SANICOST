@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="InboundFactura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="tipoComunicacion" type="xs:string"/>
+        <xs:element name="BillingDocument" type="xs:string"/>
+        <xs:element name="Matricula" type="xs:string"/>
+        <xs:element name="ImporteTotal" type="xs:decimal"/>
+        <xs:element name="FechaFactura" type="xs:string"/>
+        <xs:element name="Prestaciones" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" type="xs:string"/>
+              <xs:element name="Precio" type="xs:decimal"/>
+              <xs:element name="Inicio" type="xs:string"/>
+              <xs:element name="Fin" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

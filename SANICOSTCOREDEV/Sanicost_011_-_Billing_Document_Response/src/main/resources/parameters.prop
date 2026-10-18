@@ -1,0 +1,5 @@
+#Sun Oct 18 08:43:02 UTC 2026
+Address=Billing_Resp
+HanaDataBase=Sanicost_oAuth_Dev
+URL_HOST=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/
+enviroment=test

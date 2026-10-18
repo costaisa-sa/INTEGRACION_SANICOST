@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="FicheroFaf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IdentificacionFaf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NumeroFactura" type="xs:string"/>
+              <xs:element name="CentroSanitario" type="xs:string"/>
+              <xs:element name="MatriculaFIVA" type="xs:string"/>
+              <xs:element name="Fecha" type="xs:string"/>
+              <xs:element name="ImporteTotal" type="xs:decimal"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DatosPrestaciones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Prestacion" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="CodigoPrestacion" type="xs:string"/>
+                    <xs:element name="PrecioPrestacion" type="xs:decimal"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

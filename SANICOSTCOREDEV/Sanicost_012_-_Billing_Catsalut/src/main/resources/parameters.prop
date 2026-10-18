@@ -1,0 +1,8 @@
+#Sun Oct 18 08:43:02 UTC 2026
+AddressProcessDirect=BillingDocument
+Address_s4=BillingCatSalut
+HCI=HCILocal
+HanaDataBase=Sanicost_oAuth_Dev
+URL_HCI=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
+URL_Y=https\://fpuigvert-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com
+enviroment=test
