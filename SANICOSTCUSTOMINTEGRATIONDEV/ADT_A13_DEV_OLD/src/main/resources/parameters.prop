@@ -1,9 +1,9 @@
-#Sun Oct 18 08:59:30 UTC 2026
+#
+#Sun Oct 18 09:21:43 UTC 2026
 /AnulacionAltaAddress=
-Address=/ADT_A13_DEV
+Address=/ADT_A13_DEV_OLD
 AnulacionAltaAddress=Anulacion_Alta
 CPILocal=CPILocal
-CPI_LOCAL=https\://sanicostdemo.it-cpi018-rt.cfapps.eu10-003.hana.ondemand.com/http/
-HCILocal=HCILocal
+CPI_LOCAL=https\://chv-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
 System=_DEV
 URL_HCI=https\://y100030-iflmap.hcisbp.eu1.hana.ondemand.com

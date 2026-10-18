@@ -1,5 +1,6 @@
-#Sun Oct 18 08:43:00 UTC 2026
-Address=SimImportIncidencias
-URL_API=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
+#
+#Sun Oct 18 09:20:48 UTC 2026
+Address=/SimImportIncidencias
+URL_API=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
 URL_CREDENTIALS=Sanicost_oAuth_Dev
 enviroment=test

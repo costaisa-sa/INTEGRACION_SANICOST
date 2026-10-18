@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: CreateDeudorBasic_DEV
 Bundle-Name: CreateDeudorBasic_DEV
-Bundle-Version: 1.0.14
+Bundle-Version: 1.0.15
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -41,6 +41,6 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  le:=false
 Origin-Bundle-Name: CreateDeudorBasic_DEV
 Origin-Bundle-SymbolicName: CreateDeudorBasic_DEV
-Origin-Bundle-Version: 1.0.12
-Origin-ModifiedDate: 1761568376509
+Origin-Bundle-Version: 1.0.11
+Origin-ModifiedDate: 1751556659727
 

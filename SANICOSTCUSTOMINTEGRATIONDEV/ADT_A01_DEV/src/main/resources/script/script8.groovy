@@ -1,37 +1,35 @@
-/* Refer the link below to learn more about the use cases of script.
-https://help.sap.com/viewer/368c481cd6954bdfa5d0435479fd4eaf/Cloud/es-ES/148851bf8192412cba1f9d2c17f4bd25.html
+import com.sap.gateway.ip.core.customdev.util.Message
 
-If you want to know more about the SCRIPT APIs, refer the link below
-https://help.sap.com/doc/a56f52e1a58e4e2bac7f7adbf45b2e26/Cloud/es-ES/index.html */
-import com.sap.gateway.ip.core.customdev.util.Message;
 def Message processData(Message message) {
-   def body = message.getBody(String)
-   def messageLog = messageLogFactory.getMessageLog(message);
+    def body = message.getBody(String)
+    def headers = message.getHeaders()
+    
+    // 1. Identificación del Cliente (IP)
+    def ipMapping = ["193.146.181.2": "Dedalus", "83.39.198.106": "Costaisa"]
+    def clientIp = headers.get("x-cf-true-client-ip")?.toString()?.replaceAll(/[\[\]\s]/, "") ?: ""
+    message.setHeader("RequesterID", ipMapping.get(clientIp) ?: "Unknown (${clientIp})")
 
-    // Mapa de rutas: clave = nombre descriptivo, valor = lista de nodos
+    // 2. Extracción de datos del HL7
+    // Nota: Center se saca aquí directamente como pediste
     def pathMap = [
-        "MessageID" : ["MSH", "MSH.10"],
-        "PatientN": ["PID", "PID.2", "CX.1"],
-        "ActivityID": ["PV1", "PV1.52", "XCN.1"]
+        "MessageID"       : ["MSH", "MSH.10"],
+        "PatientN"        : ["PID", "PID.2", "CX.1"],
+        "ActivityID"      : ["PV1", "PV1.52", "XCN.1"],
+        "Center"          : ["PV1", "PV1.3", "PL.4", "HD.1"],
+        "PlanCoberturaID" : ["IN1", "IN1.2", "CWE.1"]
     ]
-    // Extraer valores y guardarlos como propiedades del mensaje
+
     pathMap.each { key, pathList ->
-        def value = getValueFromPath(body, pathList)
-        message.setProperty(key, value)    
-        if (messageLog != null) {
-            messageLog.addCustomHeaderProperty(key, value ?: "N/A")
-        }
+        message.setHeader(key, getValueFromPath(body, pathList) ?: "N/A")
     }
     
     return message
 }
 
-// Función genérica para navegar por el XML
 def getValueFromPath(xml, pathList) {
-    def node = new XmlSlurper().parseText(xml)
-    pathList.each { part ->
-        node = node[part]
-    }
-    return node.text()
-
+    try {
+        def node = new XmlSlurper().parseText(xml)
+        pathList.each { part -> node = node[part] }
+        return node.text()
+    } catch (Exception e) { return null }
 }

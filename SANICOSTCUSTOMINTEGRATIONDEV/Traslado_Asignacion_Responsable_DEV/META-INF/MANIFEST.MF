@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Traslado_Asignacion_Responsable_DEV
 Bundle-Name: Traslado_Asignacion_Responsable_DEV
-Bundle-Version: 1.0.11
+Bundle-Version: 1.0.12
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -40,10 +40,7 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  multiple:=false,com.sap.esb.camel.security.cms.SignatureSplitter;multip
  le:=false
 Origin-Bundle-Name: Traslado_Asignacion_Responsable_DEV
-Origin-Bundle-Version: 1.0.10
+Origin-Bundle-Version: 1.0.9
 Origin-Bundle-SymbolicName: Traslado_Asignacion_Responsable_DEV
-Origin-ModifiedDate: 1761577176407
-Require-Capability: scriptcollection.Sanicost_000_-_CROSS_Custom_Headers
- ;resolution:=optional;bundleType:String="ScriptCollection";source:Strin
- g="reference"
+Origin-ModifiedDate: 1751624429119
 

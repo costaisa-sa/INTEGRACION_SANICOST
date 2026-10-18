@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: ADT_A08_DEV
 Bundle-Name: ADT_A08_DEV
-Bundle-Version: 1.0.9
+Bundle-Version: 1.0.7
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -40,7 +40,7 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  multiple:=false,com.sap.esb.camel.security.cms.SignatureSplitter;multip
  le:=false
 Origin-Bundle-Name: ADT_A08_DEV
-Origin-Bundle-Version: 1.0.6
+Origin-Bundle-Version: 1.0.5
 Origin-Bundle-SymbolicName: ADT_A08_DEV
-Origin-ModifiedDate: 1754636923571
+Origin-ModifiedDate: 1750858771784
 

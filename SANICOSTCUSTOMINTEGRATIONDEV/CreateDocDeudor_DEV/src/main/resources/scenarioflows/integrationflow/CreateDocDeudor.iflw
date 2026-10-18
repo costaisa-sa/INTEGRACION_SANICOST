@@ -197,7 +197,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>fields</key>
-                    <value>DeudorID,TipoDocSanitario,DocSanitarioID,EntidadID</value>
+                    <value>ID,DeudorID,TipoDocSanitario,DocSanitarioID,EntidadID</value>
                 </ifl:property>
                 <ifl:property>
                     <key>characterEncoding</key>

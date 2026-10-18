@@ -59,11 +59,13 @@ Import-Package:  org.springframework.transaction.support, org.springfram
  pi,com.sap.esb.camel.jdbc.idempotency.reorg,javax.sql,org.apache.camel.
  processor.idempotent.jdbc,org.osgi.service.blueprint;version="[1.0.0,2.
  0.0)"
-Require-Capability: sap-HCIOData;resolution:=optional,sap-HTTPS;resoluti
- on:=optional
+Require-Capability: scriptcollection.Sanicost_000_-_CROSS_Custom_Headers
+ ;resolution:=optional;bundleType:String="ScriptCollection";source:Strin
+ g="reference",sap-HCIOData;resolution:=optional,sap-HTTPS;resolution:=o
+ ptional
 SAP-RuntimeProfile: iflmap
-Bundle-Name: Visitas_DEV_old
-Bundle-Version: 1.0.38
+Bundle-Name: Visitas_DEV
+Bundle-Version: 1.0.40
 Bundle-ClassPath: .,/mapping/m1.jar,/mapping/m1.jar
 SAP-NodeType: IFLMAP
 SAP-BundleType: IntegrationFlow
@@ -75,7 +77,7 @@ Import-Service:  com.sap.esb.camel.endpoint.configurator.api.EndpointCon
  rg.apache.cxf.ws.rm.persistence.RMStore;multiple:=false,com.sap.esb.cam
  el.security.cms.SignatureSplitter;multiple:=false
 Origin-Bundle-Name: Visitas_DEV
-Origin-Bundle-Version: 1.0.37
+Origin-Bundle-Version: 1.0.18
 Origin-Bundle-SymbolicName: Visitas_DEV
-Origin-ModifiedDate: 1761577210935
+Origin-ModifiedDate: 1751544011570
 
