@@ -1,0 +1,8 @@
+#
+#Sun Oct 18 10:22:41 UTC 2026
+<URL_ERP>=https\://dbsystema76e164cb.hana.ondemand.com/
+<url_api>=https\://my301810-api.s4hana.ondemand.com/
+Address=BillingDocument
+System=TestRefSys
+enviroment=pro/
+user_s4=my301810

@@ -1,0 +1,12 @@
+#
+#Sun Oct 18 10:23:10 UTC 2026
+ActivityStatusTransition=
+AnulacionAlta=Anulacion_Alta
+CPILocal=CPILocal
+CPI_LOCAL=https\://chv-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
+CREDENTIALS_HANA=HanaDataBase_PRD
+HANA_BD=Sanicost_oAuth_Prd
+StatusTransitionAddress=ActivityStatusTransition
+System=
+URL_HANA=https\://hvic-prd-sanicost-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_HCI=https\://y100030-iflmap.hcisbp.eu1.hana.ondemand.com

@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Sanicost_000 - CROSS Custom Headers
+Bundle-SymbolicName: Sanicost_000_-_CROSS_Custom_Headers_1
+Bundle-Version: 1.0.2
+SAP-BundleType: ScriptCollection
+SAP-NodeType: IFLMAP
+Import-Package: org.osgi.framework
+Provide-Capability: scriptcollection.Sanicost_000_-_CROSS_Custom_Headers
+ _1;version:Version="1.0.2"
+Origin-Bundle-Name: Sanicost_000 - CROSS Custom Headers
+Origin-Bundle-SymbolicName: Sanicost_000_-_CROSS_Custom_Headers_1
+

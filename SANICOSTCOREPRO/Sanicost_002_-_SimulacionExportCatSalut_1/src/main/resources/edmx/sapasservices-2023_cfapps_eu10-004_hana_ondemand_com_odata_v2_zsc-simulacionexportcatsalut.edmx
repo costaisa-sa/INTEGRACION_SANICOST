@@ -1,0 +1,1594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+  </edmx:Reference>
+  <edmx:DataServices m:DataServiceVersion="2.0">
+    <Schema Namespace="zsc_simulacionexportcatsalutService" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <Annotation Term="Core.Links">
+        <Collection>
+          <Record>
+            <PropertyValue Property="rel" String="author"/>
+            <PropertyValue Property="href" String="https://cap.cloud.sap"/>
+          </Record>
+        </Collection>
+      </Annotation>
+      <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="SimulacionSetAbonar" EntityType="zsc_simulacionexportcatsalutService.SimulacionSetAbonar"/>
+        <EntitySet Name="SimulacionSetActividad" EntityType="zsc_simulacionexportcatsalutService.SimulacionSetActividad"/>
+        <EntitySet Name="ActividadMessageDetailAfterSaveValidActividadSet" EntityType="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet"/>
+        <EntitySet Name="ActividadMessageActividadSet" EntityType="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet"/>
+        <EntitySet Name="SimulacionSetReasignar" EntityType="zsc_simulacionexportcatsalutService.SimulacionSetReasignar"/>
+        <EntitySet Name="ActividadMessageDetailAfterSaveValidSet" EntityType="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet"/>
+        <EntitySet Name="ActividadMessageSet" EntityType="zsc_simulacionexportcatsalutService.ActividadMessageSet"/>
+        <EntitySet Name="MedicosFeeSet" EntityType="zsc_simulacionexportcatsalutService.MedicosFeeSet"/>
+        <EntitySet Name="SuppliersFeeActivitySet" EntityType="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet"/>
+        <EntitySet Name="CA_SIMULACIONREADFIJOS_AGG" EntityType="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADFIJOS_AGG"/>
+        <EntitySet Name="CA_SIMULACIONREADVARIABLESAGG" EntityType="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG"/>
+        <EntitySet Name="CA_SIMULACIONREADTOTAL" EntityType="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADTOTAL"/>
+        <EntitySet Name="CA_SIMULACIONACTIVITIES" EntityType="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES"/>
+        <EntitySet Name="CA_SIMULACIONREADVARIABLES" EntityType="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES"/>
+        <AssociationSet Name="SimulacionSetAbonar_ActividadMessageSet" Association="zsc_simulacionexportcatsalutService.SimulacionSetAbonar_ActividadMessageSet">
+          <End Role="SimulacionSetAbonar" EntitySet="SimulacionSetAbonar"/>
+          <End Role="ActividadMessageSet" EntitySet="ActividadMessageSet"/>
+        </AssociationSet>
+        <AssociationSet Name="SimulacionSetAbonar_ActividadMessageDetailsAfterSaveValidSet" Association="zsc_simulacionexportcatsalutService.SimulacionSetAbonar_ActividadMessageDetailsAfterSaveValidSet">
+          <End Role="SimulacionSetAbonar" EntitySet="SimulacionSetAbonar"/>
+          <End Role="ActividadMessageDetailAfterSaveValidSet" EntitySet="ActividadMessageDetailAfterSaveValidSet"/>
+        </AssociationSet>
+        <AssociationSet Name="SimulacionSetActividad_VariableSet" Association="zsc_simulacionexportcatsalutService.SimulacionSetActividad_VariableSet">
+          <End Role="SimulacionSetActividad" EntitySet="SimulacionSetActividad"/>
+          <End Role="CA_SIMULACIONREADVARIABLESAGG" EntitySet="CA_SIMULACIONREADVARIABLESAGG"/>
+        </AssociationSet>
+        <AssociationSet Name="SimulacionSetActividad_ActividadMessageSet" Association="zsc_simulacionexportcatsalutService.SimulacionSetActividad_ActividadMessageSet">
+          <End Role="SimulacionSetActividad" EntitySet="SimulacionSetActividad"/>
+          <End Role="ActividadMessageActividadSet" EntitySet="ActividadMessageActividadSet"/>
+        </AssociationSet>
+        <AssociationSet Name="SimulacionSetActividad_ActividadMessageDetailsAfterSaveValidSet" Association="zsc_simulacionexportcatsalutService.SimulacionSetActividad_ActividadMessageDetailsAfterSaveValidSet">
+          <End Role="SimulacionSetActividad" EntitySet="SimulacionSetActividad"/>
+          <End Role="ActividadMessageDetailAfterSaveValidActividadSet" EntitySet="ActividadMessageDetailAfterSaveValidActividadSet"/>
+        </AssociationSet>
+        <AssociationSet Name="ActividadMessageDetailAfterSaveValidActividadSet_HEADER" Association="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet_HEADER">
+          <End Role="ActividadMessageDetailAfterSaveValidActividadSet" EntitySet="ActividadMessageDetailAfterSaveValidActividadSet"/>
+          <End Role="SimulacionSetActividad" EntitySet="SimulacionSetActividad"/>
+        </AssociationSet>
+        <AssociationSet Name="ActividadMessageActividadSet_HEADER" Association="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet_HEADER">
+          <End Role="ActividadMessageActividadSet" EntitySet="ActividadMessageActividadSet"/>
+          <End Role="SimulacionSetActividad" EntitySet="SimulacionSetActividad"/>
+        </AssociationSet>
+        <AssociationSet Name="SimulacionSetReasignar_ActividadMessageSet" Association="zsc_simulacionexportcatsalutService.SimulacionSetReasignar_ActividadMessageSet">
+          <End Role="SimulacionSetReasignar" EntitySet="SimulacionSetReasignar"/>
+          <End Role="ActividadMessageSet" EntitySet="ActividadMessageSet"/>
+        </AssociationSet>
+        <AssociationSet Name="SimulacionSetReasignar_ActividadMessageDetailsAfterSaveValidSet" Association="zsc_simulacionexportcatsalutService.SimulacionSetReasignar_ActividadMessageDetailsAfterSaveValidSet">
+          <End Role="SimulacionSetReasignar" EntitySet="SimulacionSetReasignar"/>
+          <End Role="ActividadMessageDetailAfterSaveValidSet" EntitySet="ActividadMessageDetailAfterSaveValidSet"/>
+        </AssociationSet>
+        <AssociationSet Name="MedicosFeeSet_ActivitySet" Association="zsc_simulacionexportcatsalutService.MedicosFeeSet_ActivitySet">
+          <End Role="MedicosFeeSet" EntitySet="MedicosFeeSet"/>
+          <End Role="SuppliersFeeActivitySet" EntitySet="SuppliersFeeActivitySet"/>
+        </AssociationSet>
+        <AssociationSet Name="CA_SIMULACIONREADFIJOS_AGG_HEADER" Association="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADFIJOS_AGG_HEADER">
+          <End Role="CA_SIMULACIONREADFIJOS_AGG" EntitySet="CA_SIMULACIONREADFIJOS_AGG"/>
+          <End Role="SimulacionSetActividad" EntitySet="SimulacionSetActividad"/>
+        </AssociationSet>
+        <AssociationSet Name="CA_SIMULACIONREADTOTAL_HEADER" Association="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADTOTAL_HEADER">
+          <End Role="CA_SIMULACIONREADTOTAL" EntitySet="CA_SIMULACIONREADTOTAL"/>
+          <End Role="SimulacionSetActividad" EntitySet="SimulacionSetActividad"/>
+        </AssociationSet>
+        <AssociationSet Name="CA_SIMULACIONACTIVITIES_HEADER" Association="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES_HEADER">
+          <End Role="CA_SIMULACIONACTIVITIES" EntitySet="CA_SIMULACIONACTIVITIES"/>
+          <End Role="SimulacionSetActividad" EntitySet="SimulacionSetActividad"/>
+        </AssociationSet>
+        <AssociationSet Name="CA_SIMULACIONREADVARIABLES_HEADER" Association="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES_HEADER">
+          <End Role="CA_SIMULACIONREADVARIABLES" EntitySet="CA_SIMULACIONREADVARIABLES"/>
+          <End Role="CA_SIMULACIONREADVARIABLESAGG" EntitySet="CA_SIMULACIONREADVARIABLESAGG"/>
+        </AssociationSet>
+      </EntityContainer>
+      <EntityType Name="SimulacionSetAbonar">
+        <Key>
+          <PropertyRef Name="SimulacionID"/>
+        </Key>
+        <Property Name="SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="TipoFacturacID" Type="Edm.String" MaxLength="2"/>
+        <Property Name="Periodo" Type="Edm.Int32"/>
+        <Property Name="Year" Type="Edm.Int32"/>
+        <Property Name="Status" Type="Edm.String" MaxLength="1"/>
+        <Property Name="NumEnvios" Type="Edm.Int32"/>
+        <Property Name="LastModified" Type="Edm.DateTimeOffset"/>
+        <Property Name="LastUserModified" Type="Edm.String" MaxLength="12"/>
+        <Property Name="Center" Type="Edm.String" MaxLength="4"/>
+        <Property Name="FechaSelInicio" Type="Edm.DateTimeOffset"/>
+        <Property Name="LineNumberCounter" Type="Edm.Int32"/>
+        <Property Name="FechaSelFin" Type="Edm.DateTimeOffset"/>
+        <Property Name="FechaInicio" Type="Edm.DateTimeOffset"/>
+        <Property Name="FechaFin" Type="Edm.DateTimeOffset"/>
+        <Property Name="BillingDocument" Type="Edm.String" MaxLength="20"/>
+        <Property Name="SimulacionCodExt" Type="Edm.String" MaxLength="10"/>
+        <NavigationProperty Name="ActividadMessageSet" Relationship="zsc_simulacionexportcatsalutService.SimulacionSetAbonar_ActividadMessageSet" FromRole="SimulacionSetAbonar" ToRole="ActividadMessageSet"/>
+        <NavigationProperty Name="ActividadMessageDetailsAfterSaveValidSet" Relationship="zsc_simulacionexportcatsalutService.SimulacionSetAbonar_ActividadMessageDetailsAfterSaveValidSet" FromRole="SimulacionSetAbonar" ToRole="ActividadMessageDetailAfterSaveValidSet"/>
+      </EntityType>
+      <EntityType Name="SimulacionSetActividad">
+        <Key>
+          <PropertyRef Name="SimulacionID"/>
+        </Key>
+        <Property Name="SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="SimulacionCodExt" Type="Edm.String" MaxLength="10"/>
+        <Property Name="Periodo" Type="Edm.Int32"/>
+        <Property Name="Year" Type="Edm.Int32"/>
+        <Property Name="Status" Type="Edm.String" MaxLength="1"/>
+        <Property Name="LastModified" Type="Edm.DateTimeOffset"/>
+        <Property Name="Center" Type="Edm.String" MaxLength="4"/>
+        <Property Name="FechaInicio" Type="Edm.DateTimeOffset"/>
+        <Property Name="FechaFin" Type="Edm.DateTimeOffset"/>
+        <Property Name="TipoFacturacID" Type="Edm.String" MaxLength="2"/>
+        <Property Name="FechaSelInicio" Type="Edm.DateTimeOffset"/>
+        <Property Name="FechaSelFin" Type="Edm.DateTimeOffset"/>
+        <Property Name="NumEnvios" Type="Edm.Int32"/>
+        <Property Name="LastUserModified" Type="Edm.String" MaxLength="12"/>
+        <Property Name="LineNumberCounter" Type="Edm.Int32"/>
+        <Property Name="BillingDocument" Type="Edm.String" MaxLength="20"/>
+        <NavigationProperty Name="FijoSet" Relationship="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADFIJOS_AGG_HEADER" FromRole="SimulacionSetActividad" ToRole="CA_SIMULACIONREADFIJOS_AGG"/>
+        <NavigationProperty Name="VariableSet" Relationship="zsc_simulacionexportcatsalutService.SimulacionSetActividad_VariableSet" FromRole="SimulacionSetActividad" ToRole="CA_SIMULACIONREADVARIABLESAGG"/>
+        <NavigationProperty Name="TotalSet" Relationship="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADTOTAL_HEADER" FromRole="SimulacionSetActividad" ToRole="CA_SIMULACIONREADTOTAL"/>
+        <NavigationProperty Name="ActivitySet" Relationship="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES_HEADER" FromRole="SimulacionSetActividad" ToRole="CA_SIMULACIONACTIVITIES"/>
+        <NavigationProperty Name="ActividadMessageSet" Relationship="zsc_simulacionexportcatsalutService.SimulacionSetActividad_ActividadMessageSet" FromRole="SimulacionSetActividad" ToRole="ActividadMessageActividadSet"/>
+        <NavigationProperty Name="ActividadMessageDetailSet" Relationship="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet_HEADER" FromRole="SimulacionSetActividad" ToRole="ActividadMessageDetailAfterSaveValidActividadSet"/>
+        <NavigationProperty Name="ActividadMessageDetailsAfterSaveValidSet" Relationship="zsc_simulacionexportcatsalutService.SimulacionSetActividad_ActividadMessageDetailsAfterSaveValidSet" FromRole="SimulacionSetActividad" ToRole="ActividadMessageDetailAfterSaveValidActividadSet"/>
+      </EntityType>
+      <EntityType Name="ActividadMessageDetailAfterSaveValidActividadSet">
+        <Key>
+          <PropertyRef Name="HEADER_SimulacionID"/>
+          <PropertyRef Name="ActivityID"/>
+          <PropertyRef Name="SimulacionID"/>
+        </Key>
+        <NavigationProperty Name="HEADER" Relationship="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet_HEADER" FromRole="ActividadMessageDetailAfterSaveValidActividadSet" ToRole="SimulacionSetActividad"/>
+        <Property Name="HEADER_SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="ActivityID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="CIPPacient" Type="Edm.String" MaxLength="14"/>
+        <Property Name="CodiComunitatConveniColectiu" Type="Edm.String" MaxLength="3"/>
+        <Property Name="CodiIdentificacioSanitari" Type="Edm.String" MaxLength="25"/>
+        <Property Name="CodiServeiAssistencial" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CodiServeiSanitari" Type="Edm.String" MaxLength="6"/>
+        <Property Name="CodiUPOrigen" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CodificacioProducte" Type="Edm.String" MaxLength="10"/>
+        <Property Name="DataFinalitzacio" Type="Edm.String" MaxLength="8"/>
+        <Property Name="DataInici" Type="Edm.String" MaxLength="8"/>
+        <Property Name="DataNaixement" Type="Edm.String" MaxLength="8"/>
+        <Property Name="Errors" Type="Edm.String" MaxLength="100"/>
+        <Property Name="HoraFinalitzacio" Type="Edm.String" MaxLength="4"/>
+        <Property Name="HoraInici" Type="Edm.String" MaxLength="4"/>
+        <Property Name="Import" Type="Edm.String" MaxLength="14"/>
+        <Property Name="MotiuAlta" Type="Edm.String" MaxLength="2"/>
+        <Property Name="NumeroAssistencia" Type="Edm.String" MaxLength="9"/>
+        <Property Name="NumeroClausula" Type="Edm.String" MaxLength="3"/>
+        <Property Name="NumeroHistoriaClinica" Type="Edm.String" MaxLength="10"/>
+        <Property Name="NumeroLiniaFactura" Type="Edm.String" MaxLength="6"/>
+        <Property Name="PerfilPacient" Type="Edm.String" MaxLength="1"/>
+        <Property Name="NumeroLiniaFacturaReferencia" Type="Edm.String" MaxLength="6"/>
+        <Property Name="PrimerCognom" Type="Edm.String" MaxLength="20"/>
+        <Property Name="QuantitatActivitat" Type="Edm.String" MaxLength="6"/>
+        <Property Name="SegonCognom" Type="Edm.String" MaxLength="20"/>
+        <Property Name="Sexe" Type="Edm.String" MaxLength="1"/>
+        <Property Name="TipusCodiIdentificacioSanitari" Type="Edm.String" MaxLength="2"/>
+        <Property Name="TipusRegimEconomic" Type="Edm.String" MaxLength="2"/>
+        <Property Name="TipusRegistre" Type="Edm.String" MaxLength="1"/>
+        <Property Name="CMBDH" Type="Edm.String" MaxLength="20"/>
+        <Property Name="CodiAparellOrtoprotetic" Type="Edm.String" MaxLength="10"/>
+        <Property Name="CodiIdentificacioSanitariAct" Type="Edm.String" MaxLength="25"/>
+        <Property Name="CodiLocalitatDestiTrasllat" Type="Edm.String" MaxLength="7"/>
+        <Property Name="CodiLocalitatOrigenTrasllat" Type="Edm.String" MaxLength="7"/>
+        <Property Name="CodiProcesRehabilitacio" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CodiUPDestiTrasllat" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CodiUPOrigenTrasllat" Type="Edm.String" MaxLength="5"/>
+        <Property Name="DataFiTractament" Type="Edm.String" MaxLength="8"/>
+        <Property Name="DataIniciTractament" Type="Edm.String" MaxLength="8"/>
+        <Property Name="DestiTrasllat" Type="Edm.String" MaxLength="1"/>
+        <Property Name="GrupTecnica" Type="Edm.String" MaxLength="3"/>
+        <Property Name="LotClausula" Type="Edm.String" MaxLength="5"/>
+        <Property Name="MatriculaVehicle" Type="Edm.String" MaxLength="8"/>
+        <Property Name="OrigenTrasllat" Type="Edm.String" MaxLength="1"/>
+        <Property Name="Quilometratge" Type="Edm.String" MaxLength="5"/>
+        <Property Name="TempsEspera" Type="Edm.String" MaxLength="1"/>
+        <Property Name="TipusCodiIdentificacioSanitariAct" Type="Edm.String" MaxLength="2"/>
+        <Property Name="Type" Type="Edm.String" MaxLength="20"/>
+      </EntityType>
+      <EntityType Name="ActividadMessageActividadSet">
+        <Key>
+          <PropertyRef Name="HEADER_SimulacionID"/>
+          <PropertyRef Name="SimulacionID"/>
+        </Key>
+        <NavigationProperty Name="HEADER" Relationship="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet_HEADER" FromRole="ActividadMessageActividadSet" ToRole="SimulacionSetActividad"/>
+        <Property Name="HEADER_SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="Aplicacio" Type="Edm.String" MaxLength="3"/>
+        <Property Name="TipusRegistre" Type="Edm.String" MaxLength="1"/>
+        <Property Name="TipusOrganitzacio" Type="Edm.String" MaxLength="2"/>
+        <Property Name="TipusFitxer" Type="Edm.String" MaxLength="1"/>
+        <Property Name="TipusFactura" Type="Edm.String" MaxLength="1"/>
+        <Property Name="NumeroFacturaOrigen" Type="Edm.String" MaxLength="10"/>
+        <Property Name="NumeroFactura" Type="Edm.String" MaxLength="10"/>
+        <Property Name="NombreTotalRegistres" Type="Edm.String" MaxLength="8"/>
+        <Property Name="IndicadorSigneImport" Type="Edm.String" MaxLength="1"/>
+        <Property Name="ImportTotalFacturat" Type="Edm.String" MaxLength="14"/>
+        <Property Name="DataIniciPeriode" Type="Edm.String" MaxLength="8"/>
+        <Property Name="DataHoraCreacioFitxer" Type="Edm.String" MaxLength="14"/>
+        <Property Name="DataFinalPeriode" Type="Edm.String" MaxLength="8"/>
+        <Property Name="DataEmissioFactura" Type="Edm.String" MaxLength="8"/>
+        <Property Name="CodiUnitatProveidora" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CodiContracte" Type="Edm.String" MaxLength="11"/>
+        <Property Name="CLSNumeroLotEnviamentFitxer" Type="Edm.String" MaxLength="6"/>
+        <Property Name="CLSCodiProcesExecutarDestinacioFitxer" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CLSCodiOrigenFitxer2" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CLSCodiOrigenFitxer1" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CLSCodiDestinacioFitxer2" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CLSCodiDestinacioFitxer1" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CLSCodiAplicacioOrigenFitxer" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CLSCodiAplicacioDestinacioFitxer" Type="Edm.String" MaxLength="12"/>
+        <Property Name="CLSAnyLotEnviamentFitxer" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CIFEntitatProveidora" Type="Edm.String" MaxLength="9"/>
+      </EntityType>
+      <EntityType Name="SimulacionSetReasignar">
+        <Key>
+          <PropertyRef Name="SimulacionID"/>
+        </Key>
+        <Property Name="SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="TipoFacturacID" Type="Edm.String" MaxLength="2"/>
+        <Property Name="Periodo" Type="Edm.Int32"/>
+        <Property Name="Year" Type="Edm.Int32"/>
+        <Property Name="Status" Type="Edm.String" MaxLength="1"/>
+        <Property Name="NumEnvios" Type="Edm.Int32"/>
+        <Property Name="LastModified" Type="Edm.DateTimeOffset"/>
+        <Property Name="LastUserModified" Type="Edm.String" MaxLength="12"/>
+        <Property Name="Center" Type="Edm.String" MaxLength="4"/>
+        <Property Name="FechaSelInicio" Type="Edm.DateTimeOffset"/>
+        <Property Name="LineNumberCounter" Type="Edm.Int32"/>
+        <Property Name="FechaSelFin" Type="Edm.DateTimeOffset"/>
+        <Property Name="FechaInicio" Type="Edm.DateTimeOffset"/>
+        <Property Name="FechaFin" Type="Edm.DateTimeOffset"/>
+        <Property Name="BillingDocument" Type="Edm.String" MaxLength="20"/>
+        <Property Name="SimulacionCodExt" Type="Edm.String" MaxLength="10"/>
+        <NavigationProperty Name="ActividadMessageSet" Relationship="zsc_simulacionexportcatsalutService.SimulacionSetReasignar_ActividadMessageSet" FromRole="SimulacionSetReasignar" ToRole="ActividadMessageSet"/>
+        <NavigationProperty Name="ActividadMessageDetailsAfterSaveValidSet" Relationship="zsc_simulacionexportcatsalutService.SimulacionSetReasignar_ActividadMessageDetailsAfterSaveValidSet" FromRole="SimulacionSetReasignar" ToRole="ActividadMessageDetailAfterSaveValidSet"/>
+      </EntityType>
+      <EntityType Name="ActividadMessageDetailAfterSaveValidSet">
+        <Key>
+          <PropertyRef Name="ActivityID"/>
+          <PropertyRef Name="TipusRegistre"/>
+          <PropertyRef Name="TipusRegimEconomic"/>
+          <PropertyRef Name="TipusCodiIdentificacioSanitariAct"/>
+          <PropertyRef Name="TipusCodiIdentificacioSanitari"/>
+          <PropertyRef Name="TempsEspera"/>
+          <PropertyRef Name="SimulacionID"/>
+        </Key>
+        <Property Name="ActivityID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TipusRegistre" Type="Edm.String" MaxLength="1" Nullable="false"/>
+        <Property Name="TipusRegimEconomic" Type="Edm.String" MaxLength="2" Nullable="false"/>
+        <Property Name="TipusCodiIdentificacioSanitariAct" Type="Edm.String" MaxLength="2" Nullable="false"/>
+        <Property Name="TipusCodiIdentificacioSanitari" Type="Edm.String" MaxLength="2" Nullable="false"/>
+        <Property Name="TempsEspera" Type="Edm.String" MaxLength="1" Nullable="false"/>
+        <Property Name="SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="Sexe" Type="Edm.String" MaxLength="1"/>
+        <Property Name="SegonCognom" Type="Edm.String" MaxLength="20"/>
+        <Property Name="Quilometratge" Type="Edm.String" MaxLength="5"/>
+        <Property Name="QuantitatActivitat" Type="Edm.String" MaxLength="6"/>
+        <Property Name="PrimerCognom" Type="Edm.String" MaxLength="20"/>
+        <Property Name="PerfilPacient" Type="Edm.String" MaxLength="1"/>
+        <Property Name="NumeroLiniaFacturaReferencia" Type="Edm.String" MaxLength="6"/>
+        <Property Name="OrigenTrasllat" Type="Edm.String" MaxLength="1"/>
+        <Property Name="NumeroLiniaFactura" Type="Edm.String" MaxLength="6"/>
+        <Property Name="NumeroHistoriaClinica" Type="Edm.String" MaxLength="10"/>
+        <Property Name="NumeroClausula" Type="Edm.String" MaxLength="3"/>
+        <Property Name="NumeroAssistencia" Type="Edm.String" MaxLength="9"/>
+        <Property Name="MotiuAlta" Type="Edm.String" MaxLength="2"/>
+        <Property Name="MatriculaVehicle" Type="Edm.String" MaxLength="8"/>
+        <Property Name="LotClausula" Type="Edm.String" MaxLength="5"/>
+        <Property Name="Import" Type="Edm.String" MaxLength="14"/>
+        <Property Name="HoraInici" Type="Edm.String" MaxLength="4"/>
+        <Property Name="HoraFinalitzacio" Type="Edm.String" MaxLength="4"/>
+        <Property Name="GrupTecnica" Type="Edm.String" MaxLength="3"/>
+        <Property Name="Errors" Type="Edm.String" MaxLength="100"/>
+        <Property Name="DestiTrasllat" Type="Edm.String" MaxLength="1"/>
+        <Property Name="DataNaixement" Type="Edm.String" MaxLength="8"/>
+        <Property Name="DataIniciTractament" Type="Edm.String" MaxLength="8"/>
+        <Property Name="DataInici" Type="Edm.String" MaxLength="8"/>
+        <Property Name="DataFinalitzacio" Type="Edm.String" MaxLength="8"/>
+        <Property Name="DataFiTractament" Type="Edm.String" MaxLength="8"/>
+        <Property Name="CodificacioProducte" Type="Edm.String" MaxLength="10"/>
+        <Property Name="CodiUPOrigenTrasllat" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CodiUPOrigen" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CodiUPDestiTrasllat" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CodiServeiSanitari" Type="Edm.String" MaxLength="6"/>
+        <Property Name="CodiServeiAssistencial" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CodiProcesRehabilitacio" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CodiLocalitatOrigenTrasllat" Type="Edm.String" MaxLength="7"/>
+        <Property Name="CodiLocalitatDestiTrasllat" Type="Edm.String" MaxLength="7"/>
+        <Property Name="CodiIdentificacioSanitariAct" Type="Edm.String" MaxLength="25"/>
+        <Property Name="CodiIdentificacioSanitari" Type="Edm.String" MaxLength="25"/>
+        <Property Name="CodiComunitatConveniColectiu" Type="Edm.String" MaxLength="3"/>
+        <Property Name="CodiAparellOrtoprotetic" Type="Edm.String" MaxLength="10"/>
+        <Property Name="CMBDH" Type="Edm.String" MaxLength="20"/>
+        <Property Name="CIPPacient" Type="Edm.String" MaxLength="14"/>
+      </EntityType>
+      <EntityType Name="ActividadMessageSet">
+        <Key>
+          <PropertyRef Name="Aplicacio"/>
+          <PropertyRef Name="TipusRegistre"/>
+          <PropertyRef Name="TipusOrganitzacio"/>
+          <PropertyRef Name="TipusFitxer"/>
+          <PropertyRef Name="TipusFactura"/>
+          <PropertyRef Name="SimulacionID"/>
+        </Key>
+        <Property Name="Aplicacio" Type="Edm.String" MaxLength="3" Nullable="false"/>
+        <Property Name="TipusRegistre" Type="Edm.String" MaxLength="1" Nullable="false"/>
+        <Property Name="TipusOrganitzacio" Type="Edm.String" MaxLength="2" Nullable="false"/>
+        <Property Name="TipusFitxer" Type="Edm.String" MaxLength="1" Nullable="false"/>
+        <Property Name="TipusFactura" Type="Edm.String" MaxLength="1" Nullable="false"/>
+        <Property Name="SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="NumeroFacturaOrigen" Type="Edm.String" MaxLength="10"/>
+        <Property Name="NumeroFactura" Type="Edm.String" MaxLength="10"/>
+        <Property Name="NombreTotalRegistres" Type="Edm.String" MaxLength="8"/>
+        <Property Name="IndicadorSigneImport" Type="Edm.String" MaxLength="1"/>
+        <Property Name="ImportTotalFacturat" Type="Edm.String" MaxLength="14"/>
+        <Property Name="DataIniciPeriode" Type="Edm.String" MaxLength="8"/>
+        <Property Name="DataHoraCreacioFitxer" Type="Edm.String" MaxLength="14"/>
+        <Property Name="DataFinalPeriode" Type="Edm.String" MaxLength="8"/>
+        <Property Name="DataEmissioFactura" Type="Edm.String" MaxLength="8"/>
+        <Property Name="CodiUnitatProveidora" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CodiContracte" Type="Edm.String" MaxLength="11"/>
+        <Property Name="CLSNumeroLotEnviamentFitxer" Type="Edm.String" MaxLength="6"/>
+        <Property Name="CLSCodiProcesExecutarDestinacioFitxer" Type="Edm.String" MaxLength="12"/>
+        <Property Name="CLSCodiOrigenFitxer2" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CLSCodiOrigenFitxer1" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CLSCodiDestinacioFitxer2" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CLSCodiDestinacioFitxer1" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CLSCodiAplicacioOrigenFitxer" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CLSCodiAplicacioDestinacioFitxer" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CLSAnyLotEnviamentFitxer" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CIFEntitatProveidora" Type="Edm.String" MaxLength="9"/>
+      </EntityType>
+      <EntityType Name="MedicosFeeSet">
+        <Key>
+          <PropertyRef Name="SupplierID"/>
+        </Key>
+        <Property Name="SupplierID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="MedicoExtID" Type="Edm.String" MaxLength="4"/>
+        <Property Name="Name" Type="Edm.String" MaxLength="60"/>
+        <NavigationProperty Name="ActivitySet" Relationship="zsc_simulacionexportcatsalutService.MedicosFeeSet_ActivitySet" FromRole="MedicosFeeSet" ToRole="SuppliersFeeActivitySet"/>
+      </EntityType>
+      <EntityType Name="SuppliersFeeActivitySet">
+        <Key>
+          <PropertyRef Name="SupplierID"/>
+        </Key>
+        <Property Name="SupplierID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="ActivityID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="Center" Type="Edm.String" MaxLength="4"/>
+        <Property Name="ProductID" Type="Edm.String" MaxLength="18"/>
+        <Property Name="Desc" Type="Edm.String" MaxLength="40"/>
+        <Property Name="FeeActivity" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="Importe" Type="Edm.Decimal" Precision="15" Scale="4"/>
+        <Property Name="FechaHoraFin" Type="Edm.DateTimeOffset"/>
+        <Property Name="Name" Type="Edm.String" MaxLength="60"/>
+        <Property Name="Fee" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="AbonoID" Type="Edm.String" MaxLength="10"/>
+        <Property Name="MedicoExtID" Type="Edm.String" MaxLength="4"/>
+        <Property Name="ClasifEconomicaID" Type="Edm.String" MaxLength="2"/>
+        <Property Name="NHC" Type="Edm.String" MaxLength="15"/>
+      </EntityType>
+      <EntityType Name="CA_SIMULACIONREADFIJOS_AGG">
+        <Key>
+          <PropertyRef Name="HEADER_SimulacionID"/>
+          <PropertyRef Name="AgrupacionID"/>
+          <PropertyRef Name="ClausulaID"/>
+          <PropertyRef Name="SimulacionID"/>
+        </Key>
+        <NavigationProperty Name="HEADER" Relationship="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADFIJOS_AGG_HEADER" FromRole="CA_SIMULACIONREADFIJOS_AGG" ToRole="SimulacionSetActividad"/>
+        <Property Name="HEADER_SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="AgrupacionID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="ClausulaID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="Cantidad" Type="Edm.Decimal" Precision="15" Scale="0"/>
+        <Property Name="DescAgrupacion" Type="Edm.String" MaxLength="40"/>
+        <Property Name="DescClausula" Type="Edm.String" MaxLength="40"/>
+        <Property Name="NumClausulaID" Type="Edm.String" MaxLength="3"/>
+        <Property Name="ImporteTotal" Type="Edm.Decimal" Precision="15" Scale="0"/>
+      </EntityType>
+      <EntityType Name="CA_SIMULACIONREADVARIABLESAGG">
+        <Key>
+          <PropertyRef Name="AgrupacionID"/>
+          <PropertyRef Name="ClausulaID"/>
+          <PropertyRef Name="SimulacionID"/>
+          <PropertyRef Name="TramoID"/>
+        </Key>
+        <Property Name="AgrupacionID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="ClausulaID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="TramoID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="Cantidad" Type="Edm.Decimal" Precision="15" Scale="0"/>
+        <Property Name="DescAgrupacion" Type="Edm.String" MaxLength="40"/>
+        <Property Name="DescClausula" Type="Edm.String" MaxLength="40"/>
+        <Property Name="ImporteTramo" Type="Edm.Decimal" Precision="15" Scale="0"/>
+        <Property Name="NumClausulaID" Type="Edm.String" MaxLength="3"/>
+        <Property Name="TramoOrder" Type="Edm.Int32"/>
+        <Property Name="ImporteTotal" Type="Edm.Decimal" Precision="15" Scale="0"/>
+        <Property Name="ImporteFacturado" Type="Edm.Decimal" Precision="15" Scale="0"/>
+        <Property Name="CantidadFacturada" Type="Edm.Decimal" Precision="15" Scale="0"/>
+        <NavigationProperty Name="ProductSet" Relationship="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES_HEADER" FromRole="CA_SIMULACIONREADVARIABLESAGG" ToRole="CA_SIMULACIONREADVARIABLES"/>
+      </EntityType>
+      <EntityType Name="CA_SIMULACIONREADTOTAL">
+        <Key>
+          <PropertyRef Name="HEADER_SimulacionID"/>
+          <PropertyRef Name="SimulacionID"/>
+          <PropertyRef Name="AgrupacionID"/>
+          <PropertyRef Name="ClausulaID"/>
+        </Key>
+        <NavigationProperty Name="HEADER" Relationship="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADTOTAL_HEADER" FromRole="CA_SIMULACIONREADTOTAL" ToRole="SimulacionSetActividad"/>
+        <Property Name="HEADER_SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="AgrupacionID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="ClausulaID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="DescAgrupacion" Type="Edm.String" MaxLength="40"/>
+        <Property Name="DescClausula" Type="Edm.String" MaxLength="40"/>
+        <Property Name="NumClausulaID" Type="Edm.String" MaxLength="3"/>
+        <Property Name="ImporteTotal" Type="Edm.Decimal" Precision="15" Scale="0"/>
+      </EntityType>
+      <EntityType Name="CA_SIMULACIONACTIVITIES">
+        <Key>
+          <PropertyRef Name="HEADER_SimulacionID"/>
+          <PropertyRef Name="SimulacionID"/>
+          <PropertyRef Name="ActivityID"/>
+        </Key>
+        <NavigationProperty Name="HEADER" Relationship="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES_HEADER" FromRole="CA_SIMULACIONACTIVITIES" ToRole="SimulacionSetActividad"/>
+        <Property Name="HEADER_SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="ActivityID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="NumeroLiniaFactura" Type="Edm.String" MaxLength="6"/>
+        <Property Name="ActivityCodExt" Type="Edm.String" MaxLength="30"/>
+        <Property Name="Status" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PacienteExtID" Type="Edm.String" MaxLength="10"/>
+        <Property Name="Importe" Type="Edm.Decimal" Precision="15" Scale="0"/>
+        <Property Name="FechaHoraFin" Type="Edm.String"/>
+        <Property Name="ServicioRealizadorID" Type="Edm.String" MaxLength="8"/>
+        <Property Name="Cantidad" Type="Edm.Decimal" Precision="10" Scale="0"/>
+        <Property Name="ProductID" Type="Edm.String" MaxLength="18"/>
+        <Property Name="Desc" Type="Edm.String" MaxLength="40"/>
+      </EntityType>
+      <EntityType Name="CA_SIMULACIONREADVARIABLES">
+        <Key>
+          <PropertyRef Name="HEADER_AgrupacionID"/>
+          <PropertyRef Name="HEADER_ClausulaID"/>
+          <PropertyRef Name="HEADER_SimulacionID"/>
+          <PropertyRef Name="HEADER_TramoID"/>
+          <PropertyRef Name="SimulacionID"/>
+          <PropertyRef Name="ClausulaID"/>
+          <PropertyRef Name="AgrupacionID"/>
+          <PropertyRef Name="ProductID"/>
+          <PropertyRef Name="TramoID"/>
+        </Key>
+        <NavigationProperty Name="HEADER" Relationship="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES_HEADER" FromRole="CA_SIMULACIONREADVARIABLES" ToRole="CA_SIMULACIONREADVARIABLESAGG"/>
+        <Property Name="HEADER_AgrupacionID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="HEADER_ClausulaID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="HEADER_SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="HEADER_TramoID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="SimulacionID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="ClausulaID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="AgrupacionID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="ProductID" Type="Edm.String" MaxLength="18" Nullable="false"/>
+        <Property Name="TramoID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="DescClausula" Type="Edm.String" MaxLength="40"/>
+        <Property Name="NumClausulaID" Type="Edm.String" MaxLength="3"/>
+        <Property Name="DescAgrupacion" Type="Edm.String" MaxLength="40"/>
+        <Property Name="ImporteTramo" Type="Edm.Decimal" Precision="15" Scale="0"/>
+        <Property Name="ImporteUnitario" Type="Edm.Decimal" Precision="15" Scale="0"/>
+        <Property Name="Cantidad" Type="Edm.Decimal" Precision="15" Scale="0"/>
+        <Property Name="Desc" Type="Edm.String" MaxLength="75"/>
+        <Property Name="ImporteTotal" Type="Edm.Decimal" Precision="15" Scale="0"/>
+        <Property Name="TramoOrder" Type="Edm.Int32"/>
+        <Property Name="ImporteFacturado" Type="Edm.Decimal" Precision="15" Scale="0"/>
+        <Property Name="CantidadFacturada" Type="Edm.Decimal" Precision="15" Scale="0"/>
+        <Property Name="DisableFacturacion" Type="Edm.Int32"/>
+      </EntityType>
+      <Association Name="SimulacionSetAbonar_ActividadMessageSet">
+        <End Role="SimulacionSetAbonar" Type="zsc_simulacionexportcatsalutService.SimulacionSetAbonar" Multiplicity="*"/>
+        <End Role="ActividadMessageSet" Type="zsc_simulacionexportcatsalutService.ActividadMessageSet" Multiplicity="*"/>
+      </Association>
+      <Association Name="SimulacionSetAbonar_ActividadMessageDetailsAfterSaveValidSet">
+        <End Role="SimulacionSetAbonar" Type="zsc_simulacionexportcatsalutService.SimulacionSetAbonar" Multiplicity="*"/>
+        <End Role="ActividadMessageDetailAfterSaveValidSet" Type="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet" Multiplicity="*"/>
+      </Association>
+      <Association Name="SimulacionSetActividad_VariableSet">
+        <End Role="SimulacionSetActividad" Type="zsc_simulacionexportcatsalutService.SimulacionSetActividad" Multiplicity="1">
+          <OnDelete Action="Cascade"/>
+        </End>
+        <End Role="CA_SIMULACIONREADVARIABLESAGG" Type="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG" Multiplicity="*"/>
+      </Association>
+      <Association Name="SimulacionSetActividad_ActividadMessageSet">
+        <End Role="SimulacionSetActividad" Type="zsc_simulacionexportcatsalutService.SimulacionSetActividad" Multiplicity="*"/>
+        <End Role="ActividadMessageActividadSet" Type="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet" Multiplicity="*"/>
+      </Association>
+      <Association Name="SimulacionSetActividad_ActividadMessageDetailsAfterSaveValidSet">
+        <End Role="SimulacionSetActividad" Type="zsc_simulacionexportcatsalutService.SimulacionSetActividad" Multiplicity="*"/>
+        <End Role="ActividadMessageDetailAfterSaveValidActividadSet" Type="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet" Multiplicity="*"/>
+      </Association>
+      <Association Name="ActividadMessageDetailAfterSaveValidActividadSet_HEADER">
+        <End Role="ActividadMessageDetailAfterSaveValidActividadSet" Type="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet" Multiplicity="*"/>
+        <End Role="SimulacionSetActividad" Type="zsc_simulacionexportcatsalutService.SimulacionSetActividad" Multiplicity="0..1">
+          <OnDelete Action="Cascade"/>
+        </End>
+        <ReferentialConstraint>
+          <Principal Role="SimulacionSetActividad">
+            <PropertyRef Name="SimulacionID"/>
+          </Principal>
+          <Dependent Role="ActividadMessageDetailAfterSaveValidActividadSet">
+            <PropertyRef Name="HEADER_SimulacionID"/>
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="ActividadMessageActividadSet_HEADER">
+        <End Role="ActividadMessageActividadSet" Type="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet" Multiplicity="*"/>
+        <End Role="SimulacionSetActividad" Type="zsc_simulacionexportcatsalutService.SimulacionSetActividad" Multiplicity="0..1"/>
+        <ReferentialConstraint>
+          <Principal Role="SimulacionSetActividad">
+            <PropertyRef Name="SimulacionID"/>
+          </Principal>
+          <Dependent Role="ActividadMessageActividadSet">
+            <PropertyRef Name="HEADER_SimulacionID"/>
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="SimulacionSetReasignar_ActividadMessageSet">
+        <End Role="SimulacionSetReasignar" Type="zsc_simulacionexportcatsalutService.SimulacionSetReasignar" Multiplicity="*"/>
+        <End Role="ActividadMessageSet" Type="zsc_simulacionexportcatsalutService.ActividadMessageSet" Multiplicity="*"/>
+      </Association>
+      <Association Name="SimulacionSetReasignar_ActividadMessageDetailsAfterSaveValidSet">
+        <End Role="SimulacionSetReasignar" Type="zsc_simulacionexportcatsalutService.SimulacionSetReasignar" Multiplicity="*"/>
+        <End Role="ActividadMessageDetailAfterSaveValidSet" Type="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet" Multiplicity="*"/>
+      </Association>
+      <Association Name="MedicosFeeSet_ActivitySet">
+        <End Role="MedicosFeeSet" Type="zsc_simulacionexportcatsalutService.MedicosFeeSet" Multiplicity="*"/>
+        <End Role="SuppliersFeeActivitySet" Type="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet" Multiplicity="*"/>
+      </Association>
+      <Association Name="CA_SIMULACIONREADFIJOS_AGG_HEADER">
+        <End Role="CA_SIMULACIONREADFIJOS_AGG" Type="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADFIJOS_AGG" Multiplicity="*"/>
+        <End Role="SimulacionSetActividad" Type="zsc_simulacionexportcatsalutService.SimulacionSetActividad" Multiplicity="0..1">
+          <OnDelete Action="Cascade"/>
+        </End>
+        <ReferentialConstraint>
+          <Principal Role="SimulacionSetActividad">
+            <PropertyRef Name="SimulacionID"/>
+          </Principal>
+          <Dependent Role="CA_SIMULACIONREADFIJOS_AGG">
+            <PropertyRef Name="HEADER_SimulacionID"/>
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="CA_SIMULACIONREADTOTAL_HEADER">
+        <End Role="CA_SIMULACIONREADTOTAL" Type="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADTOTAL" Multiplicity="*"/>
+        <End Role="SimulacionSetActividad" Type="zsc_simulacionexportcatsalutService.SimulacionSetActividad" Multiplicity="0..1">
+          <OnDelete Action="Cascade"/>
+        </End>
+        <ReferentialConstraint>
+          <Principal Role="SimulacionSetActividad">
+            <PropertyRef Name="SimulacionID"/>
+          </Principal>
+          <Dependent Role="CA_SIMULACIONREADTOTAL">
+            <PropertyRef Name="HEADER_SimulacionID"/>
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="CA_SIMULACIONACTIVITIES_HEADER">
+        <End Role="CA_SIMULACIONACTIVITIES" Type="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES" Multiplicity="*"/>
+        <End Role="SimulacionSetActividad" Type="zsc_simulacionexportcatsalutService.SimulacionSetActividad" Multiplicity="0..1">
+          <OnDelete Action="Cascade"/>
+        </End>
+        <ReferentialConstraint>
+          <Principal Role="SimulacionSetActividad">
+            <PropertyRef Name="SimulacionID"/>
+          </Principal>
+          <Dependent Role="CA_SIMULACIONACTIVITIES">
+            <PropertyRef Name="HEADER_SimulacionID"/>
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="CA_SIMULACIONREADVARIABLES_HEADER">
+        <End Role="CA_SIMULACIONREADVARIABLES" Type="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES" Multiplicity="*"/>
+        <End Role="CA_SIMULACIONREADVARIABLESAGG" Type="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG" Multiplicity="0..1">
+          <OnDelete Action="Cascade"/>
+        </End>
+        <ReferentialConstraint>
+          <Principal Role="CA_SIMULACIONREADVARIABLESAGG">
+            <PropertyRef Name="AgrupacionID"/>
+            <PropertyRef Name="ClausulaID"/>
+            <PropertyRef Name="SimulacionID"/>
+            <PropertyRef Name="TramoID"/>
+          </Principal>
+          <Dependent Role="CA_SIMULACIONREADVARIABLES">
+            <PropertyRef Name="HEADER_AgrupacionID"/>
+            <PropertyRef Name="HEADER_ClausulaID"/>
+            <PropertyRef Name="HEADER_SimulacionID"/>
+            <PropertyRef Name="HEADER_TramoID"/>
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Annotations Target="zsc_simulacionexportcatsalutService.EntityContainer/SimulacionSetAbonar" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/SimulacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONID: SimulacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/TipoFacturacID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPOFACTURACID: TipoFacturacID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/Periodo" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PERIODO: Periodo"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/Year" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="YEAR: Year"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/Status" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="STATUS: Status"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/NumEnvios" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMENVIOS: NumEnvios"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/LastModified" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="LASTMODIFIED: LastModified"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/LastUserModified" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="LASTUSERMODIFIED: LastUserModified"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/Center" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CENTER: Center"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/FechaSelInicio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FECHASELINICIO: FechaSelInicio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/LineNumberCounter" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="LINENUMBERCOUNTER: LineNumberCounter"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/FechaSelFin" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FECHASELFIN: FechaSelFin"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/FechaInicio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FECHAINICIO: FechaInicio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/FechaFin" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FECHAFIN: FechaFin"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/BillingDocument" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="BILLINGDOCUMENT: BillingDocument"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetAbonar/SimulacionCodExt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONCODEXT: SimulacionCodExt"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.EntityContainer/SimulacionSetActividad" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/SimulacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONID: SimulacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/SimulacionCodExt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONCODEXT: SimulacionCodExt"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/Periodo" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PERIODO: Periodo"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/Year" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="YEAR: Year"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/Status" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="STATUS: Status"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/LastModified" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="LASTMODIFIED: LastModified"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/Center" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CENTER: Center"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/FechaInicio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FECHAINICIO: FechaInicio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/FechaFin" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FECHAFIN: FechaFin"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/TipoFacturacID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPOFACTURACID: TipoFacturacID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/FechaSelInicio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FECHASELINICIO: FechaSelInicio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/FechaSelFin" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FECHASELFIN: FechaSelFin"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/NumEnvios" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMENVIOS: NumEnvios"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/LastUserModified" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="LASTUSERMODIFIED: LastUserModified"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/LineNumberCounter" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="LINENUMBERCOUNTER: LineNumberCounter"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetActividad/BillingDocument" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="BILLINGDOCUMENT: BillingDocument"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.EntityContainer/ActividadMessageDetailAfterSaveValidActividadSet" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/ActivityID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ACTIVITYID: ActivityID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/SimulacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONID: SimulacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CIPPacient" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CIPPACIENT: CIPPacient"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CodiComunitatConveniColectiu" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODICOMUNITATCONVENICOLECTIU: CodiComunitatConveniColectiu"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CodiIdentificacioSanitari" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIIDENTIFICACIOSANITARI: CodiIdentificacioSanitari"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CodiServeiAssistencial" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODISERVEIASSISTENCIAL: CodiServeiAssistencial"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CodiServeiSanitari" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODISERVEISANITARI: CodiServeiSanitari"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CodiUPOrigen" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIUPORIGEN: CodiUPOrigen"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CodificacioProducte" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIFICACIOPRODUCTE: CodificacioProducte"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/DataFinalitzacio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAFINALITZACIO: DataFinalitzacio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/DataInici" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAINICI: DataInici"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/DataNaixement" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATANAIXEMENT: DataNaixement"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/Errors" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ERRORS: Errors"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/HoraFinalitzacio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="HORAFINALITZACIO: HoraFinalitzacio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/HoraInici" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="HORAINICI: HoraInici"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/Import" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IMPORT: Import"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/MotiuAlta" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="MOTIUALTA: MotiuAlta"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/NumeroAssistencia" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROASSISTENCIA: NumeroAssistencia"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/NumeroClausula" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROCLAUSULA: NumeroClausula"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/NumeroHistoriaClinica" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROHISTORIACLINICA: NumeroHistoriaClinica"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/NumeroLiniaFactura" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROLINIAFACTURA: NumeroLiniaFactura"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/PerfilPacient" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PERFILPACIENT: PerfilPacient"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/NumeroLiniaFacturaReferencia" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROLINIAFACTURAREFERENCIA: NumeroLiniaFacturaReferencia"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/PrimerCognom" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PRIMERCOGNOM: PrimerCognom"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/QuantitatActivitat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="QUANTITATACTIVITAT: QuantitatActivitat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/SegonCognom" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SEGONCOGNOM: SegonCognom"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/Sexe" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SEXE: Sexe"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/TipusCodiIdentificacioSanitari" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSCODIIDENTIFICACIOSANITARI: TipusCodiIdentificacioSanitari"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/TipusRegimEconomic" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSREGIMECONOMIC: TipusRegimEconomic"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/TipusRegistre" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSREGISTRE: TipusRegistre"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CMBDH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CMBDH: CMBDH"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CodiAparellOrtoprotetic" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIAPARELLORTOPROTETIC: CodiAparellOrtoprotetic"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CodiIdentificacioSanitariAct" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIIDENTIFICACIOSANITARIACT: CodiIdentificacioSanitariAct"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CodiLocalitatDestiTrasllat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODILOCALITATDESTITRASLLAT: CodiLocalitatDestiTrasllat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CodiLocalitatOrigenTrasllat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODILOCALITATORIGENTRASLLAT: CodiLocalitatOrigenTrasllat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CodiProcesRehabilitacio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIPROCESREHABILITACIO: CodiProcesRehabilitacio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CodiUPDestiTrasllat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIUPDESTITRASLLAT: CodiUPDestiTrasllat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/CodiUPOrigenTrasllat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIUPORIGENTRASLLAT: CodiUPOrigenTrasllat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/DataFiTractament" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAFITRACTAMENT: DataFiTractament"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/DataIniciTractament" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAINICITRACTAMENT: DataIniciTractament"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/DestiTrasllat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DESTITRASLLAT: DestiTrasllat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/GrupTecnica" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="GRUPTECNICA: GrupTecnica"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/LotClausula" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="LOTCLAUSULA: LotClausula"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/MatriculaVehicle" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="MATRICULAVEHICLE: MatriculaVehicle"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/OrigenTrasllat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ORIGENTRASLLAT: OrigenTrasllat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/Quilometratge" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="QUILOMETRATGE: Quilometratge"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/TempsEspera" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TEMPSESPERA: TempsEspera"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/TipusCodiIdentificacioSanitariAct" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSCODIIDENTIFICACIOSANITARIACT: TipusCodiIdentificacioSanitariAct"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidActividadSet/Type" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TYPE: Type"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.EntityContainer/ActividadMessageActividadSet" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/SimulacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONID: SimulacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/Aplicacio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="APLICACIO: Aplicacio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/TipusRegistre" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSREGISTRE: TipusRegistre"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/TipusOrganitzacio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSORGANITZACIO: TipusOrganitzacio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/TipusFitxer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSFITXER: TipusFitxer"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/TipusFactura" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSFACTURA: TipusFactura"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/NumeroFacturaOrigen" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROFACTURAORIGEN: NumeroFacturaOrigen"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/NumeroFactura" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROFACTURA: NumeroFactura"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/NombreTotalRegistres" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NOMBRETOTALREGISTRES: NombreTotalRegistres"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/IndicadorSigneImport" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="INDICADORSIGNEIMPORT: IndicadorSigneImport"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/ImportTotalFacturat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IMPORTTOTALFACTURAT: ImportTotalFacturat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/DataIniciPeriode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAINICIPERIODE: DataIniciPeriode"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/DataHoraCreacioFitxer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAHORACREACIOFITXER: DataHoraCreacioFitxer"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/DataFinalPeriode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAFINALPERIODE: DataFinalPeriode"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/DataEmissioFactura" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAEMISSIOFACTURA: DataEmissioFactura"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/CodiUnitatProveidora" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIUNITATPROVEIDORA: CodiUnitatProveidora"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/CodiContracte" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODICONTRACTE: CodiContracte"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/CLSNumeroLotEnviamentFitxer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSNUMEROLOTENVIAMENTFITXER: CLSNumeroLotEnviamentFitxer"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/CLSCodiProcesExecutarDestinacioFitxer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSCODIPROCESEXECUTARDESTINACIOFITXER: CLSCodiProcesExecutarDestinacioFitxer"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/CLSCodiOrigenFitxer2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSCODIORIGENFITXER2: CLSCodiOrigenFitxer2"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/CLSCodiOrigenFitxer1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSCODIORIGENFITXER1: CLSCodiOrigenFitxer1"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/CLSCodiDestinacioFitxer2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSCODIDESTINACIOFITXER2: CLSCodiDestinacioFitxer2"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/CLSCodiDestinacioFitxer1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSCODIDESTINACIOFITXER1: CLSCodiDestinacioFitxer1"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/CLSCodiAplicacioOrigenFitxer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSCODIAPLICACIOORIGENFITXER: CLSCodiAplicacioOrigenFitxer"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/CLSCodiAplicacioDestinacioFitxer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSCODIAPLICACIODESTINACIOFITXER: CLSCodiAplicacioDestinacioFitxer"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/CLSAnyLotEnviamentFitxer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSANYLOTENVIAMENTFITXER: CLSAnyLotEnviamentFitxer"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageActividadSet/CIFEntitatProveidora" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CIFENTITATPROVEIDORA: CIFEntitatProveidora"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.EntityContainer/SimulacionSetReasignar" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/SimulacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONID: SimulacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/TipoFacturacID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPOFACTURACID: TipoFacturacID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/Periodo" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PERIODO: Periodo"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/Year" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="YEAR: Year"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/Status" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="STATUS: Status"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/NumEnvios" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMENVIOS: NumEnvios"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/LastModified" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="LASTMODIFIED: LastModified"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/LastUserModified" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="LASTUSERMODIFIED: LastUserModified"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/Center" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CENTER: Center"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/FechaSelInicio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FECHASELINICIO: FechaSelInicio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/LineNumberCounter" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="LINENUMBERCOUNTER: LineNumberCounter"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/FechaSelFin" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FECHASELFIN: FechaSelFin"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/FechaInicio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FECHAINICIO: FechaInicio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/FechaFin" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FECHAFIN: FechaFin"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/BillingDocument" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="BILLINGDOCUMENT: BillingDocument"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SimulacionSetReasignar/SimulacionCodExt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONCODEXT: SimulacionCodExt"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.EntityContainer/ActividadMessageDetailAfterSaveValidSet" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/ActivityID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ACTIVITYID: ActivityID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/TipusRegistre" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSREGISTRE: TipusRegistre"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/TipusRegimEconomic" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSREGIMECONOMIC: TipusRegimEconomic"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/TipusCodiIdentificacioSanitariAct" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSCODIIDENTIFICACIOSANITARIACT: TipusCodiIdentificacioSanitariAct"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/TipusCodiIdentificacioSanitari" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSCODIIDENTIFICACIOSANITARI: TipusCodiIdentificacioSanitari"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/TempsEspera" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TEMPSESPERA: TempsEspera"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/SimulacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONID: SimulacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/Sexe" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SEXE: Sexe"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/SegonCognom" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SEGONCOGNOM: SegonCognom"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/Quilometratge" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="QUILOMETRATGE: Quilometratge"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/QuantitatActivitat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="QUANTITATACTIVITAT: QuantitatActivitat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/PrimerCognom" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PRIMERCOGNOM: PrimerCognom"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/PerfilPacient" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PERFILPACIENT: PerfilPacient"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/NumeroLiniaFacturaReferencia" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROLINIAFACTURAREFERENCIA: NumeroLiniaFacturaReferencia"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/OrigenTrasllat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ORIGENTRASLLAT: OrigenTrasllat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/NumeroLiniaFactura" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROLINIAFACTURA: NumeroLiniaFactura"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/NumeroHistoriaClinica" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROHISTORIACLINICA: NumeroHistoriaClinica"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/NumeroClausula" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROCLAUSULA: NumeroClausula"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/NumeroAssistencia" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROASSISTENCIA: NumeroAssistencia"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/MotiuAlta" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="MOTIUALTA: MotiuAlta"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/MatriculaVehicle" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="MATRICULAVEHICLE: MatriculaVehicle"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/LotClausula" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="LOTCLAUSULA: LotClausula"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/Import" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IMPORT: Import"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/HoraInici" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="HORAINICI: HoraInici"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/HoraFinalitzacio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="HORAFINALITZACIO: HoraFinalitzacio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/GrupTecnica" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="GRUPTECNICA: GrupTecnica"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/Errors" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ERRORS: Errors"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/DestiTrasllat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DESTITRASLLAT: DestiTrasllat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/DataNaixement" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATANAIXEMENT: DataNaixement"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/DataIniciTractament" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAINICITRACTAMENT: DataIniciTractament"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/DataInici" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAINICI: DataInici"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/DataFinalitzacio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAFINALITZACIO: DataFinalitzacio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/DataFiTractament" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAFITRACTAMENT: DataFiTractament"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CodificacioProducte" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIFICACIOPRODUCTE: CodificacioProducte"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CodiUPOrigenTrasllat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIUPORIGENTRASLLAT: CodiUPOrigenTrasllat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CodiUPOrigen" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIUPORIGEN: CodiUPOrigen"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CodiUPDestiTrasllat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIUPDESTITRASLLAT: CodiUPDestiTrasllat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CodiServeiSanitari" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODISERVEISANITARI: CodiServeiSanitari"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CodiServeiAssistencial" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODISERVEIASSISTENCIAL: CodiServeiAssistencial"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CodiProcesRehabilitacio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIPROCESREHABILITACIO: CodiProcesRehabilitacio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CodiLocalitatOrigenTrasllat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODILOCALITATORIGENTRASLLAT: CodiLocalitatOrigenTrasllat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CodiLocalitatDestiTrasllat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODILOCALITATDESTITRASLLAT: CodiLocalitatDestiTrasllat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CodiIdentificacioSanitariAct" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIIDENTIFICACIOSANITARIACT: CodiIdentificacioSanitariAct"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CodiIdentificacioSanitari" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIIDENTIFICACIOSANITARI: CodiIdentificacioSanitari"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CodiComunitatConveniColectiu" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODICOMUNITATCONVENICOLECTIU: CodiComunitatConveniColectiu"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CodiAparellOrtoprotetic" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIAPARELLORTOPROTETIC: CodiAparellOrtoprotetic"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CMBDH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CMBDH: CMBDH"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageDetailAfterSaveValidSet/CIPPacient" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CIPPACIENT: CIPPacient"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.EntityContainer/ActividadMessageSet" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/Aplicacio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="APLICACIO:Aplicacio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/TipusRegistre" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSREGISTRE:TipusRegistre"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/TipusOrganitzacio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSORGANITZACIO:TipusOrganitzacio"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/TipusFitxer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSFITXER:TipusFitxer"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/TipusFactura" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPUSFACTURA:TipusFactura"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/SimulacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONID:SimulacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/NumeroFacturaOrigen" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROFACTURAORIGEN:NumeroFacturaOrigen"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/NumeroFactura" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROFACTURA:NumeroFactura"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/NombreTotalRegistres" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NOMBRETOTALREGISTRES:NombreTotalRegistres"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/IndicadorSigneImport" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="INDICADORSIGNEIMPORT:IndicadorSigneImport"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/ImportTotalFacturat" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IMPORTTOTALFACTURAT:ImportTotalFacturat"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/DataIniciPeriode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAINICIPERIODE:DataIniciPeriode"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/DataHoraCreacioFitxer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAHORACREACIOFITXER:DataHoraCreacioFitxer"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/DataFinalPeriode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAFINALPERIODE:DataFinalPeriode"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/DataEmissioFactura" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DATAEMISSIOFACTURA:DataEmissioFactura"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/CodiUnitatProveidora" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIUNITATPROVEIDORA:CodiUnitatProveidora"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/CodiContracte" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODICONTRACTE:CodiContracte"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/CLSNumeroLotEnviamentFitxer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSNUMEROLOTENVIAMENTFITXER:CLSNumeroLotEnviamentFitxer"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/CLSCodiProcesExecutarDestinacioFitxer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSCODIPROCESEXECUTARDESTINACIOFITXER:CLSCodiProcesExecutarDestinacioFitxer"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/CLSCodiOrigenFitxer2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSCODIORIGENFITXER2:CLSCodiOrigenFitxer2"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/CLSCodiOrigenFitxer1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSCODIORIGENFITXER1:CLSCodiOrigenFitxer1"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/CLSCodiDestinacioFitxer2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSCODIDESTINACIOFITXER2:CLSCodiDestinacioFitxer2"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/CLSCodiDestinacioFitxer1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSCODIDESTINACIOFITXER1:CLSCodiDestinacioFitxer1"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/CLSCodiAplicacioOrigenFitxer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSCODIAPLICACIOORIGENFITXER:CLSCodiAplicacioOrigenFitxer"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/CLSCodiAplicacioDestinacioFitxer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSCODIAPLICACIODESTINACIOFITXER:CLSCodiAplicacioDestinacioFitxer"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/CLSAnyLotEnviamentFitxer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLSANYLOTENVIAMENTFITXER:CLSAnyLotEnviamentFitxer"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.ActividadMessageSet/CIFEntitatProveidora" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CIFENTITATPROVEIDORA:CIFEntitatProveidora"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.EntityContainer/MedicosFeeSet" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.MedicosFeeSet/SupplierID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SupplierID: SupplierID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.MedicosFeeSet/MedicoExtID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="MedicoExtID: MedicoExtID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.MedicosFeeSet/Name" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Name: Name"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.EntityContainer/SuppliersFeeActivitySet" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet/SupplierID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SupplierID: SupplierID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet/ActivityID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ActivityID: ActivityID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet/Center" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Center: Center"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet/ProductID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ProductID: ProductID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet/Desc" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DESC: DESC"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet/FeeActivity" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FeeActivity: FeeActivity"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet/Importe" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Importe: Importe"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet/FechaHoraFin" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FechaHoraFin: FechaHoraFin"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet/Name" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Name: Name"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet/Fee" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Fee: Fee"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet/AbonoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="AbonoID: AbonoID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet/MedicoExtID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="MedicoExtID: MedicoExtID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet/ClasifEconomicaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ClasifEconomicaID: ClasifEconomicaID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.SuppliersFeeActivitySet/NHC" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NHC: NHC"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADFIJOS_AGG/AgrupacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="AGRUPACIONID: AgrupacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADFIJOS_AGG/ClausulaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLAUSULAID: ClausulaID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADFIJOS_AGG/SimulacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONID: SimulacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADFIJOS_AGG/Cantidad" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CANTIDAD: Cantidad"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADFIJOS_AGG/DescAgrupacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DESCAGRUPACION: DescAgrupacion"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADFIJOS_AGG/DescClausula" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DESCCLAUSULA: DescClausula"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADFIJOS_AGG/NumClausulaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMCLAUSULAID: NumClausulaID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADFIJOS_AGG/ImporteTotal" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IMPORTETOTAL: ImporteTotal"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG/AgrupacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="AGRUPACIONID: AgrupacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG/ClausulaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLAUSULAID: ClausulaID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG/SimulacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONID: SimulacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG/TramoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TRAMOID: TramoID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG/Cantidad" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CANTIDAD: Cantidad"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG/DescAgrupacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DESCAGRUPACION: DescAgrupacion"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG/DescClausula" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DESCCLAUSULA: DescClausula"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG/ImporteTramo" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IMPORTETRAMO: ImporteTramo"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG/NumClausulaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMCLAUSULAID: NumClausulaID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG/TramoOrder" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TRAMOORDER: TramoOrder"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG/ImporteTotal" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IMPORTETOTAL: ImporteTotal"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG/ImporteFacturado" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IMPORTEFACTURADO: ImporteFacturado"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLESAGG/CantidadFacturada" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CANTIDADFACTURADA: CantidadFacturada"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADTOTAL/SimulacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONID: SimulacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADTOTAL/AgrupacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="AGRUPACIONID: AgrupacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADTOTAL/ClausulaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLAUSULAID: ClausulaID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADTOTAL/DescAgrupacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DESCAGRUPACION: DescAgrupacion"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADTOTAL/DescClausula" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DESCCLAUSULA: DescClausula"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADTOTAL/NumClausulaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMCLAUSULAID: NumClausulaID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADTOTAL/ImporteTotal" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IMPORTETOTAL: ImporteTotal"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES/SimulacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONID: SimulacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES/ActivityID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ACTIVITYID: ActivityID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES/NumeroLiniaFactura" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMEROLINIAFACTURA: NumeroLiniaFactura"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES/ActivityCodExt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ACTIVITYCODEXT: ActivityCodExt"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES/Status" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="STATUS: Status"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES/PacienteExtID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PACIENTEEXTID: PacienteExtID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES/Importe" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IMPORTE: Importe"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES/FechaHoraFin" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FECHAHORAFIN: FechaHoraFin"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES/ServicioRealizadorID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SERVICIOREALIZADORID: ServicioRealizadorID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES/Cantidad" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CANTIDAD: Cantidad"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES/ProductID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PRODUCTID: ProductID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONACTIVITIES/Desc" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DESC: Desc"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/SimulacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SIMULACIONID: SimulacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/ClausulaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CLAUSULAID: ClausulaID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/AgrupacionID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="AGRUPACIONID: AgrupacionID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/ProductID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PRODUCTID: ProductID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/TramoID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TRAMOID: TramoID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/DescClausula" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DESCCLAUSULA: DescClausula"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/NumClausulaID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMCLAUSULAID: NumClausulaID"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/DescAgrupacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DESCAGRUPACION: DescAgrupacion"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/ImporteTramo" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IMPORTETRAMO: ImporteTramo"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/ImporteUnitario" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IMPORTEUNITARIO: ImporteUnitario"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/Cantidad" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CANTIDAD: Cantidad"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/Desc" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DESC: Desc"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/ImporteTotal" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IMPORTETOTAL: ImporteTotal"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/TramoOrder" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TRAMOORDER: TramoOrder"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/ImporteFacturado" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IMPORTEFACTURADO: ImporteFacturado"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/CantidadFacturada" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CANTIDADFACTURADA: CantidadFacturada"/>
+      </Annotations>
+      <Annotations Target="zsc_simulacionexportcatsalutService.CA_SIMULACIONREADVARIABLES/DisableFacturacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DISABLEFACTURACION: DisableFacturacion"/>
+      </Annotations>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

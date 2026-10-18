@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="DeudorSet">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="unbounded" name="DeudorSetType">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element nillable="false" maxOccurs="unbounded" name="DeudorID">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="10"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="DeudorExtID">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="20"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="DeudorTypeID">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="1"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="DocIdentif">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="16"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="DeudorDocType">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="4"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="NHC">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="15"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Apellido1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="20"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Apellido2">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="20"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Nombre">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="40"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element type="xs:dateTime" nillable="true" minOccurs="0" maxOccurs="unbounded" name="FechaNacimiento" xmlns=""/>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Genero">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="1"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Direccion">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="70"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Numero">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="16"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Puerta">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Poblacion">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="35"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Municipio">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="35"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Provincia">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="35"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Region">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="35"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="CodigoPostal">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="10"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Pais">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Telefono1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="16"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Telefono2">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="16"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Idioma">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="RegimenEconomico">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="CodigoColectivo">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="3"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="FusedDeudorID">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="10"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

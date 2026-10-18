@@ -1,0 +1,19 @@
+#
+#Sun Oct 18 10:23:38 UTC 2026
+ActividadConsumosAddress=Actividad_Consumos
+ActivityStartWorkflowReprocessAddress=ActivityStartWorkflowReprocess
+CPILocal=CPILocal
+CPI_LOCAL=https\://chv-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
+CREDENTIALS_HANA=HanaDataBase_PRD
+CREDENTIALS_HCI=HCILocal
+CREDENTIALS_NAME=
+HANA_BD=Sanicost_oAuth_Prd
+System=
+URL_API=https\://spa-api-gateway-bpi-eu-prod.cfapps.eu10.hana.ondemand.com
+URL_HANA=https\://hvic-prd-sanicost-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_HCI=https\://y100030-iflmap.hcisbp.eu1.hana.ondemand.com
+address_token=https\://hvic-qa.authentication.eu10.hana.ondemand.com/oauth/token
+credencial_name_token=CloudPlatform_PRD
+enviromentBPA=environmentId\=productive
+query_token=grant_type\=client_credentials
+tokenIRPAEnviroment=X5lYuxHsDyLL34f9LbwLjj8v9r8UQjad

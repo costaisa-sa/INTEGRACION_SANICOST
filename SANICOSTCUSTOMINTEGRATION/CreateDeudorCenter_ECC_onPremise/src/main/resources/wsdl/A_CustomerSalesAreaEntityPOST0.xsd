@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="A_CustomerSalesArea">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="unbounded" name="A_CustomerSalesAreaType">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element nillable="false" maxOccurs="unbounded" name="Customer">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="10"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="false" maxOccurs="unbounded" name="SalesOrganization">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="4"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="false" maxOccurs="unbounded" name="DistributionChannel">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="false" maxOccurs="unbounded" name="Division">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="to_PartnerFunction">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element minOccurs="0" maxOccurs="unbounded" name="A_CustSalesPartnerFuncType">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element nillable="false" maxOccurs="unbounded" name="Customer">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string" xmlns="">
+                                                                <xs:maxLength value="10"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element nillable="false" maxOccurs="unbounded" name="SalesOrganization">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string" xmlns="">
+                                                                <xs:maxLength value="4"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element nillable="false" maxOccurs="unbounded" name="DistributionChannel">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string" xmlns="">
+                                                                <xs:maxLength value="2"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element nillable="false" maxOccurs="unbounded" name="Division">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string" xmlns="">
+                                                                <xs:maxLength value="2"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element nillable="false" maxOccurs="unbounded" name="PartnerCounter">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string" xmlns="">
+                                                                <xs:maxLength value="3"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element nillable="false" maxOccurs="unbounded" name="PartnerFunction">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string" xmlns="">
+                                                                <xs:maxLength value="2"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element minOccurs="0" maxOccurs="1" name="link">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="to_PartnerFunction">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element minOccurs="0" maxOccurs="unbounded" name="A_CustSalesPartnerFuncType">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element type="xs:string" minOccurs="1" maxOccurs="1" name="Customer" xmlns=""/>
+                                                                <xs:element type="xs:string" minOccurs="1" maxOccurs="1" name="SalesOrganization" xmlns=""/>
+                                                                <xs:element type="xs:string" minOccurs="1" maxOccurs="1" name="DistributionChannel" xmlns=""/>
+                                                                <xs:element type="xs:string" minOccurs="1" maxOccurs="1" name="Division" xmlns=""/>
+                                                                <xs:element type="xs:string" minOccurs="1" maxOccurs="1" name="PartnerCounter" xmlns=""/>
+                                                                <xs:element type="xs:string" minOccurs="1" maxOccurs="1" name="PartnerFunction" xmlns=""/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

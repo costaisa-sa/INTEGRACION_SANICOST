@@ -1,0 +1,26 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="DeudorID"/>
+        <xs:element type="xs:int" name="BusinessPartner"/>
+        <xs:element type="xs:string" name="FirstName"/>
+        <xs:element type="xs:string" name="CorrespondenceLanguage"/>
+        <xs:element type="xs:string" name="Language"/>
+        <xs:element type="xs:int" name="SearchTerm1"/>
+        <xs:element type="xs:string" name="LastName"/>
+        <xs:element type="xs:string" name="IsFemale"/>
+        <xs:element type="xs:string" name="IsMale"/>
+        <xs:element type="xs:string" name="BirthDate"/>
+        <xs:element type="xs:string" name="AddressID"/>
+        <xs:element type="xs:string" name="CityName"/>
+        <xs:element type="xs:string" name="StreetName"/>
+        <xs:element type="xs:string" name="HouseNumber"/>
+        <xs:element type="xs:byte" name="PostalCode"/>
+        <xs:element type="xs:string" name="Country"/>
+        <xs:element type="xs:string" name="Region"/>
+        <xs:element type="xs:string" name="BPTaxNumber"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

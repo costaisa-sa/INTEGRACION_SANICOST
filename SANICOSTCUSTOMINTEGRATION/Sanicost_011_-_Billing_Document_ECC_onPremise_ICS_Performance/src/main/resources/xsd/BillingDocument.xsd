@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="BillingDocument">
+		<xs:complexType>
+			<xs:sequence>
+				
+
+				
+				<xs:element name="ID"></xs:element>
+                <xs:element name="ReferenceDocument"></xs:element>
+                <xs:element name="ReferenceDocumentLogicalSystem"/>
+                <xs:element name="CreationDateTime"></xs:element>
+                <xs:element name="RegionSanitaria"></xs:element>
+				
+				
+				<xs:element name="BillableDocumentItem" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ReferenceDocumentItem"/>
+							<xs:element name="BillingDocumentItemText"/>
+							<xs:element name="SalesOrganization"/>
+							<xs:element name="DistributionChannel"/>
+							<xs:element name="Division"/>
+							<xs:element name="BillingDocumentDate"/>
+							<xs:element name="SoldToParty"/>
+							<xs:element name="BillToParty"/>
+							<xs:element name="PayerParty"/>
+							<xs:element name="PlanCoberturaID"/>
+							<xs:element name="PMP0Price"/>
+							<xs:element name="PacienteExtID"/>
+							<xs:element name="Material"/>
+							<xs:element name="Plant"/>
+							<xs:element name="Quantity"/>
+							<xs:element name="PricingElement" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ConditionType"/>
+										<xs:element name="ConditionRateValue"/>
+										<xs:element name="ConditionQuantity" minOccurs="0" maxOccurs="1"/>
+										<xs:element name="ConditionCurrency" minOccurs="0" maxOccurs="1"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ProfitCenter"/>
+							<xs:element name="YY1_SDHISTORIA"/>
+							<xs:element name="YY1_SDPACIENTE"/>
+							<xs:element name="YY1_SDFECHAACTIVIDAD"/>
+							<xs:element name="YY1_REFERENCIA_FACTURA"/>
+							<xs:element name="YY1_CODIGO_MEDICO"/>
+							<xs:element name="edificio_OData" minOccurs="0"/>
+							<xs:element name="servicio_OData" minOccurs="0"/>
+							<xs:element name="gfh_OData" minOccurs="0"/>
+							<xs:element name="autorizacion_OData" minOccurs="0"/>
+							<xs:element name="fechaAsistencia_OData" minOccurs="0"/>
+							<xs:element name="asistencia_OData" minOccurs="0"/>
+							<xs:element name="upOrigen_OData" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

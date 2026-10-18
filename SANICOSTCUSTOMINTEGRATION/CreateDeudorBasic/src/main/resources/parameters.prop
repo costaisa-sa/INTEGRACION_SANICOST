@@ -1,0 +1,6 @@
+#Sun Oct 18 10:23:24 UTC 2026
+CreateDeudorBasic=CreateDeudorBasic
+S4HANA=Sanicost_oAuth_Prd
+URL_ERP=https\://my301787.s4hana.ondemand.com\:443
+URL_HANA=https\://hvic-prd-sanicost-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
+USER_S4=CloudPlatform_DEV

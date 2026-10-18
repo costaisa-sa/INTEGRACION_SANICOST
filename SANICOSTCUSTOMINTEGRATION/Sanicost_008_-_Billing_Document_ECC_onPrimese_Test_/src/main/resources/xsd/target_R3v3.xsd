@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="ROOT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CABECERA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TIPO_MENSAJE" type="xs:string"/>
+							<xs:element name="ORGANIZACION_VENTAS" type="xs:string"/>
+							<xs:element name="PLAN_COBERTURA" type="xs:string"/>
+							<xs:element name="NUMERO_FACTURA" type="xs:string" minOccurs="0"/>
+							<xs:element name="CODIGO_CLIENTE" type="xs:string"/>
+							<xs:element name="FECHA_FACTURA" type="xs:string"/>
+							<xs:element name="PACIENTE" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="POSICIONES">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="producto_facturable_sanicost" type="xs:string"/>
+										<xs:element name="cantidad" type="xs:string"/>
+										<xs:element name="precio_neto" type="xs:decimal"/>
+										<xs:element name="paciente" type="xs:string"/>
+										<xs:element name="servicio" type="xs:string"/>
+										<xs:element name="edificio" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

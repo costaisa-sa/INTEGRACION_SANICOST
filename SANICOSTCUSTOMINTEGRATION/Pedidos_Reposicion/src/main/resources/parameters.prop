@@ -1,0 +1,7 @@
+#
+#Sun Oct 18 10:23:03 UTC 2026
+HANA_BD=Sanicost_oAuth_Prd
+HANA_CREDENTIALS_NAME=HanaDataBase
+System=
+URL_API=https\://dbsystema76e164cb.hana.ondemand.com
+URL_HANA=https\://hvic-prd-sanicost-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/

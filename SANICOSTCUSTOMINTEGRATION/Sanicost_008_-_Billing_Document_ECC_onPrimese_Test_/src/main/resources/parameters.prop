@@ -1,0 +1,13 @@
+#
+#Sun Oct 18 10:23:30 UTC 2026
+<URL_ERP>=https\://dbsystema76e164cb.hana.ondemand.com/
+<url_api>=https\://my301787-api.s4hana.ondemand.com/
+Address=BillingDocument
+CREDENTIALS_HANA=Sanicost_oAuth_Prd
+HanaDataBase=Sanicost_oAuth_Prd
+Sanicost_oAuth_Dev=Sanicost_oAuth_Prd
+System=
+URL_HANA=https\://hvic-prd-sanicost-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_HOST=https\://hvic-prd-sanicost-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/
+enviroment=
+user_s4=my301787

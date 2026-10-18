@@ -1,0 +1,4 @@
+#Sun Oct 18 10:23:41 UTC 2026
+HANA_BD=Sanicost_oAuth_Prd
+ModifyDeudorBasic=ModifyDeudorBasic
+URL_HANA=https\://hvic-prd-sanicost-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com

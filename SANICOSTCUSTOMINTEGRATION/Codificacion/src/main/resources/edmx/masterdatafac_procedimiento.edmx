@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema Namespace="masterdatafacService" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="Procedimiento" EntityType="masterdatafacService.Procedimiento"/>
+			</EntityContainer>
+			<EntityType Name="Procedimiento">
+				<Key>
+					<PropertyRef Name="ProcedimientoID"/>
+				</Key>
+				<Property Name="ProcedimientoID" Type="Edm.String" MaxLength="15" Nullable="false"/>
+				<Property Name="Langu" Type="Edm.String" MaxLength="2"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="150"/>
+				<Property Name="TipoProcedimID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="TipoProcedimMenorID" Type="Edm.String" MaxLength="10"/>
+			</EntityType>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

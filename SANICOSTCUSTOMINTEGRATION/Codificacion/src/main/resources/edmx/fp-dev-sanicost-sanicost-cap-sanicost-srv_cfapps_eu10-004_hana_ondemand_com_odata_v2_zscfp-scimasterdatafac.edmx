@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+  </edmx:Reference>
+  <edmx:DataServices m:DataServiceVersion="2.0">
+    <Schema Namespace="zscfp_scimasterdatafacService" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <Annotation Term="Core.Links">
+        <Collection>
+          <Record>
+            <PropertyValue Property="rel" String="author"/>
+            <PropertyValue Property="href" String="https://cap.cloud.sap"/>
+          </Record>
+        </Collection>
+      </Annotation>
+      <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Prestacion" EntityType="zscfp_scimasterdatafacService.Prestacion"/>
+        <EntitySet Name="RelEtiquetaPrestacionSet" EntityType="zscfp_scimasterdatafacService.RelEtiquetaPrestacionSet"/>
+        <EntitySet Name="ActivityDiagnosticEntity" EntityType="zscfp_scimasterdatafacService.ActivityDiagnosticEntity"/>
+        <EntitySet Name="ActivityProcessEntity" EntityType="zscfp_scimasterdatafacService.ActivityProcessEntity"/>
+        <EntitySet Name="RelDeudorDocSanitarioSet" EntityType="zscfp_scimasterdatafacService.RelDeudorDocSanitarioSet"/>
+        <EntitySet Name="DeudorSet" EntityType="zscfp_scimasterdatafacService.DeudorSet"/>
+        <EntitySet Name="SalesParametersEntity" EntityType="zscfp_scimasterdatafacService.SalesParametersEntity"/>
+      </EntityContainer>
+      <EntityType Name="Prestacion">
+        <Key>
+          <PropertyRef Name="PrestacionExtID"/>
+        </Key>
+        <Property Name="PrestacionExtID" Type="Edm.String" MaxLength="20" Nullable="false"/>
+        <Property Name="Langu" Type="Edm.String" MaxLength="2"/>
+        <Property Name="Nivel1" Type="Edm.String" MaxLength="3"/>
+        <Property Name="Nivel2" Type="Edm.String" MaxLength="6"/>
+        <Property Name="Descripcion" Type="Edm.String" MaxLength="128"/>
+        <Property Name="Observaciones" Type="Edm.String" MaxLength="128"/>
+      </EntityType>
+      <EntityType Name="RelEtiquetaPrestacionSet">
+        <Key>
+          <PropertyRef Name="EtiquetaHIS"/>
+        </Key>
+        <Property Name="EtiquetaHIS" Type="Edm.String" MaxLength="20" Nullable="false"/>
+        <Property Name="PrestacionExtID" Type="Edm.String" MaxLength="20"/>
+        <Property Name="ActivityCheck" Type="Edm.String" MaxLength="1"/>
+      </EntityType>
+      <EntityType Name="ActivityDiagnosticEntity">
+        <Key>
+          <PropertyRef Name="ActivityID"/>
+          <PropertyRef Name="Diagnostic"/>
+        </Key>
+        <Property Name="ActivityID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="Diagnostic" Type="Edm.String" MaxLength="20" Nullable="false"/>
+        <Property Name="Principal" Type="Edm.Int32"/>
+        <Property Name="DiagnosticTxt" Type="Edm.String" MaxLength="150"/>
+      </EntityType>
+      <EntityType Name="ActivityProcessEntity">
+        <Key>
+          <PropertyRef Name="ActivityID"/>
+          <PropertyRef Name="Process"/>
+        </Key>
+        <Property Name="ActivityID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="Process" Type="Edm.String" MaxLength="20" Nullable="false"/>
+        <Property Name="Principal" Type="Edm.Int32"/>
+        <Property Name="ProcessTxt" Type="Edm.String" MaxLength="150"/>
+      </EntityType>
+      <EntityType Name="RelDeudorDocSanitarioSet">
+        <Key>
+          <PropertyRef Name="DeudorID"/>
+          <PropertyRef Name="TipoDocSanitario"/>
+        </Key>
+        <Property Name="DeudorID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="TipoDocSanitario" Type="Edm.String" MaxLength="1" Nullable="false"/>
+        <Property Name="DocSanitarioID" Type="Edm.String" MaxLength="20"/>
+      </EntityType>
+      <EntityType Name="DeudorSet">
+        <Key>
+          <PropertyRef Name="DeudorID"/>
+        </Key>
+        <Property Name="DeudorID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="DeudorExtID" Type="Edm.String" MaxLength="20"/>
+        <Property Name="DeudorTypeID" Type="Edm.String" MaxLength="1"/>
+        <Property Name="DocIdentif" Type="Edm.String" MaxLength="16"/>
+        <Property Name="DeudorDocType" Type="Edm.String" MaxLength="4"/>
+        <Property Name="NHC" Type="Edm.String" MaxLength="15"/>
+        <Property Name="Apellido1" Type="Edm.String" MaxLength="20"/>
+        <Property Name="Apellido2" Type="Edm.String" MaxLength="20"/>
+        <Property Name="Nombre" Type="Edm.String" MaxLength="40"/>
+        <Property Name="FechaNacimiento" Type="Edm.DateTimeOffset"/>
+        <Property Name="Genero" Type="Edm.String" MaxLength="1"/>
+        <Property Name="Direccion" Type="Edm.String" MaxLength="70"/>
+        <Property Name="Numero" Type="Edm.String" MaxLength="16"/>
+        <Property Name="Puerta" Type="Edm.String" MaxLength="2"/>
+        <Property Name="Poblacion" Type="Edm.String" MaxLength="35"/>
+        <Property Name="Municipio" Type="Edm.String" MaxLength="35"/>
+        <Property Name="Provincia" Type="Edm.String" MaxLength="35"/>
+        <Property Name="Region" Type="Edm.String" MaxLength="35"/>
+        <Property Name="CodigoPostal" Type="Edm.String" MaxLength="10"/>
+        <Property Name="Pais" Type="Edm.String" MaxLength="2"/>
+        <Property Name="Telefono1" Type="Edm.String" MaxLength="16"/>
+        <Property Name="Telefono2" Type="Edm.String" MaxLength="16"/>
+        <Property Name="Idioma" Type="Edm.String" MaxLength="2"/>
+        <Property Name="RegimenEconomico" Type="Edm.String" MaxLength="2"/>
+        <Property Name="CodigoColectivo" Type="Edm.String" MaxLength="3"/>
+        <Property Name="FusedDeudorID" Type="Edm.String" MaxLength="10"/>
+      </EntityType>
+      <EntityType Name="SalesParametersEntity">
+        <Key>
+          <PropertyRef Name="Center"/>
+        </Key>
+        <Property Name="Center" Type="Edm.String" MaxLength="4" Nullable="false"/>
+        <Property Name="CompanyCode" Type="Edm.String" MaxLength="4"/>
+        <Property Name="SalesOrganization" Type="Edm.String" MaxLength="4"/>
+        <Property Name="SalesChannel" Type="Edm.String" MaxLength="4"/>
+        <Property Name="Division" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CustomerAccountAssignmentGroup" Type="Edm.String" MaxLength="4"/>
+      </EntityType>
+      <Annotations Target="zscfp_scimasterdatafacService.EntityContainer/Prestacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.Prestacion/PrestacionExtID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PRESTACIONEXTID: PrestacionExtID"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.Prestacion/Langu" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="LANGU: Langu"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.Prestacion/Nivel1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NIVEL1: Nivel1"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.Prestacion/Nivel2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NIVEL2: Nivel2"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.Prestacion/Descripcion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DESCRIPCION: Descripcion"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.Prestacion/Observaciones" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="OBSERVACIONES: Observaciones"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.RelEtiquetaPrestacionSet/EtiquetaHIS" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ETIQUETAHIS"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.RelEtiquetaPrestacionSet/PrestacionExtID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PRESTACIONEXTID"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.RelEtiquetaPrestacionSet/ActivityCheck" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ACTIVITYCHECK"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.ActivityDiagnosticEntity/ActivityID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ACTIVITYID"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.ActivityDiagnosticEntity/Diagnostic" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DIAGNOSTIC"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.ActivityDiagnosticEntity/Principal" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PRINCIPAL"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.ActivityDiagnosticEntity/DiagnosticTxt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DIAGNOSTICTXT"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.ActivityProcessEntity/ActivityID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="ACTIVITYID"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.ActivityProcessEntity/Process" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PROCESS"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.ActivityProcessEntity/Principal" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PRINCIPAL"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.ActivityProcessEntity/ProcessTxt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PROCESSTXT"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.RelDeudorDocSanitarioSet/DeudorID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DEUDORID"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.RelDeudorDocSanitarioSet/TipoDocSanitario" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TIPODOCSANITARIO"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.RelDeudorDocSanitarioSet/DocSanitarioID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DOCSANITARIOID"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/DeudorID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DEUDORID"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/DeudorExtID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DEUDOREXTID"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/DeudorTypeID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DEUDORTYPEID"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/DocIdentif" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DOCIDENTIF"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/DeudorDocType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DEUDORDOCTYPE"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/NHC" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NHC"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Apellido1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="APELLIDO1"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Apellido2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="APELLIDO2"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Nombre" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NOMBRE"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/FechaNacimiento" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FECHANACIMIENTO"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Genero" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="GENERO"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Direccion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DIRECCION"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Numero" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="NUMERO"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Puerta" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PUERTA"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Poblacion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="POBLACION"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Municipio" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="MUNICIPIO"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Provincia" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PROVINCIA"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Region" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="REGION"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/CodigoPostal" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIGOPOSTAL"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Pais" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PAIS"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Telefono1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TELEFONO1"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Telefono2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="TELEFONO2"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/Idioma" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="IDIOMA"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/RegimenEconomico" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="REGIMENECONOMICO"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/CodigoColectivo" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CODIGOCOLECTIVO"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.DeudorSet/FusedDeudorID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="FUSEDDEUDORID"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.SalesParametersEntity/Center" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CENTER"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.SalesParametersEntity/CompanyCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="COMPANYCODE"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.SalesParametersEntity/SalesOrganization" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SALESORGANIZATION"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.SalesParametersEntity/SalesChannel" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="SALESCHANNEL"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.SalesParametersEntity/Division" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="DIVISION"/>
+      </Annotations>
+      <Annotations Target="zscfp_scimasterdatafacService.SalesParametersEntity/CustomerAccountAssignmentGroup" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="CUSTOMERACCOUNTASSIGNMENTGROUP"/>
+      </Annotations>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

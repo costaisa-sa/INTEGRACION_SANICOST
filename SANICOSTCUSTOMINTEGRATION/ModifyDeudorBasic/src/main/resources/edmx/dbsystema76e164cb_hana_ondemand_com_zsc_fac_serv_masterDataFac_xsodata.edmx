@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema Namespace="zsc.fac.serv" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="TiposFacturacionType">
+				<Key>
+					<PropertyRef Name="TipoFacturacID"/>
+				</Key>
+				<Property Name="TipoFacturacID" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="TipoFacturacID"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="40" sap:label="Desc"/>
+			</EntityType>
+			<EntityType Name="TipoFacturacionType">
+				<Key>
+					<PropertyRef Name="TipoFacturacID"/>
+				</Key>
+				<Property Name="TipoFacturacID" Type="Edm.String" Nullable="false" MaxLength="2"/>
+				<Property Name="Langu" Type="Edm.String" Nullable="false" MaxLength="2"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="40"/>
+			</EntityType>
+			<EntityType Name="PrestacionType">
+				<Key>
+					<PropertyRef Name="PrestacionExtID"/>
+				</Key>
+				<Property Name="PrestacionExtID" Type="Edm.String" Nullable="false" MaxLength="20"/>
+				<Property Name="Langu" Type="Edm.String" Nullable="false" MaxLength="2"/>
+				<Property Name="Nivel1" Type="Edm.String" MaxLength="3"/>
+				<Property Name="Nivel2" Type="Edm.String" MaxLength="6"/>
+				<Property Name="Descripcion" Type="Edm.String" MaxLength="128"/>
+				<Property Name="Observaciones" Type="Edm.String" MaxLength="128"/>
+			</EntityType>
+			<EntityType Name="TipoPrestacionType">
+				<Key>
+					<PropertyRef Name="TipoPrestacionID"/>
+				</Key>
+				<Property Name="TipoPrestacionID" Type="Edm.String" Nullable="false" MaxLength="4"/>
+				<Property Name="Langu" Type="Edm.String" Nullable="false" MaxLength="2"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="50"/>
+			</EntityType>
+			<EntityType Name="TipoProcedimientoType">
+				<Key>
+					<PropertyRef Name="TipoProcedimID"/>
+				</Key>
+				<Property Name="TipoProcedimID" Type="Edm.String" Nullable="false" MaxLength="10"/>
+				<Property Name="Langu" Type="Edm.String" Nullable="false" MaxLength="2"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="50"/>
+			</EntityType>
+			<EntityType Name="ProcedimientoType">
+				<Key>
+					<PropertyRef Name="ProcedimientoID"/>
+				</Key>
+				<Property Name="ProcedimientoID" Type="Edm.String" Nullable="false" MaxLength="15"/>
+				<Property Name="Langu" Type="Edm.String" Nullable="false" MaxLength="2"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="150"/>
+				<Property Name="TipoProcedimID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="TipoProcedimMenorID" Type="Edm.String" MaxLength="10"/>
+			</EntityType>
+			<EntityType Name="PlanCoberturaType">
+				<Key>
+					<PropertyRef Name="PlanCoberturaID"/>
+				</Key>
+				<Property Name="PlanCoberturaID" Type="Edm.String" Nullable="false" MaxLength="10"/>
+				<Property Name="Langu" Type="Edm.String" Nullable="false" MaxLength="2"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="40"/>
+			</EntityType>
+			<EntityType Name="ServicioType">
+				<Key>
+					<PropertyRef Name="ServicioID"/>
+				</Key>
+				<Property Name="ServicioID" Type="Edm.String" Nullable="false" MaxLength="10"/>
+				<Property Name="Langu" Type="Edm.String" Nullable="false" MaxLength="2"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="40"/>
+			</EntityType>
+			<EntityType Name="ClasifEconomicaType">
+				<Key>
+					<PropertyRef Name="ClasifEconomicaID"/>
+				</Key>
+				<Property Name="ClasifEconomicaID" Type="Edm.String" Nullable="false" MaxLength="2"/>
+				<Property Name="Langu" Type="Edm.String" Nullable="false" MaxLength="2"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="40"/>
+			</EntityType>
+			<EntityType Name="SituacionType">
+				<Key>
+					<PropertyRef Name="SituacionID"/>
+				</Key>
+				<Property Name="SituacionID" Type="Edm.String" Nullable="false" MaxLength="4"/>
+				<Property Name="Langu" Type="Edm.String" Nullable="false" MaxLength="2"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="50"/>
+			</EntityType>
+			<EntityType Name="ActivityStatusSetType">
+				<Key>
+					<PropertyRef Name="Status"/>
+				</Key>
+				<Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="1"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="40"/>
+			</EntityType>
+			<EntityType Name="PeriodsType">
+				<Key>
+					<PropertyRef Name="Year"/>
+					<PropertyRef Name="Periodo"/>
+				</Key>
+				<Property Name="Year" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="Periodo" Type="Edm.Int32" Nullable="false"/>
+			</EntityType>
+			<EntityType Name="EntidadSetType">
+				<Key>
+					<PropertyRef Name="EntidadID"/>
+				</Key>
+				<Property Name="EntidadID" Type="Edm.String" Nullable="false" MaxLength="10"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="40"/>
+			</EntityType>
+			<EntityType Name="DeudorSetType">
+				<Key>
+					<PropertyRef Name="DeudorID"/>
+				</Key>
+				<Property Name="DeudorID" Type="Edm.String" Nullable="false" MaxLength="10"/>
+				<Property Name="DeudorExtID" Type="Edm.String" MaxLength="20"/>
+				<Property Name="DeudorTypeID" Type="Edm.String" MaxLength="1"/>
+				<Property Name="DocIdentif" Type="Edm.String" MaxLength="16"/>
+				<Property Name="DeudorDocType" Type="Edm.String" MaxLength="4"/>
+				<Property Name="NHC" Type="Edm.String" MaxLength="15"/>
+				<Property Name="Apellido1" Type="Edm.String" MaxLength="20"/>
+				<Property Name="Apellido2" Type="Edm.String" MaxLength="20"/>
+				<Property Name="Nombre" Type="Edm.String" MaxLength="40"/>
+				<Property Name="FechaNacimiento" Type="Edm.DateTime"/>
+				<Property Name="FechaExitus" Type="Edm.DateTime"/>
+				<Property Name="Genero" Type="Edm.String" MaxLength="1"/>
+				<Property Name="Direccion" Type="Edm.String" MaxLength="70"/>
+				<Property Name="Numero" Type="Edm.String" MaxLength="16"/>
+				<Property Name="Puerta" Type="Edm.String" MaxLength="2"/>
+				<Property Name="Poblacion" Type="Edm.String" MaxLength="35"/>
+				<Property Name="Municipio" Type="Edm.String" MaxLength="35"/>
+				<Property Name="Provincia" Type="Edm.String" MaxLength="35"/>
+				<Property Name="Region" Type="Edm.String" MaxLength="35"/>
+				<Property Name="CodigoPostal" Type="Edm.String" MaxLength="10"/>
+				<Property Name="Pais" Type="Edm.String" MaxLength="2"/>
+				<Property Name="Telefono1" Type="Edm.String" MaxLength="16"/>
+				<Property Name="Telefono2" Type="Edm.String" MaxLength="16"/>
+				<Property Name="Idioma" Type="Edm.String" MaxLength="2"/>
+				<Property Name="RegimenEconomico" Type="Edm.String" MaxLength="2"/>
+				<Property Name="CodigoColectivo" Type="Edm.String" MaxLength="3"/>
+				<Property Name="FusedDeudorID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="Poliza" Type="Edm.String" MaxLength="30"/>
+                <Property Name="TarjetaMutua" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Email" Type="Edm.String" MaxLength="100"/>
+                <Property Name="IsGrouped" Type="Edm.String" MaxLength="1"/>
+                <Property Name="PCC" Type="Edm.Boolean"/>
+                <Property Name="MACA" Type="Edm.Boolean"/>
+				<NavigationProperty Name="DocSanitariosSet" Relationship="zsc.fac.serv.DeudorToRelDeudoreDocSanitariosType" FromRole="DeudorSetPrincipal" ToRole="RelDeudorDocSanitarioSetDependent"/>
+			</EntityType>
+			<EntityType Name="DeudoresExtendedType">
+				<Key>
+					<PropertyRef Name="DeudorID"/>
+				</Key>
+				<Property Name="DeudorID" Type="Edm.String" Nullable="false" MaxLength="10"/>
+				<Property Name="DeudorExtID" Type="Edm.String" MaxLength="20"/>
+				<Property Name="DeudorTypeID" Type="Edm.String" MaxLength="1"/>
+				<Property Name="DocIdentif" Type="Edm.String" MaxLength="16"/>
+				<Property Name="DeudorDocType" Type="Edm.String" MaxLength="4"/>
+				<Property Name="NHC" Type="Edm.String" MaxLength="15"/>
+				<Property Name="Apellido1" Type="Edm.String" MaxLength="20"/>
+				<Property Name="Apellido2" Type="Edm.String" MaxLength="20"/>
+				<Property Name="Nombre" Type="Edm.String" MaxLength="40"/>
+				<Property Name="FechaNacimiento" Type="Edm.DateTime"/>
+				<Property Name="FechaExitus" Type="Edm.DateTime"/>
+				<Property Name="Genero" Type="Edm.String" MaxLength="1"/>
+				<Property Name="Direccion" Type="Edm.String" MaxLength="70"/>
+				<Property Name="Numero" Type="Edm.String" MaxLength="16"/>
+				<Property Name="Puerta" Type="Edm.String" MaxLength="2"/>
+				<Property Name="Poblacion" Type="Edm.String" MaxLength="35"/>
+				<Property Name="Municipio" Type="Edm.String" MaxLength="35"/>
+				<Property Name="Provincia" Type="Edm.String" MaxLength="35"/>
+				<Property Name="Region" Type="Edm.String" MaxLength="35"/>
+				<Property Name="CodigoPostal" Type="Edm.String" MaxLength="5"/>
+				<Property Name="Pais" Type="Edm.String" MaxLength="2"/>
+				<Property Name="Telefono1" Type="Edm.String" MaxLength="16"/>
+				<Property Name="Telefono2" Type="Edm.String" MaxLength="16"/>
+				<Property Name="Idioma" Type="Edm.String" MaxLength="2"/>
+				<Property Name="RegimenEconomico" Type="Edm.String" MaxLength="2"/>
+				<Property Name="RegimenEconomicoDesc" Type="Edm.String" MaxLength="30"/>
+				<Property Name="CodigoColectivo" Type="Edm.String" MaxLength="3"/>
+				<Property Name="CodigoColectivoDesc" Type="Edm.String" MaxLength="40"/>
+				<Property Name="FusedDeudorID" Type="Edm.String" MaxLength="10"/>
+				<Property Name="Poliza" Type="Edm.String" MaxLength="30"/>
+                <Property Name="TarjetaMutua" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Email" Type="Edm.String" MaxLength="100"/>
+                <Property Name="IsGrouped" Type="Edm.String" MaxLength="1"/>
+                <Property Name="PCC" Type="Edm.Boolean"/>
+                <Property Name="MACA" Type="Edm.Boolean"/>
+				<NavigationProperty Name="DocSanitarios" Relationship="zsc.fac.serv.DeudorExtendedToRelDocSanitariosType" FromRole="DeudoresExtendedPrincipal" ToRole="RelDeudorDocSanitarioSetExtendedDependent"/>
+			</EntityType>
+			<EntityType Name="PacientesType">
+				<Key>
+					<PropertyRef Name="PacienteID"/>
+				</Key>
+				<Property Name="PacienteID" Type="Edm.String" Nullable="false" MaxLength="10"/>
+				<Property Name="PacienteExtID" Type="Edm.String" MaxLength="20"/>
+				<Property Name="FechaNacimiento" Type="Edm.DateTime"/>
+				<Property Name="FechaExitus" Type="Edm.DateTime"/>
+				<Property Name="Genero" Type="Edm.String" MaxLength="1"/>
+				<Property Name="Poblacion" Type="Edm.String" MaxLength="35"/>
+				<Property Name="Apellido1" Type="Edm.String" MaxLength="20"/>
+				<Property Name="Apellido2" Type="Edm.String" MaxLength="20"/>
+				<Property Name="Nombre" Type="Edm.String" MaxLength="40"/>
+				<Property Name="NHC" Type="Edm.String" MaxLength="15"/>
+				<Property Name="RegimenEconomico" Type="Edm.String" MaxLength="2"/>
+				<Property Name="CodigoColectivo" Type="Edm.String" MaxLength="3"/>
+				<Property Name="CIP" Type="Edm.String" MaxLength="20"/>
+			</EntityType>
+			<EntityType Name="RelDeudorDocSanitarioSetType">
+				<Key>
+					<PropertyRef Name="DeudorID"/>
+					<PropertyRef Name="TipoDocSanitario"/>
+				</Key>
+				<Property Name="DeudorID" Type="Edm.String" Nullable="false" MaxLength="10"/>
+				<Property Name="TipoDocSanitario" Type="Edm.String" Nullable="false" MaxLength="1"/>
+				<Property Name="DocSanitarioID" Type="Edm.String" MaxLength="20"/>
+			</EntityType>
+			<EntityType Name="RelDeudorDocSanitarioSetExtendedType">
+				<Key>
+					<PropertyRef Name="DeudorID"/>
+					<PropertyRef Name="TipoDocSanitario"/>
+				</Key>
+				<Property Name="DeudorID" Type="Edm.String" Nullable="false" MaxLength="10"/>
+				<Property Name="TipoDocSanitario" Type="Edm.String" Nullable="false" MaxLength="1"/>
+				<Property Name="TipoDocSanitarioDesc" Type="Edm.String" MaxLength="30"/>
+				<Property Name="DocSanitarioID" Type="Edm.String" MaxLength="20"/>
+			</EntityType>
+			<EntityType Name="TipoDocSanitarioSetType">
+				<Key>
+					<PropertyRef Name="TipoDocSanitario"/>
+					<PropertyRef Name="Langu"/>
+				</Key>
+				<Property Name="TipoDocSanitario" Type="Edm.String" Nullable="false" MaxLength="1"/>
+				<Property Name="Langu" Type="Edm.String" Nullable="false" MaxLength="2"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="30"/>
+			</EntityType>
+			<EntityType Name="RegimenEconomicoSetType">
+				<Key>
+					<PropertyRef Name="RegimenEconomico"/>
+				</Key>
+				<Property Name="RegimenEconomico" Type="Edm.String" Nullable="false" MaxLength="2"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="30"/>
+			</EntityType>
+			<EntityType Name="ColectivoSetType">
+				<Key>
+					<PropertyRef Name="CodigoColectivo"/>
+				</Key>
+				<Property Name="CodigoColectivo" Type="Edm.String" Nullable="false" MaxLength="3"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="40"/>
+			</EntityType>
+			<EntityType Name="StatusNomenclatorSetType">
+				<Key>
+					<PropertyRef Name="Status"/>
+				</Key>
+				<Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="1"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="40"/>
+			</EntityType>
+			<EntityType Name="SalesParametersType">
+				<Key>
+					<PropertyRef Name="Center"/>
+				</Key>
+				<Property Name="Center" Type="Edm.String" Nullable="false" MaxLength="4"/>
+				<Property Name="CompanyCode" Type="Edm.String" MaxLength="4"/>
+				<Property Name="SalesOrganization" Type="Edm.String" MaxLength="4"/>
+				<Property Name="SalesChannel" Type="Edm.String" MaxLength="4"/>
+				<Property Name="Division" Type="Edm.String" MaxLength="4"/>
+				<Property Name="CustomerAccountAssignmentGroup" Type="Edm.String" MaxLength="4"/>
+			</EntityType>
+			<EntityType Name="CompanyParametersType">
+				<Key>
+					<PropertyRef Name="CompanyCode"/>
+				</Key>
+				<Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4"/>
+				<Property Name="ReconciliationAccount" Type="Edm.String" MaxLength="10"/>
+				<Property Name="DefaultFeeCostCenter" Type="Edm.String" MaxLength="10"/>
+				<Property Name="DefaultFeeAccount" Type="Edm.String" MaxLength="10"/>
+			</EntityType>
+			<EntityType Name="RelEtiquetaPrestacionSetType">
+				<Key>
+					<PropertyRef Name="EtiquetaHIS"/>
+				</Key>
+				<Property Name="EtiquetaHIS" Type="Edm.String" Nullable="false" MaxLength="20"/>
+				<Property Name="PrestacionExtID" Type="Edm.String" MaxLength="20"/>
+				<Property Name="ActivityCheck" Type="Edm.String" MaxLength="1"/>
+			</EntityType>
+			<EntityType Name="ProductSetType">
+				<Key>
+					<PropertyRef Name="MaterialID"/>
+				</Key>
+				<Property Name="NumExtProductID" Type="Edm.String" MaxLength="18" sap:label="NumExtProductID"/>
+				<Property Name="DescExtPr" Type="Edm.String" MaxLength="60" sap:label="DescExtPr"/>
+				<Property Name="MaterialID" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="MaterialID"/>
+				<Property Name="Desc" Type="Edm.String" MaxLength="40" sap:label="Desc"/>
+				<Property Name="MatType" Type="Edm.String" MaxLength="5" sap:label="MatType"/>
+				<Property Name="MatGroupID" Type="Edm.String" MaxLength="30" sap:label="MatGroupID"/>
+				<Property Name="DescMatGroup" Type="Edm.String" MaxLength="40" sap:label="DescMatGroup"/>
+			</EntityType>
+			<EntityType Name="ActivityDiagnosticSetType">
+				<Key>
+					<PropertyRef Name="ActivityID"/>
+					<PropertyRef Name="Diagnostic"/>
+				</Key>
+				<Property Name="ActivityID" Type="Edm.String" Nullable="false" MaxLength="50"/>
+				<Property Name="Diagnostic" Type="Edm.String" Nullable="false" MaxLength="20"/>
+				<Property Name="Principal" Type="Edm.Int32"/>
+				<Property Name="DiagnosticTxt" Type="Edm.String" MaxLength="150"/>
+			</EntityType>
+			<EntityType Name="ActivityProcessSetType">
+				<Key>
+					<PropertyRef Name="ActivityID"/>
+					<PropertyRef Name="Process"/>
+				</Key>
+				<Property Name="ActivityID" Type="Edm.String" Nullable="false" MaxLength="50"/>
+				<Property Name="Process" Type="Edm.String" Nullable="false" MaxLength="20"/>
+				<Property Name="Principal" Type="Edm.Int32"/>
+				<Property Name="ProcessTxt" Type="Edm.String" MaxLength="150"/>
+			</EntityType>
+			<Association Name="DeudorToRelDeudoreDocSanitariosType">
+				<End Type="zsc.fac.serv.DeudorSetType" Role="DeudorSetPrincipal" Multiplicity="1"/>
+				<End Type="zsc.fac.serv.RelDeudorDocSanitarioSetType" Role="RelDeudorDocSanitarioSetDependent" Multiplicity="*"/>
+				<ReferentialConstraint>
+					<Principal Role="DeudorSetPrincipal">
+						<PropertyRef Name="DeudorID"/>
+					</Principal>
+					<Dependent Role="RelDeudorDocSanitarioSetDependent">
+						<PropertyRef Name="DeudorID"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="DeudorExtendedToRelDocSanitariosType">
+				<End Type="zsc.fac.serv.DeudoresExtendedType" Role="DeudoresExtendedPrincipal" Multiplicity="1"/>
+				<End Type="zsc.fac.serv.RelDeudorDocSanitarioSetExtendedType" Role="RelDeudorDocSanitarioSetExtendedDependent" Multiplicity="*"/>
+				<ReferentialConstraint>
+					<Principal Role="DeudoresExtendedPrincipal">
+						<PropertyRef Name="DeudorID"/>
+					</Principal>
+					<Dependent Role="RelDeudorDocSanitarioSetExtendedDependent">
+						<PropertyRef Name="DeudorID"/>
+					</Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityContainer Name="masterDataFac" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="TiposFacturacion" EntityType="zsc.fac.serv.TiposFacturacionType"/>
+				<EntitySet Name="TipoFacturacion" EntityType="zsc.fac.serv.TipoFacturacionType"/>
+				<EntitySet Name="Prestacion" EntityType="zsc.fac.serv.PrestacionType"/>
+				<EntitySet Name="TipoPrestacion" EntityType="zsc.fac.serv.TipoPrestacionType"/>
+				<EntitySet Name="TipoProcedimiento" EntityType="zsc.fac.serv.TipoProcedimientoType"/>
+				<EntitySet Name="Procedimiento" EntityType="zsc.fac.serv.ProcedimientoType"/>
+				<EntitySet Name="PlanCobertura" EntityType="zsc.fac.serv.PlanCoberturaType"/>
+				<EntitySet Name="Servicio" EntityType="zsc.fac.serv.ServicioType"/>
+				<EntitySet Name="ClasifEconomica" EntityType="zsc.fac.serv.ClasifEconomicaType"/>
+				<EntitySet Name="Situacion" EntityType="zsc.fac.serv.SituacionType"/>
+				<EntitySet Name="ActivityStatusSet" EntityType="zsc.fac.serv.ActivityStatusSetType"/>
+				<EntitySet Name="Periods" EntityType="zsc.fac.serv.PeriodsType"/>
+				<EntitySet Name="EntidadSet" EntityType="zsc.fac.serv.EntidadSetType"/>
+				<EntitySet Name="DeudorSet" EntityType="zsc.fac.serv.DeudorSetType"/>
+				<EntitySet Name="DeudoresExtended" EntityType="zsc.fac.serv.DeudoresExtendedType" sap:creatable="false" sap:updatable="false" sap:deletable="false"/>
+				<EntitySet Name="Pacientes" EntityType="zsc.fac.serv.PacientesType"/>
+				<EntitySet Name="RelDeudorDocSanitarioSet" EntityType="zsc.fac.serv.RelDeudorDocSanitarioSetType"/>
+				<EntitySet Name="RelDeudorDocSanitarioSetExtended" EntityType="zsc.fac.serv.RelDeudorDocSanitarioSetExtendedType"/>
+				<EntitySet Name="TipoDocSanitarioSet" EntityType="zsc.fac.serv.TipoDocSanitarioSetType"/>
+				<EntitySet Name="RegimenEconomicoSet" EntityType="zsc.fac.serv.RegimenEconomicoSetType"/>
+				<EntitySet Name="ColectivoSet" EntityType="zsc.fac.serv.ColectivoSetType"/>
+				<EntitySet Name="StatusNomenclatorSet" EntityType="zsc.fac.serv.StatusNomenclatorSetType"/>
+				<EntitySet Name="SalesParameters" EntityType="zsc.fac.serv.SalesParametersType"/>
+				<EntitySet Name="CompanyParameters" EntityType="zsc.fac.serv.CompanyParametersType"/>
+				<EntitySet Name="RelEtiquetaPrestacionSet" EntityType="zsc.fac.serv.RelEtiquetaPrestacionSetType"/>
+				<EntitySet Name="ProductSet" EntityType="zsc.fac.serv.ProductSetType"/>
+				<EntitySet Name="ActivityDiagnosticSet" EntityType="zsc.fac.serv.ActivityDiagnosticSetType"/>
+				<EntitySet Name="ActivityProcessSet" EntityType="zsc.fac.serv.ActivityProcessSetType"/>
+				<AssociationSet Name="DeudorToRelDeudoreDocSanitarios" Association="zsc.fac.serv.DeudorToRelDeudoreDocSanitariosType">
+					<End Role="DeudorSetPrincipal" EntitySet="DeudorSet"/>
+					<End Role="RelDeudorDocSanitarioSetDependent" EntitySet="RelDeudorDocSanitarioSet"/>
+				</AssociationSet>
+				<AssociationSet Name="DeudorExtendedToRelDocSanitarios" Association="zsc.fac.serv.DeudorExtendedToRelDocSanitariosType">
+					<End Role="DeudoresExtendedPrincipal" EntitySet="DeudoresExtended"/>
+					<End Role="RelDeudorDocSanitarioSetExtendedDependent" EntitySet="RelDeudorDocSanitarioSetExtended"/>
+				</AssociationSet>
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

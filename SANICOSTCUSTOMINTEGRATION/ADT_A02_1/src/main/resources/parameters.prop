@@ -1,0 +1,6 @@
+#
+#Sun Oct 18 10:23:04 UTC 2026
+ModificacionIngresoAddress=Modificacion_Ingreso_scc
+System=
+TrasladoAddress=Traslado_Asignacion_Responsable{{System}}
+URL_HCI=https\://y100030-iflmap.hcisbp.eu1.hana.ondemand.com

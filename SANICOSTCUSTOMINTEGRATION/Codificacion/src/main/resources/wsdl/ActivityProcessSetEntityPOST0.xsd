@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="ActivityProcessSet">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="ActivityProcessSetType">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element nillable="false" maxOccurs="unbounded" name="ActivityID">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="50"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="false" maxOccurs="unbounded" name="Process">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="20"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="Principal">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="1"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="ProcessTxt">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string" xmlns="">
+                                        <xs:maxLength value="150"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

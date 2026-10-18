@@ -1,0 +1,11 @@
+#
+#Sun Oct 18 10:22:48 UTC 2026
+AddresAct=https\://sapasservices-2023.cfapps.eu10-004.hana.ondemand.com
+CredentialName=Sanicost_oAuth_Prd
+CredentialNameAct=HanaDataBase_PRD
+URL_CREDENTIALS=Sanicost_oAuth_Prd
+URL_HOST=https\://hvic-prd-sanicost-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
+address=/SimulacionExportCatSalut
+credentialName=HanaDataBase_PRD
+environment=test
+test=/SimulacionExportCatSalut

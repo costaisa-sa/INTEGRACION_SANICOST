@@ -1,0 +1,7 @@
+#
+#Sun Oct 18 10:23:49 UTC 2026
+CreateActivity=CreateActivity
+HANA_BD=Sanicost_oAuth_Prd
+HanaDataBase=HanaDataBase
+System=
+URL_HANA=https\://hvic-prd-sanicost-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
