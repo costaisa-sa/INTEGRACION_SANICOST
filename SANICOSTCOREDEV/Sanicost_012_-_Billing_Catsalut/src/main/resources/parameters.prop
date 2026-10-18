@@ -1,9 +1,0 @@
-#
-#Sun Oct 18 09:20:42 UTC 2026
-AddressProcessDirect=/test/BillingDocument
-Address_s4=/test/BillingCatSalut
-HCI=HCILocal
-HanaDataBase=Sanicost_oAuth_Dev
-URL_HCI=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
-URL_Y=https\://fpuigvert-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com
-enviroment=test

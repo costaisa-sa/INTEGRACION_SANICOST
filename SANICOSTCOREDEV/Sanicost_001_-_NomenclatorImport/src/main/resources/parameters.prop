@@ -1,9 +1,0 @@
-#
-#Sun Oct 18 09:20:42 UTC 2026
-CREDENTIALS_HANA=Sanicost_oAuth_Dev
-URL_API=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
-URL_ERP=
-URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
-address=/test/NomenclatorImport
-environment=test
-path=test

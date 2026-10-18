@@ -1,8 +1,0 @@
-#Sun Oct 18 09:20:44 UTC 2026
-<url_api>=https\://my301787-api.s4hana.ondemand.com/
-<user>=TEST_Q
-Address=BillingDocumentReject
-S4HANA=my301787
-URL_API=https\://my301787-api.s4hana.ondemand.com/
-URL_ERP=https\://my301787.s4hana.ondemand.com/
-enviroment=test

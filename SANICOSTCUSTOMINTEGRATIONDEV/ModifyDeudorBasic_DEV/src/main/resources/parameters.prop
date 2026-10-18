@@ -1,5 +1,0 @@
-#
-#Sun Oct 18 09:21:38 UTC 2026
-HANA_BD=Sanicost_oAuth_Dev
-ModifyDeudorBasic=ModifyDeudorBasic_DEV
-URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com

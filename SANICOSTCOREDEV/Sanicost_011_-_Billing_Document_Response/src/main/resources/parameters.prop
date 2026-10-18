@@ -1,6 +1,0 @@
-#
-#Sun Oct 18 09:20:47 UTC 2026
-Address=/test/Billing_Resp
-HanaDataBase=Sanicost_oAuth_Dev
-URL_HOST=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/
-enviroment=test
