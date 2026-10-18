@@ -1,7 +1,7 @@
-#Sun Oct 18 09:21:56 UTC 2026
+#Sun Oct 18 08:59:34 UTC 2026
 AnulacionTraslado=Anulacion_Traslado_DEV_OLD
 CPILocal=
-CPI_LOCAL=https\://chv-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
+CPI_LOCAL=https\://sanicostdemo.it-cpi018-rt.cfapps.eu10-003.hana.ondemand.com/http/
 CpiLocal=CPILocal
 System=_DEV
 TrasladoAsignacionResponsableAddress=Traslado_Asignacion_Responsable

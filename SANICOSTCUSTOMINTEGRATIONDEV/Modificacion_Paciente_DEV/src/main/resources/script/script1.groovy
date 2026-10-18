@@ -91,19 +91,21 @@ def Message processData(Message message) {
          message.setProperty("Idioma", valor5)
        }
        
-       /// Country
-def Country = completeXml.PID.'**'.findAll{ node-> node.name() == 'XAD.6' }*.text()
-def countryValue = Country ? Country[0] : ''
-message.setProperty("Country", countryValue)
-
-// Province (solo si Country == "ES")
-if (countryValue == "ES") {
-    def Province = completeXml.PID.'**'.findAll{ node-> node.name() == 'XAD.4' }*.text()
-    def provinceValue = Province ? Province[0] : ''
-    message.setProperty("Province", provinceValue)
-} else {
-    message.setProperty("Province", '')
-}
+       //Country
+       def Country = completeXml.PID.'**'.findAll{ node-> node.name() == 'XAD.6' }*.text()
+       if(Country){
+         def valor = Country[0];
+         message.setProperty("Country", valor)
+       }
+       //Province
+       def Province = completeXml.PID.'**'.findAll{ node-> node.name() == 'XAD.4' }*.text()
+       if(Province){
+         def valor2 = Province[0];
+         message.setProperty("Province", valor2)
+       }else{
+        valor2 = "";
+         message.setProperty("Province", valor2)
+       }
       //Deudor
        def Deudor = completeXml.PID.'**'.findAll{ node-> node.name() == 'CX.1' }*.text()
        if(Deudor){

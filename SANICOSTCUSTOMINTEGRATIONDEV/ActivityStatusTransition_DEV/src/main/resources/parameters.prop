@@ -1,7 +1,7 @@
 #
-#Sun Oct 18 09:21:16 UTC 2026
+#Sun Oct 18 08:59:24 UTC 2026
 ActivityStatusTransition=ActivityStatusTransition_DEV
 CREDENTIALS_HANA=HanaDataBase
 HANA_BD=Sanicost_oAuth_Dev
 System=
-URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
+URL_HANA=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com

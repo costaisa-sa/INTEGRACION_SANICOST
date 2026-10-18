@@ -24,7 +24,12 @@ def Message processData(Message message) {
     def mapHeaders = message.getHeaders();
     def ex = mapProps.get("CamelExceptionCaught");
     
-    def sFullExceptionMessage = ex.getResponseBody() as String;
+    def sFullExceptionMessage;
+    try {
+        sFullExceptionMessage = ex.getResponseBody() as String;
+    } catch (MissingMethodException e) {
+        sFullExceptionMessage = ex?.getMessage() as String;
+    }
     
      if (sFullExceptionMessage.indexOf("{") == -1)
     {

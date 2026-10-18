@@ -396,6 +396,7 @@ def Message processData(Message message) {
     def oDeudor = getDeudor(completeXml);
     message.setProperty("DeudorExtID", oDeudor.DeudorExtID);
     message.setProperty("DeudorTypeID", oDeudor.DeudorTypeID);
+    
     message.setProperty("PlanCoberturaID", oDeudor.PlanCoberturaID);
 
     //Prestacion HIS - Esto se considera una etiqueta, no la prestación en sí mismo. Luego se mapeará a la prestación correcta.

@@ -339,19 +339,6 @@
                 <value>From Calling Process</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:startEvent id="StartEvent_24" name="Start 2">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_26</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_36" name="Set Session Cookies">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -429,9 +416,22 @@
             <bpmn2:incoming>SequenceFlow_37</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_40</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:sequenceFlow id="SequenceFlow_26" sourceRef="StartEvent_24" targetRef="CallActivity_36"/>
+        <bpmn2:startEvent id="StartEvent_24" name="Start 2">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_26</bpmn2:outgoing>
+        </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_37" sourceRef="CallActivity_36" targetRef="CallActivity_39"/>
         <bpmn2:sequenceFlow id="SequenceFlow_40" sourceRef="CallActivity_39" targetRef="EndEvent_25"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_26" sourceRef="StartEvent_24" targetRef="CallActivity_36"/>
     </bpmn2:process>
     <bpmn2:process id="Process_1" name="Integration Process">
         <bpmn2:extensionElements>
@@ -647,20 +647,6 @@
             <bpmn2:incoming>SequenceFlow_149</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_141</bpmn2:outgoing>
         </bpmn2:serviceTask>
-        <bpmn2:startEvent id="StartEvent_2" name="Start">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::MessageStartEvent/version::1.0</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
-            <bpmn2:messageEventDefinition/>
-        </bpmn2:startEvent>
         <bpmn2:endEvent id="EndEvent_2" name="End">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -675,32 +661,6 @@
             <bpmn2:incoming>SequenceFlow_143</bpmn2:incoming>
             <bpmn2:messageEventDefinition/>
         </bpmn2:endEvent>
-        <bpmn2:callActivity id="CallActivity_8" name="Get X-CSRF token ">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>processId</key>
-                    <value>Process_23</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>ProcessCallElement</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>subActivityType</key>
-                    <value>NonLoopingProcess</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_45</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_47</bpmn2:outgoing>
-        </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_42" name="GetDataXML">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -734,6 +694,46 @@
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_45</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:startEvent id="StartEvent_2" name="Start">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::MessageStartEvent/version::1.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
+            <bpmn2:messageEventDefinition/>
+        </bpmn2:startEvent>
+        <bpmn2:callActivity id="CallActivity_8" name="Get X-CSRF token ">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>processId</key>
+                    <value>Process_23</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>ProcessCallElement</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>NonLoopingProcess</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_45</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_47</bpmn2:outgoing>
         </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_46" name="JSON Mensaje Actividad">
             <bpmn2:extensionElements>
@@ -788,9 +788,9 @@
         <bpmn2:sequenceFlow id="SequenceFlow_143" sourceRef="CallActivity_142" targetRef="EndEvent_2"/>
         <bpmn2:sequenceFlow id="SequenceFlow_149" sourceRef="CallActivity_148" targetRef="ServiceTask_12"/>
         <bpmn2:sequenceFlow id="SequenceFlow_141" sourceRef="ServiceTask_12" targetRef="CallActivity_142"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_45" sourceRef="CallActivity_42" targetRef="CallActivity_8"/>
         <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="StartEvent_2" targetRef="CallActivity_42"/>
         <bpmn2:sequenceFlow id="SequenceFlow_47" sourceRef="CallActivity_8" targetRef="CallActivity_46"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_45" sourceRef="CallActivity_42" targetRef="CallActivity_8"/>
         <bpmn2:sequenceFlow id="SequenceFlow_48" sourceRef="CallActivity_46" targetRef="CallActivity_148"/>
     </bpmn2:process>
     <bpmn2:process id="Process_78" name="ConvertXML">
@@ -816,19 +816,6 @@
                 <value>From Calling Process</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:startEvent id="StartEvent_79" name="Start 3">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_82</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_51" name="BeforeConvertToXML">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -872,6 +859,19 @@
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_84</bpmn2:incoming>
         </bpmn2:endEvent>
+        <bpmn2:startEvent id="StartEvent_79" name="Start 3">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_82</bpmn2:outgoing>
+        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_61" name="XML Mensaje Actividad">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -914,8 +914,8 @@
             <bpmn2:incoming>SequenceFlow_83</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_84</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:sequenceFlow id="SequenceFlow_82" sourceRef="StartEvent_79" targetRef="CallActivity_51"/>
         <bpmn2:sequenceFlow id="SequenceFlow_83" sourceRef="CallActivity_51" targetRef="CallActivity_61"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_82" sourceRef="StartEvent_79" targetRef="CallActivity_51"/>
         <bpmn2:sequenceFlow id="SequenceFlow_84" sourceRef="CallActivity_61" targetRef="EndEvent_80"/>
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">

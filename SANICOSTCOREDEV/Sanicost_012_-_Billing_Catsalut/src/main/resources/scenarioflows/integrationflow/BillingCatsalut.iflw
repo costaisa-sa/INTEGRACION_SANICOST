@@ -77,7 +77,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>address</key>
-                    <value>{{AddressProcessDirect}}</value>
+                    <value>{{enviroment}}{{AddressProcessDirect}}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>ComponentNS</key>
@@ -317,7 +317,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>urlPath</key>
-                    <value>{{Address_s4}}</value>
+                    <value>/{{enviroment}}/{{Address_s4}}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>Name</key>

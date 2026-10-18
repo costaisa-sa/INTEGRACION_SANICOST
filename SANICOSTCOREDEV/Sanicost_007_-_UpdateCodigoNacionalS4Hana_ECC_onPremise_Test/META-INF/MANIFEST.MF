@@ -45,6 +45,6 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  er="(dataSourceName=default)",org.apache.cxf.ws.rm.persistence.RMStore;
  multiple:=false,com.sap.esb.camel.security.cms.SignatureSplitter;multip
  le:=false
-Origin-Bundle-Version: 1.0.4
-Origin-ModifiedDate: 1737966882417
+Origin-Bundle-Version: 1.0.11
+Origin-ModifiedDate: 1751965540933
 

@@ -16,7 +16,31 @@
     <additionalMetadata/>
   </parameter><parameter>
     <key/>
+    <name>&lt;url_api&gt;</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
     <name>System</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>&lt;URL_ERP&gt;</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>user_s4</name>
     <type>xsd:string</type>
     <isRequired>false</isRequired>
     <constraint/>

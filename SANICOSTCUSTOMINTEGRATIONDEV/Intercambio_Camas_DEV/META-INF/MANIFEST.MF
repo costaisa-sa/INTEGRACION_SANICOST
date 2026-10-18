@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Intercambio_Camas_DEV
 Bundle-Name: Intercambio_Camas_DEV
-Bundle-Version: 1.0.4
+Bundle-Version: 1.0.5
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -42,5 +42,5 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
 Origin-Bundle-Name: Intercambio_Camas_DEV
 Origin-Bundle-Version: 1.0.4
 Origin-Bundle-SymbolicName: Intercambio_Camas_DEV
-Origin-ModifiedDate: 1742983694594
+Origin-ModifiedDate: 1751880532346
 

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Modificacion_Alta_Modi_DEV
 Bundle-Name: Modificacion_Alta_Modi_DEV
-Bundle-Version: 1.0.10
+Bundle-Version: 1.0.11
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -40,7 +40,7 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  multiple:=false,com.sap.esb.camel.security.cms.SignatureSplitter;multip
  le:=false
 Origin-Bundle-Name: Modificacion_Alta_Modi_DEV
-Origin-Bundle-Version: 1.0.9
+Origin-Bundle-Version: 1.0.10
 Origin-Bundle-SymbolicName: Modificacion_Alta_Modi_DEV
-Origin-ModifiedDate: 1751616398292
+Origin-ModifiedDate: 1761577018455
 

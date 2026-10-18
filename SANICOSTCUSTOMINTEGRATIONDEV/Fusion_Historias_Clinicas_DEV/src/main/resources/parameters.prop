@@ -1,8 +1,7 @@
-#
-#Sun Oct 18 09:20:58 UTC 2026
+#Sun Oct 18 08:59:18 UTC 2026
 CREDENTIALS_HANA=HanaDataBase_PRD
 FusionHistoriasClinicas=Fusion_Historias_Clinicas_DEV
 HANA_BD=Sanicost_oAuth_Dev
 System=_DEV
-URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_HANA=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
 URL_HCI=https\://y100030-iflmap.hcisbp.eu1.hana.ondemand.com

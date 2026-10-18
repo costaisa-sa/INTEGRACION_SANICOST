@@ -17,7 +17,8 @@ def Message processData(Message message) {
         "Center"          : ["PV1", "PV1.3", "PL.4", "HD.1"],
         "Edificio"        : ["PV1", "PV1.3", "PL.7"],
         "PlanCoberturaID" : ["IN1", "IN1.2", "CWE.1"],
-        "PrestacionExtID" : ["PV1", "PV1.4"]
+        "PrestacionExtID" : ["PV1", "PV1.4"],
+        "EpisodioID"      : ["PV1", "PV1.50"]
     ]
 
     pathMap.each { key, pathList ->

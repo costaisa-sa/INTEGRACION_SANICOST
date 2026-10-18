@@ -3,7 +3,7 @@ Bundle-SymbolicName: Sanicost_011_-_Billing_Document_Response
 Bundle-ManifestVersion: 2
 Origin-Bundle-SymbolicName: Sanicost_011_-_Billing_Document_Response
 SAP-ArtifactTrait: 
-Origin-Bundle-Version: 1.0.6
+Origin-Bundle-Version: 1.0.10
 Import-Package: com.sap.esb.application.services.cxf.interceptor,com.sap
  .esb.security,com.sap.it.op.agent.api,com.sap.it.op.agent.collector.cam
  el,com.sap.it.op.agent.collector.cxf,com.sap.it.op.agent.mpl,javax.jms,
@@ -33,9 +33,9 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.sap
 Origin-Bundle-Name: Sanicost_011 - Billing Document Response Test
 SAP-RuntimeProfile: iflmap
 Bundle-Name: Sanicost_011 - Billing Document Response Test
-Bundle-Version: 1.0.11
+Bundle-Version: 1.0.10
 SAP-NodeType: IFLMAP
-Origin-ModifiedDate: 1737966977248
+Origin-ModifiedDate: 1751965950364
 SAP-BundleType: IntegrationFlow
 Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  .security.KeyManagerFactory;multiple:=false,com.sap.esb.security.TrustM

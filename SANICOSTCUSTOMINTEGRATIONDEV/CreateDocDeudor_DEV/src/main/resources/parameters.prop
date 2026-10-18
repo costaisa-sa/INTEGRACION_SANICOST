@@ -1,5 +1,6 @@
-#
-#Sun Oct 18 09:21:09 UTC 2026
+#Sun Oct 18 08:59:48 UTC 2026
 CreateDocDeudor=CreateDocDeudor_DEV
 HANA_BD=Sanicost_oAuth_Dev
-URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+System=
+URL_HANA=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_SCP=https\://dbsystema76e164cb.hana.ondemand.com

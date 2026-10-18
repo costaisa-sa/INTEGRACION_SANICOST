@@ -43,7 +43,7 @@
 				string-length($blank_zero)+string-length(CodiServeiSanitari)-5),
 				string-length($blank_zero)+string-length(CodiServeiSanitari)"/>	
 				
-			    <xsl:value-of select="substring(concat(DataInici,$blank),
+				<xsl:value-of select="substring(concat(DataInici,$blank),
 				0,
 				9)"/>	
 				
@@ -136,7 +136,7 @@
 				</xsl:choose>
 				<!--<<<PRG 19.02.2021-->
     				
-                <xsl:value-of select="substring(concat($blank_zero,NumeroClausula),
+    			<xsl:value-of select="substring(concat($blank_zero,NumeroClausula),
     				string-length($blank_zero)+string-length(NumeroClausula)-2),
     				string-length($blank_zero)+string-length(NumeroClausula)"/>
     			
@@ -324,7 +324,7 @@
     			   0,
     			   26)"/>
     				
-                <xsl:value-of select="substring(concat(CMBDH,$blank),
+    			<xsl:value-of select="substring(concat(CMBDH,$blank),
     				0,
     				26)"/>
     				

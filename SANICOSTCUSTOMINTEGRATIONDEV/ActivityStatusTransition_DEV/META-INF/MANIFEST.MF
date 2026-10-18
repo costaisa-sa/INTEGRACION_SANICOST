@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: ActivityStatusTransition_DEV
 Bundle-Name: ActivityStatusTransition_DEV
-Bundle-Version: 1.0.11
+Bundle-Version: 1.0.12
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -42,5 +42,5 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
 Origin-Bundle-Name: ActivityStatusTransition_DEV
 Origin-Bundle-SymbolicName: ActivityStatusTransition_DEV
 Origin-Bundle-Version: 1.0.11
-Origin-ModifiedDate: 1751550361944
+Origin-ModifiedDate: 1751880532359
 

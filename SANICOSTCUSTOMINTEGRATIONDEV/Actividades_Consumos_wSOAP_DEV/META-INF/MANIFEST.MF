@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Actividades_Consumos_wSOAP_DEV
-Bundle-Version: 1.0.8
+Bundle-Version: 1.0.10
 Bundle-Name: Actividades_Consumos_wSOAP_DEV
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
@@ -42,5 +42,5 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
 Origin-Bundle-Name: Actividades_Consumos_wSOAP_DEV
 Origin-Bundle-Version: 1.0.8
 Origin-Bundle-SymbolicName: Actividades_Consumos_wSOAP_DEV
-Origin-ModifiedDate: 1751547808115
+Origin-ModifiedDate: 1751880532568
 

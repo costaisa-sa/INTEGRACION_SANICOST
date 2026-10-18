@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><parameters><parameter>
     <key/>
+    <name>URL_ERP</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>URL_SCP</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
     <name>URL_HANA</name>
     <type>xsd:string</type>
     <isRequired>false</isRequired>
@@ -9,6 +25,14 @@
   </parameter><parameter>
     <key/>
     <name>HANA_BD</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>System</name>
     <type>xsd:string</type>
     <isRequired>false</isRequired>
     <constraint/>

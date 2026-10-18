@@ -21,9 +21,9 @@ def void mapDeudorDocType(String[] arg1, String[] arg2, String[] arg3, Output ou
 	if(arg1){
 	    output.addValue("2");  //Numero pasaporte
 	}else if(arg2){
-	    output.addValue("1"); //Documento nacional de identidad
+	    output.addValue("C"); //Documento nacional de identidad
 	}else{
-	   output.addValue("5");  //Número de identificación extranjeros
+	   output.addValue("8");  //Número de identificación extranjeros
 	}
 }
 

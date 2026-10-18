@@ -44,6 +44,6 @@ Origin-Bundle-Name: Sanicost_005 - Liquidacion_Honorarios_ECC_onPremise
  Test
 Origin-Bundle-SymbolicName: Sanicost_005_-_Liquidacion_Honorarios_ECC_on
  Premise_Test
-Origin-Bundle-Version: 1.0.5
-Origin-ModifiedDate: 1731921892260
+Origin-Bundle-Version: 1.0.12
+Origin-ModifiedDate: 1751965405351
 

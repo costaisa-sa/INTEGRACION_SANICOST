@@ -1,12 +1,12 @@
-#
-#Sun Oct 18 09:21:42 UTC 2026
+#Sun Oct 18 08:59:55 UTC 2026
 ActivityStartAddress=ActivityStartWorkflowReprocess
 AltaPacienteAddress=Alta_Paciente
 AltaUrgenciasAddress=Alta_Urgencias
-CPILocal=CPILocal
-CPI_LOCAL=https\://chv-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
+CPILocal=
+CPI_LOCAL=https\://sanicostdemo.it-cpi018-rt.cfapps.eu10-003.hana.ondemand.com/http/
 CREDENTIALS_HCI=HCILocal
 CREDENTIALS_SCP=CloudPlatform_DEV
+HCILocal=HCILocal
 System=_DEV
 URL_HCI=https\://y100030-iflmap.hcisbp.eu1.hana.ondemand.com
 URL_WF=https\://bpmworkflowruntimea2d6007ea-a76e164cb.hana.ondemand.com

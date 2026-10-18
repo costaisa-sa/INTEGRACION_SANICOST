@@ -1,19 +1,19 @@
-#
-#Sun Oct 18 09:21:11 UTC 2026
+#Sun Oct 18 08:59:29 UTC 2026
 ActividadConsumosAddress=Actividad_Consumos
 ActivityStartWorkflowReprocessAddress=ActivityStartWorkflowReprocess
-CPILocal=CPILocal
-CPI_LOCAL=https\://chv-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
+CPILocal=
+CPI_LOCAL=https\://sanicostdemo.it-cpi018-rt.cfapps.eu10-003.hana.ondemand.com/http/
 CREDENTIALS_HANA=HanaDataBase_PRD
 CREDENTIALS_HCI=HCILocal
 CREDENTIALS_NAME=
 HANA_BD=Sanicost_oAuth_Dev
+HCILocal=HCILocal
 System=_DEV
-URL_API=https\://spa-api-gateway-bpi-eu-prod.cfapps.eu10.hana.ondemand.com
-URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_API=https\://bpmworkflowruntimea2d6007ea-a76e164cb.hana.ondemand.com
+URL_HANA=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
 URL_HCI=https\://y100030-iflmap.hcisbp.eu1.hana.ondemand.com
-address_token=https\://hvic-qa.authentication.eu10.hana.ondemand.com/oauth/token
-credencial_name_token=CloudPlatform_DEV
+address_token=https\://sanicostdemo.authentication.eu10.hana.ondemand.com/oauth/token
+credencial_name_token=
 enviromentBPA=environmentId\=develop
 query_token=grant_type\=client_credentials
-tokenIRPAEnviroment=W2eoxD0SONBt2_z-VWzBojM7cFJqxK6y
+tokenIRPAEnviroment=ZjGzbbxcR34ENHkSqpEZsMhU8-D0z66x

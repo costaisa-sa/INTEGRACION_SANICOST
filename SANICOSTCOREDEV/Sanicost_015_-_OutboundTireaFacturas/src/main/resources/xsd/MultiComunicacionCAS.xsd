@@ -1,0 +1,1068 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.tirea.es/CAS/MultiComunicacionCAS"
+	targetNamespace="http://www.tirea.es/CAS/MultiComunicacionCAS"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+
+	<!-- ################################################################# -->
+	<!-- # Definicion de tipos de datos                                  # -->
+	<!-- ################################################################# -->
+
+    <!--
+    <xs:include schemaLocation="TiposCAS.xsd"/>
+    -->
+
+    <!-- ################################################################# -->
+	<!-- # Definicion de tipos de datos simples                          # -->
+	<!-- ################################################################# -->
+
+	<xs:simpleType name="_t_actos">
+		<xs:restriction base="xs:unsignedInt">
+    		<xs:minInclusive value="0"/>
+    		<xs:maxInclusive value="999"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_calle">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="80"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_centro">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="EA"/>
+			<xs:enumeration value="CS"/>
+			<xs:enumeration value="CC"/>
+      <xs:enumeration value="NE"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_cif">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="9"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_coderror">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="8"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_codigo">
+		<xs:restriction base="xs:token">
+			<xs:length value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_codigodgs">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_codigocs">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_complemento">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="80"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_condicion">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_convenio">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_cp">
+		<xs:restriction base="xs:token">
+			<xs:pattern value="[0-9]{5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_dc">
+		<xs:restriction base="xs:token">
+			<xs:pattern value="[0-9]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_delegacion">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="8"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_edad">
+		<xs:restriction base="xs:unsignedInt">
+    		<xs:minInclusive value="0"/>
+    		<xs:maxInclusive value="199"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_email">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+		  	<xs:maxLength value="80"/>
+			<xs:pattern value="\w+((\.|-|_)\w+)*@\w+((\.|-|_)\w+)*"/>
+ 	 	</xs:restriction>
+ 	</xs:simpleType>
+
+	<xs:simpleType name="_t_entidad">
+		<xs:restriction base="xs:token">
+			<xs:pattern value="[0-9]{4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_identificador1">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_identificador2">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="24"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_identificador3">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="16"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_identificador4">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="8"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_infoadicional">
+		<xs:restriction base="xs:token">
+    		<xs:pattern value="S|N"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_infoadicional2">
+		<xs:restriction base="xs:token">
+    		<xs:pattern value="S|N|D"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_infoadicional3">
+		<xs:restriction base="xs:token">
+    		<xs:pattern value="S|N|0|1|2|3"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_marca">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="24"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_matricula">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+  <xs:simpleType name="_t_matricula2">
+    <xs:restriction base="xs:token">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+	<xs:simpleType name="_t_matriculafiva">
+		<xs:restriction base="xs:string">
+			<!-- Ordinarias -->
+			<xs:pattern value="  [0-9]{4}[B-DF-HJ-NP-PR-TV-Z]{3}" />
+			<xs:pattern value="  [A-Z][A-Z ](00[0-9]{4}[ A-Z][A-Z]|0[1-9][0-9]{4}|[1-9][0-9]{5})" />
+			<!-- Especiales -->
+			<xs:pattern value="E [A-Z][A-Z ][0-9]{6}VE" />
+ 			<xs:pattern value="E1E[0-9]{4}[B-DF-HJ-NP-TV-Z]{3}" />
+			<!-- Remolques -->
+ 			<xs:pattern value="R [A-Z][A-Z ][0-9]{6}R" />
+			<xs:pattern value="R1R[0-9]{4}[B-DF-HJ-NP-TV-Z]{3}" />
+	 		<!-- Ciclomotor -->
+		 	<xs:pattern value="C C[0-9]{4}[B-DF-HJ-NP-TV-Z]{3}" />
+ 			<!-- Diplomatica -->
+		 	<xs:pattern value="D (CD|OI|TA|CC)[0-9]{6}" />
+		 	<!-- Turistica -->
+	 		<xs:pattern value="T [0-9]{2}[A-Z][A-Z ]([0-9]{8}|[0-9]{4}|[0-9]{4}    )" />
+	 		<xs:pattern value="T1T[0-9]{4}[B-DF-HJ-NP-TV-Z]{3}" />
+		 	<!-- Historica -->
+ 			<xs:pattern value="H H[0-9]{4}[B-DF-HJ-NP-TV-Z]{3}" />
+		 	<!-- Temporal -->
+		 	<xs:pattern value="TE[A-Z][A-Z ][0-9]{4}[RT][0-9]{2}" />
+	 		<xs:pattern value="TT[PSV][0-9]{4}[B-DF-HJ-NP-TV-Z]{3}" />
+		 	<!-- Pruebas TP -->
+		 	<xs:pattern value="P [A-Z][A-Z ][0-9]{2}[PT][0-9]{4}([12][0-9]{2}|[12]|[12]  )" />
+	 		<!-- ITV -->
+	 		<xs:pattern value="I [A-Z][A-Z ]ITV[0-9]{4}" />
+			<!-- Vehiculo oficial -->
+			<xs:pattern value="M [A-Z](  |[A-Z][A-Z ])(00[0-9]{4}[ A-Z][A-Z]|0[1-9][0-9]{4}|[1-9][0-9]{5})" />
+	 		<xs:pattern value="M1[A-Z](  |[A-Z][A-Z ])(VE|  )[0-9]{6}" />
+			<!-- Otras -->
+			<xs:pattern value="K .+" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_nif">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_nombre">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="40"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_nombreapellidos">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="120"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_num">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_numero">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="24"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_numero2">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="24"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_numeroafiliacionss">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="24"/>
+			<xs:pattern value="[0-9]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_numerocuenta">
+		<xs:restriction base="xs:token">
+			<xs:pattern value="[0-9]{10}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_numpoliza">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="24"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_numvehiculos">
+		<xs:restriction base="xs:unsignedInt">
+    		<xs:minInclusive value="0"/>
+    		<xs:maxInclusive value="99"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_poblacion">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="80"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_provincia">
+		<xs:restriction base="xs:unsignedInt">
+    		<xs:minInclusive value="0"/>
+    		<xs:maxInclusive value="99"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_referencia">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_sucursal">
+		<xs:restriction base="xs:token">
+			<xs:pattern value="[0-9]{4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_telefonofax">
+		<xs:restriction base="xs:token">
+			<xs:pattern value="[0-9]{9}"/>
+			<xs:pattern value="([+])?[0-9]{2}[0-9]{9}"/>
+			<xs:pattern value="([+])?[0-9]{3}[0-9]{9}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_telefonofax2">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_texto">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="240"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_texto80">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="80"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_texto2_80">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="80"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_texto2_1024">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="1024"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_tipocomunicacion">
+		<xs:restriction base="xs:unsignedInt">
+    		<xs:minInclusive value="0"/>
+    		<xs:maxInclusive value="999"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_tipopago">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="_t_tipovehiculo">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="UNIDADES MEDICALIZADAS"/>
+			<xs:enumeration value="UNIDADES SANITARIZADAS"/>
+			<xs:enumeration value="UNIDADES BASICAS"/>
+			<xs:enumeration value="MEDIOS AEREOS"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<!-- ################################################################# -->
+	<!-- # Definicion de tipos de datos complejos                        # -->
+	<!-- ################################################################# -->
+
+	<xs:complexType name="_t_cabeceradocumento">
+		<xs:sequence>
+			<!-- CO_COMUNICACION. Obligatorio -->
+			<xs:element name="TipoComunicacion" type="_t_tipocomunicacion"/>
+			<xs:choice>
+				<xs:element name="IdentificacionCas" type="_t_identificacioncas" minOccurs="0"/>
+				<xs:element name="IdentificacionSin" type="_t_identificacionsin" minOccurs="0"/>
+				<xs:element name="IdentificacionFaf" type="_t_identificacionfaf" minOccurs="0"/>
+				<xs:element name="IdentificacionFas" type="_t_identificacionfas" minOccurs="0"/>
+			</xs:choice>
+			<!-- OBSERVACIONES -->
+			<xs:element name="Observaciones" type="_t_texto" minOccurs="0"/>
+			<!-- CO_CENTRO o CO_ENTIDAD -->
+			<xs:element name="CentroEmisor" type="_t_codigocs" minOccurs="0"/>
+			<!-- CO_EMISOR -->
+			<xs:element name="Emisor" type="_t_centro" minOccurs="0"/>
+			<!-- Valor 'S' o 'N'. Salida -->
+			<xs:element name="InformacionAdicional" type="_t_infoadicional" minOccurs="0"/>
+			<!-- MATRICULA_FIVA. Salida -->
+			<xs:element name="MatriculaFIVA" type="_t_matriculafiva" minOccurs="0"/>
+			<!-- FE_ENVIO from CAS_COMUNICACION. Salida -->
+			<xs:element name="FechaEnvio" type="xs:date" minOccurs="0"/>
+			<!-- salida -->
+			<xs:element name="CodError" type="_t_coderror" minOccurs="0"/>
+			<!-- salida -->
+			<xs:element name="Error" type="_t_texto2_1024" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_identificacioncas">
+		<xs:sequence>
+			<!-- CO_EXPEDIENTE. Obligatorio -->
+			<xs:element name="CodExpedienteCAS" type="_t_identificador1"/>
+                        <!-- CO_CONVENIO -->
+                        <xs:element name="Convenio" type="_t_convenio" minOccurs="0"/>
+			<!-- CO_CENTRO o CO_ENTIDAD. Salida -->
+			<xs:element name="CentroReceptor" type="_t_codigocs" minOccurs="0"/>
+			<!-- FE_SINIESTRO. Salida -->
+			<xs:element name="FechaSiniestro" type="xs:date" minOccurs="0"/>
+			<!-- MATRICULA. Salida -->
+			<xs:element name="MatriculaVehiculo" type="_t_matricula" minOccurs="0"/>
+			<!-- ID_LESIONADO_CS. Salida -->
+			<xs:element name="IdLesionadoCentroHospitalario" type="_t_identificador2" minOccurs="0"/>
+			<!-- DE_CENTRO. Salida -->
+			<xs:element name="DelegacionCentroSanitario" type="_t_delegacion" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_identificacionsin">
+		<xs:sequence>
+                        <!-- CO_CONVENIO -->
+                        <xs:element name="Convenio" type="_t_convenio" minOccurs="0"/>
+			<!-- CO_CENTRO o CO_ENTIDAD. Obligatorio -->
+			<xs:element name="CentroReceptor" type="_t_codigocs" />
+			<!-- FE_SINIESTRO from CAS_EXPEDIENTE. Obligatorio -->
+			<xs:element name="FechaSiniestro" type="xs:date"/>
+			<!-- MATRICULA. Obligatorio -->
+			<xs:element name="MatriculaVehiculo" type="_t_matricula"/>
+			<!-- ID_LESIONADO_CS. Obligatorio -->
+			<xs:element name="IdLesionadoCentroHospitalario" type="_t_identificador2"/>
+			<!-- DE_CENTRO from CAS_EXPEDIENTE -->
+			<xs:element name="DelegacionCentroSanitario" type="_t_delegacion" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_identificacionfaf">
+		<xs:sequence>
+			<!--  NU_FACTURA from CAS_FACTURA. -->
+			<xs:element name="NumeroFactura" type="_t_numero2" minOccurs="0"/>
+			<!-- CIF -->
+			<xs:element name="CIF" type="_t_cif" minOccurs="0"/>
+			<!-- CO_EXPEDIENTE -->
+			<xs:element name="CodExpedienteCAS" type="_t_identificador1" minOccurs="0"/>
+			<!-- CO_CENTRO -->
+			<xs:element name="CentroSanitario" type="_t_codigocs" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_identificacionfas">
+		<xs:sequence>
+			<!--  NU_FACTURA from CAS_FACTURA. -->
+			<xs:element name="NumeroFactura" type="_t_numero" minOccurs="0"/>
+
+                        <!-- CO_CONVENIO -->
+                        <xs:element name="Convenio" type="_t_convenio" minOccurs="0"/>
+			<!-- CO_CENTRO o CO_ENTIDAD. Obligatorio -->
+			<xs:element name="CentroReceptor" type="_t_codigocs" />
+			<!-- FE_SINIESTRO from CAS_EXPEDIENTE. Obligatorio -->
+			<xs:element name="FechaSiniestro" type="xs:date"/>
+			<!-- MATRICULA. Obligatorio -->
+			<xs:element name="MatriculaVehiculo" type="_t_matricula"/>
+			<!-- ID_LESIONADO_CS. Obligatorio -->
+			<xs:element name="IdLesionadoCentroHospitalario" type="_t_identificador2"/>
+			<!-- DE_CENTRO from CAS_EXPEDIENTE -->
+			<xs:element name="DelegacionCentroSanitario" type="_t_delegacion" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_datosexpedienteea">
+		<xs:sequence>
+			<!-- DE_ENTIDAD from CAS_EXPEDIENTE -->
+			<xs:element name="DelegacionEntidadAseguradora" type="_t_delegacion" minOccurs="0"/>
+			<!-- RE_ENTIDAD from CAS_EXPEDIENTE -->
+			<xs:element name="RefSiniestroEntidadAseguradora" type="_t_identificador2" minOccurs="0"/>
+			<!-- ID_LESIONADO_EA. -->
+			<xs:element name="IdLesionadoEntidadAseguradora" type="_t_identificador1" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_cabecerafichero">
+		<xs:sequence>
+			<!-- FE_GENERACION from CAS_COMUNICACION -->
+			<xs:element name="FechaGeneracion" type="xs:date" minOccurs="0"/>
+			<!-- CO_CENTRO. Obligatorio -->
+			<xs:element name="CodigoEmisor" type="_t_codigocs"/>
+			<!--  -->
+			<xs:element name="CodigoReceptor" type="_t_codigocs" minOccurs="0"/>
+			<!-- Salida -->
+			<xs:element name="CodError" type="_t_coderror" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_centrosanitario">
+		<xs:sequence>
+			<!-- DOMICILIO from CAS_CENTRO_SANITARIO. Salida -->
+			<xs:element name="Domicilio" type="_t_direccion" minOccurs="0"/>
+			<!-- TELEFONO_CENTRO from CAS_CENTRO_SANITARIO. Salida -->
+			<xs:element name="Telefono" type="_t_telefonofax" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_direccion">
+		<xs:sequence>
+			<xs:element name="Calle" type="_t_calle" minOccurs="0"/>
+			<xs:element name="Numero" type="_t_num" minOccurs="0"/>
+			<xs:element name="Complemento" type="_t_complemento" minOccurs="0"/>
+			<xs:element name="Poblacion" type="_t_poblacion" minOccurs="0"/>
+			<xs:element name="Provincia" type="_t_provincia" minOccurs="0"/>
+			<xs:element name="CP" type="_t_cp" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_hospitalemergencias">
+		<xs:sequence>
+			<!-- Obligatorio -->
+			<xs:element name="Nombre" type="_t_texto80"/>
+			<!-- Obligatorio -->
+			<xs:element name="Poblacion" type="_t_poblacion"/>
+			<!-- Obligatorio -->
+			<xs:element name="Provincia" type="_t_provincia"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!--  from CAS_DATOS_PERSONALES -->
+	<xs:complexType name="_t_lesionado">
+		<xs:sequence>
+			<!-- Obligatorio -->
+			<xs:element name="Nombre" type="_t_nombre"/>
+			<!-- Obligatorio -->
+			<xs:element name="PrimerApellido" type="_t_nombre"/>
+			<xs:element name="SegundoApellido" type="_t_nombre" minOccurs="0"/>
+                        <xs:element name="NIF" type="_t_nif" minOccurs="0"/>
+                        <xs:element name="Edad" type="_t_edad" minOccurs="0"/>
+			<!-- En RestoComunicacion no existe -->
+			<xs:element name="Domicilio" type="_t_direccion" minOccurs="0"/>
+			<xs:element name="Telefono" type="_t_telefonofax2" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!--  from CAS_VEHI_PARTE -->
+	<xs:complexType name="_t_vehiculo">
+		<xs:sequence>
+			<!-- En ParteTrasladoInterhospitalario no exite -->
+			<xs:element name="NombreApellidos" type="_t_nombreapellidos" minOccurs="0"/>
+			<xs:element name="MatriculaVehiculo" type="_t_matricula2" minOccurs="0"/>
+			<xs:element name="MatriculaFIVA" type="_t_matriculafiva" minOccurs="0"/>
+			<xs:element name="Marca" type="_t_marca" minOccurs="0"/>
+			<xs:element name="NumPolizaSeguro" type="_t_numpoliza" minOccurs="0"/>
+			<xs:element name="CodigoEntidadAseguradora" type="_t_codigodgs" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_datosadicionales">
+		<xs:sequence>
+			<!-- FE_CADUCIDAD from CAS_COMUNICACION -->
+			<xs:element name="FechaCaducidad" type="xs:date" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_penalizacion">
+		<xs:sequence>
+			<xs:element name="IdPenalizacion" type="xs:integer" minOccurs="0"/>
+			<xs:element name="CodigoReceptor" type="_t_centro" minOccurs="0"/>
+			<xs:element name="Importe" type="xs:integer" minOccurs="0"/>
+			<xs:element name="Observaciones" type="_t_texto" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+
+
+
+
+
+    <!--
+        <xs:include schemaLocation="ParteAsistenciaCAS.xsd"/>
+    -->
+
+    <!-- ################################################################# -->
+	<!-- # Definicion de tipos de datos                                  # -->
+	<!-- ################################################################# -->
+
+	<!-- include necesario solo si no esta dentro de una MultiComunicacion -->
+	<!-- <xs:include schemaLocation="TiposCAS.xsd"/> -->
+
+	<!-- ################################################################# -->
+	<!-- # Definicion de elementos                                       # -->
+	<!-- ################################################################# -->
+
+	<xs:complexType name="_t_detalleparteasistencia">
+		<xs:sequence>
+			<!-- RE_CENTRO from CAS_EXPEDIENTE -->
+			<xs:element name="IdSiniestroLesionadoCentroSanitario" type="_t_identificador2" minOccurs="0"/>
+			<!-- CONDICION from CAS_COMUNICACION. -->
+			<xs:element name="CondicionLesionado" type="_t_condicion" minOccurs="0"/>
+			<!-- Obligatorio. EQUIPO from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="EquipoFacultativo" type="_t_texto80" minOccurs="0"/>
+			<!-- OObligatorio. FL_TRASLADO from CAS_PARTE_ASISTENCIA Valor 'S' o 'N'-->
+			<xs:element name="Traslado" type="_t_infoadicional" minOccurs="0"/>
+			<!-- Obligatorio. LUGAR from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="LugarDelSiniestro" type="_t_texto80"/>
+			<!-- Obligatorio. CO_PROVIN_SINIE from CAS_COMUNICACION -->
+			<xs:element name="ProvinciaOcurrenciaDelSiniestro" type="_t_provincia"/>
+			<xs:element name="HoraSiniestro" type="xs:time" minOccurs="0"/>
+			<!-- Obligatorio. FE_INGRESO from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="FechaHoraIngreso" type="xs:dateTime"/>
+			<!-- Obligatorio. NU_VEHICULOS from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="NumVehiculos" type="_t_numvehiculos"/>
+			<!-- LESIONES from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="Lesiones" type="_t_texto" minOccurs="0"/>
+			<!-- CO_CENTRO_ANT from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="CentroAnterior" type="_t_infoadicional" minOccurs="0"/>
+			<!-- CO_CENTRO_TRAS from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="CentroTraslado" type="_t_infoadicional" minOccurs="0"/>
+			<!-- COD. LESIONES from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="CodLesiones" type="_t_cod_lesiones" minOccurs="0"/>
+			<!-- Salida -->
+			<xs:element name="ModuloGeneral" type="_t_infoadicional" minOccurs="0"/>
+			<!-- Salida -->
+			<xs:element name="ModuloDesplazamiento" type="_t_infoadicional" minOccurs="0"/>
+			<!-- FL_RECHAZO from CAS_EXPEDIENTE -->
+			<xs:element name="RechazoPrevio" type="_t_infoadicional3" minOccurs="0"/>
+			<!--FL_ACC_LAB from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="AccidenteLaboral" type="_t_infoadicional2" minOccurs="0"/>
+			<!--CO_EXP_ANTERIOR from CAS_EXPEDIENTE -->
+			<xs:element name="CodExpRechazado" type="_t_identificador1" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_emergencias">
+		<xs:sequence>
+			<!-- NOMBRE_BA from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="NombreBaseAsistencial" type="_t_texto80" minOccurs="0"/>
+			<!-- TI_VEHICULO from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="TipoVehiculo" type="_t_tipovehiculo" minOccurs="0"/>
+			<!-- Obligatorio. Campos *_HR de CAS_PARTE_ASISTENCIA -->
+			<xs:element name="DatosHospitalReceptor" type="_t_hospitalemergencias"/>
+			<!-- Campos *_HE de CAS_PARTE_ASISTENCIA -->
+			<xs:element name="DatosHospitalEmisor" type="_t_hospitalemergencias" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_vehiculosimplicados">
+		<xs:sequence>
+			<xs:element name="DatosVehiculos" minOccurs="1" maxOccurs="4" type="_t_vehiculo"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_lesvehiculosimplicados">
+		<xs:sequence>
+			<xs:element name="DatosLesVehiculos" minOccurs="0" maxOccurs="2" type="_t_lesvehiculos"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_lesvehiculos">
+		<xs:sequence>
+			<!-- Obligatorio. MATRICULA from CAS_VEHI_PARTE -->
+			<xs:element name="MatriculaVehiculo" type="_t_matricula" minOccurs="0"/>
+			<!-- Obligatorio. FL_LESIONADOS from CAS_VEHI_PARTE -->
+			<xs:element name="ExisteLesionados" type="_t_infoadicional" minOccurs="0"/>
+			<!-- Obligatorio. NUMERO_LESIONADOS from CAS_VEHI_PARTE -->
+			<xs:element name="NumeroLesionados" type="_t_numvehiculos" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_centroanterior">
+		<xs:sequence>
+			<!-- Obligatorio. FL_MISMA_LESION from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="MismaLesion" type="_t_infoadicional" minOccurs="1"/>
+			<!--  CENTRO_MISMA_LES from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="CentroLesion" type="_t_texto2_80" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_ingreso">
+		<xs:sequence>
+			<!-- Obligatorio. FL_URGENCIA from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="Urgencia" type="_t_infoadicional" minOccurs="1"/>
+			<!-- Obligatorio. FL_INGRESO from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="Ingreso" type="_t_infoadicional" minOccurs="1"/>
+			<!-- Obligatorio. FL_CIRUGIA from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="Cirugia" type="_t_infoadicional" minOccurs="1"/>
+			<!-- Opcional. FL_UCI from CAS_PARTE_ASISTENCIA -->
+			<!--<xs:element name="Uci" type="_t_infoadicional3" minOccurs="0"/>-->
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_procedimientos">
+		<xs:sequence>
+			<!-- Obligatorio. PROCEDIMIENTOS from CAS_PARTE_ASISTENCIA -->
+			<xs:element name="Procedimientos" type="_t_texto" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_cod_lesiones">
+		<xs:sequence>
+			<xs:element name="CodLesion" minOccurs="0" maxOccurs="100" type="_t_identificador4"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+
+	<!-- ################################################################# -->
+	<!-- # Esquema General de ParteAsistencia                            # -->
+	<!-- ################################################################# -->
+
+	<xs:complexType name="_t_parteasistencia">
+		<xs:sequence>
+			<xs:element name="CabeceraDocumento" type="_t_cabeceradocumento" minOccurs="0"/>
+			<xs:element name="DatosAdicionales"  type="_t_datosadicionales" minOccurs="0"/>
+			<xs:element name="DatosLesionado" type="_t_lesionado" minOccurs="0"/>
+			<xs:element name="DatosCentroSanitario" type="_t_centrosanitario" minOccurs="0"/>
+			<xs:element name="DatosParteAsistencia" type="_t_detalleparteasistencia" minOccurs="0"/>
+			<xs:element name="DatosExpedienteEA" type="_t_datosexpedienteea" minOccurs="0"/>
+			<xs:element name="DatosEmergencias" type="_t_emergencias" minOccurs="0"/>
+			<xs:element name="DatosVehiculosImplicados" type="_t_vehiculosimplicados" minOccurs="0"/>
+			<xs:element name="DatosCentroAnterior" type="_t_centroanterior" minOccurs="0"/>
+			<xs:element name="DatosLesVehiculosImplicados" type="_t_lesvehiculosimplicados" minOccurs="0"/>
+			<xs:element name="DatosIngreso" type="_t_ingreso" minOccurs="0"/>
+			<xs:element name="DatosProcedimientos" type="_t_procedimientos" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- ################################################################# -->
+	<!-- # Documento ParteAsistencia                                     # -->
+	<!-- ################################################################# -->
+
+	<xs:element name="ParteAsistencia" type="_t_parteasistencia"/>
+
+
+
+
+
+
+
+
+    <!--
+    <xs:include schemaLocation="FacturaCAS.xsd"/>
+    -->
+
+    <!-- ################################################################# -->
+	<!-- # Definicion de tipos de datos                                  # -->
+	<!-- ################################################################# -->
+
+	<!-- include necesario solo si no esta dentro de una MultiComunicacion -->
+	<!-- <xs:include schemaLocation="TiposCAS.xsd"/> -->
+
+	<!-- ################################################################# -->
+	<!-- # Definicion de elementos                                       # -->
+	<!-- ################################################################# -->
+
+	<xs:complexType name="_t_prestacion">
+		<xs:sequence>
+			<!-- Obligatorio. CO_PRESTACION from CAS_PRES_FACTURA -->
+			<xs:element name="CodigoPrestacion" type="_t_codigo"/>
+			<!-- Obligatorio. FE_INICIO from CAS_PRES_FACTURA -->
+			<xs:element name="InicioPrestacion" type="xs:date"/>
+			<!-- FE_FIN from CAS_PRES_FACTURA -->
+			<xs:element name="FinPrestacion" type="xs:date" minOccurs="0"/>
+			<!-- Obligatorio. NU_ACTOS from CAS_PRES_FACTURA -->
+			<xs:element name="NumActos" type="_t_actos"/>
+			<!-- Obligatorio. IMPORTE from CAS_PRES_FACTURA -->
+			<xs:element name="PrecioPrestacion" type="xs:integer"/>
+			<!-- Opcional -->
+			<xs:element name="Porcentaje" type="xs:integer" minOccurs="0"/>
+			<!-- Opcional -->
+			<xs:element name="PrecioPrestacionR" type="xs:integer" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_prestaciones">
+		<xs:sequence>
+			<xs:element name="Prestacion" minOccurs="1" maxOccurs="11" type="_t_prestacion"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_detallefactura">
+		<xs:sequence>
+			<!--   -->
+			<xs:element name="NumeroFacturaRectificativa" type="_t_numero" minOccurs="0"/>
+			<!--   -->
+			<xs:element name="MotivoRectificacion" type="_t_texto80" minOccurs="0"/>
+			<!-- Salida. CIF from CAS_CENTRO_SANITARIO -->
+			<xs:element name="CIF" type="_t_cif" minOccurs="0"/>
+			<!-- IMPORTE_TOTAL from CAS_FACTURA -->
+			<xs:element name="ImporteTotal" type="xs:integer" minOccurs="0"/>
+			<!-- Obligatorio. FE_FACTURA from CAS_FACTURA -->
+			<xs:element name="Fecha" type="xs:date"/>
+			<!-- NU_POLIZA from CAS_FACTURA -->
+			<xs:element name="NumeroPoliza" type="_t_numero" minOccurs="0"/>
+			<!-- NU_SECSOC from CAS_FACTURA -->
+			<xs:element name="NumeroAfiliacionSS" type="_t_numeroafiliacionss" minOccurs="0"/>
+			<!-- Salida. CO_ENTIDADF from CAS_FACTURA -->
+			<xs:element name="Entidad" type="_t_entidad" minOccurs="0"/>
+			<!-- Salida. SUCURSAL from CAS_FACTURA -->
+			<xs:element name="Sucursal" type="_t_sucursal" minOccurs="0"/>
+			<!-- Salida. DIGITO_CONTROL from CAS_FACTURA -->
+			<xs:element name="DC" type="_t_dc" minOccurs="0"/>
+			<!-- Salida. NU_CUENTA from CAS_FACTURA -->
+			<xs:element name="NumeroCuenta" type="_t_numerocuenta" minOccurs="0"/>
+			<!-- FE_LIMITE from CAS_FACTURA -->
+			<xs:element name="FechaLimitePago" type="xs:date" minOccurs="0"/>
+			<!-- CARTA_PAGO from CAS_FACTURA -->
+			<xs:element name="CartadePago" type="_t_identificador3" minOccurs="0"/>
+			<!-- FL_ULT_FACTURA from CAS_FACTURA -->
+			<xs:element name="FlUltFactura" type="_t_infoadicional" minOccurs="0"/>
+			<!-- FACT_SUSTITUIDA from CAS_FACTURA -->
+			<xs:element name="FactSustituida" type="_t_numero" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_detallepago">
+		<xs:sequence>
+			<!--  -->
+			<xs:element name="FechaPago" type="xs:date" minOccurs="0"/>
+			<!--  -->
+			<xs:element name="TipoPago" type="_t_tipopago" minOccurs="0"/>
+			<!--  -->
+			<xs:element name="IdentificativoPago" type="_t_referencia" minOccurs="0"/>
+
+			<!-- IMPORTE_TOTAL from CAS_FACTURA -->
+			<xs:element name="ImporteTotal" type="xs:integer" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_detalleliquid">
+		<xs:sequence>
+			<!--  -->
+			<xs:element name="NumeroLiquidacion" type="_t_identificador3"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- ################################################################# -->
+	<!-- # Esquema General de Factura                                    # -->
+	<!-- ################################################################# -->
+
+	<xs:complexType name="_t_factura">
+		<xs:sequence>
+			<xs:element name="CabeceraDocumento" type="_t_cabeceradocumento" minOccurs="0"/>
+			<xs:element name="DatosAdicionales"  type="_t_datosadicionales" minOccurs="0"/>
+			<xs:element name="DatosExpedienteEA" type="_t_datosexpedienteea" minOccurs="0"/>
+		    <xs:choice>
+			   <xs:element name="DatosFactura" type="_t_detallefactura" minOccurs="0"/>
+			   <xs:element name="DatosPago" type="_t_detallepago" minOccurs="0"/>
+		    </xs:choice>
+		    	<xs:element name="DatosLiquidacion" type="_t_detalleliquid" minOccurs="0"/>
+			<xs:element name="DatosPrestaciones" type="_t_prestaciones" minOccurs="0"/>
+			<xs:element name="Penalizacion" type="_t_penalizacion" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- ################################################################# -->
+	<!-- # Documento Factura                                               # -->
+	<!-- ################################################################# -->
+
+	<xs:element name="Factura" type="_t_factura"/>
+
+
+
+
+
+
+
+
+
+
+    <!--
+    <xs:include schemaLocation="RestoCAS.xsd"/>
+    -->
+
+    <!-- ################################################################# -->
+	<!-- # Definicion de tipos de datos                                  # -->
+	<!-- ################################################################# -->
+
+	<!-- include necesario solo si no esta dentro de una MultiComunicacion -->
+	<!-- <xs:include schemaLocation="TiposCAS.xsd"/> -->
+
+	<!-- ################################################################# -->
+	<!-- # Definicion de elementos                                       # -->
+	<!-- ################################################################# -->
+
+	<xs:complexType name="_t_detalleresto">
+		<xs:sequence>
+			<!-- OBSERVACIONES1 from CAS_DOCADIC ??? -->
+			<xs:element name="TextoLibre" type="_t_texto" minOccurs="0"/>
+			<!-- Opcional. FE_DIAGNOSTICO from CAS_EXPEDIENTE -->
+			<xs:element name="FeDiagnostico" type="xs:date" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- ################################################################# -->
+	<!-- # Esquema General de RestoComunicacion                          # -->
+	<!-- ################################################################# -->
+
+	<xs:complexType name="_t_resto">
+		<xs:sequence>
+			<xs:element name="CabeceraDocumento" type="_t_cabeceradocumento" minOccurs="0"/>
+			<xs:element name="DatosAdicionales"  type="_t_datosadicionales" minOccurs="0"/>
+			<xs:element name="DatosExpedienteEA" type="_t_datosexpedienteea" minOccurs="0"/>
+			<xs:element name="DatosResto" type="_t_detalleresto" minOccurs="0"/>
+			<xs:element name="Penalizacion" type="_t_penalizacion" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- ################################################################# -->
+	<!-- # Documento RestoComunicacion                                               # -->
+	<!-- ################################################################# -->
+
+	<xs:element name="Resto" type="_t_resto"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+    <xs:include schemaLocation="DocumentoCAS.xsd"/>
+    -->
+
+    <!-- ################################################################# -->
+	<!-- # Definicion de tipos de datos                                  # -->
+	<!-- ################################################################# -->
+
+	<!-- include necesario solo si no esta dentro de una MultiComunicacion -->
+	<!-- <xs:include schemaLocation="TiposCAS.xsd"/> -->
+
+	<!-- ################################################################# -->
+	<!-- # Definicion de elementos                                       # -->
+	<!-- ################################################################# -->
+
+	<xs:complexType name="_t_datonumerofactura">
+		<xs:sequence>
+			<xs:element name="NumFactura" type="_t_numero" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="_t_detalledatopagina">
+		<xs:sequence>
+			<!-- Obligatorio -->
+			<xs:element name="NombreFichero" type="_t_nombre" minOccurs="0"/>
+			<!-- Obligatorio -->
+			<xs:element name="TipoFichero" type="_t_num" minOccurs="0"/>
+			<!-- Obligatorio -->
+			<xs:element name="Descripcion" type="_t_texto"/>
+			<!-- Obligatorio-->
+			<xs:element name="DatoBase64" type="xs:base64Binary"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<!-- ################################################################# -->
+	<!-- # Esquema General de ParteAsistencia                            # -->
+	<!-- ################################################################# -->
+
+	<xs:complexType name="_t_datopagina">
+		<xs:sequence>
+			<xs:element name="CabeceraDocumento" type="_t_cabeceradocumento" minOccurs="0"/>
+			<xs:element name="DatoNumeroFactura" type="_t_datonumerofactura" minOccurs="0"/>
+			<xs:element name="DatosAdicionales"  type="_t_datosadicionales" minOccurs="0"/>
+			<xs:element name="DatosExpedienteEA" type="_t_datosexpedienteea" minOccurs="0"/>
+			<xs:element name="DatoPagina" type="_t_detalledatopagina" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- ################################################################# -->
+	<!-- # Documento DatoAdjunto                                         # -->
+	<!-- ################################################################# -->
+
+	<xs:element name="Documento" type="_t_datopagina"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- ################################################################# -->
+	<!-- # Definicion de grupo para admitir comunicaciones desordenadas  # -->
+	<!-- ################################################################# -->
+
+	<xs:group name="Comunicacion">
+		<xs:sequence>
+			<xs:element name="ParteAsistencia" type="_t_parteasistencia" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Factura" type="_t_factura" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Resto" type="_t_resto" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Documento" type="_t_datopagina" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+
+	<!-- ################################################################# -->
+	<!-- # Esquema General                                               # -->
+	<!-- ################################################################# -->
+	<xs:element name="MultiComunicacion">
+		<xs:complexType>
+			<xs:sequence>
+
+				<xs:element name="CabeceraFichero" type="_t_cabecerafichero"/>
+
+				<xs:element name="Comunicaciones">
+					<xs:complexType>
+						<xs:group ref="Comunicacion" minOccurs="1" maxOccurs="unbounded"/>
+					</xs:complexType>
+				</xs:element>
+
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

@@ -44,6 +44,6 @@ Origin-Bundle-Name: Sanicost_009 - Billing Document Reject_ECC_onPrimese
   Test
 Origin-Bundle-SymbolicName: Sanicost_009_-_Billing_Document_Reject_ECC_o
  nPrimese_Test
-Origin-Bundle-Version: 1.0.1
-Origin-ModifiedDate: 1718361274162
+Origin-Bundle-Version: 1.0.5
+Origin-ModifiedDate: 1751965732749
 

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: ADT_A02_DEV
 Bundle-Name: ADT_A02_DEV
-Bundle-Version: 1.0.5
+Bundle-Version: 1.0.4
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -40,9 +40,9 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  multiple:=false,com.sap.esb.camel.security.cms.SignatureSplitter;multip
  le:=false
 Origin-Bundle-Name: ADT_A02_DEV
-Origin-Bundle-Version: 1.0.2
+Origin-Bundle-Version: 1.0.3
 Origin-Bundle-SymbolicName: ADT_A02_DEV
-Origin-ModifiedDate: 1739960524384
+Origin-ModifiedDate: 1761305183103
 Require-Capability: scriptcollection.Sanicost_000_-_CROSS_Custom_Headers
  ;resolution:=optional;bundleType:String="ScriptCollection";source:Strin
  g="reference"

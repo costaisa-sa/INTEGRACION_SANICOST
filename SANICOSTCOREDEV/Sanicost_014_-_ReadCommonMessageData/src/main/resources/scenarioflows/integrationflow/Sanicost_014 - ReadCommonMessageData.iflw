@@ -240,7 +240,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>queryOptions</key>
-                    <value>$select=ActivityID,FechaHoraInicio,DeudorID,PlanCoberturaID&amp;$filter=ActivityCodExt eq '${property.ActivityCodExt}'</value>
+                    <value>$select=ActivityID,FechaHoraInicio,DeudorID,PlanCoberturaID,PrestacionExtID&amp;$filter=ActivityCodExt eq '${property.ActivityCodExt}'</value>
                 </ifl:property>
                 <ifl:property>
                     <key>proxyType</key>
@@ -1761,7 +1761,10 @@
         "ActivityID": "${property.ActivityID}",
         "ActivityExists": "${property.ActivityExists}",
         "EsCatSalut": "${property.EsCatSalut}",
-        "FechaHoraInicioCurrent": "${property.FechaHoraInicioCurrent}"
+        "FechaHoraInicioCurrent": "${property.FechaHoraInicioCurrent}",
+        "PlanCoberturaIDCurrent": "${property.PlanCoberturaIDCurrent}",
+        "DeudorIDCurrent": "${property.DeudorIDCurrent}",
+        "PrestacionExtIDCurrent": "${property.PrestacionExtIDCurrent}"
     }
 }</value>
                 </ifl:property>
@@ -2194,7 +2197,7 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_85588726_1788339623335" xsi:type="bpmn2:tFormalExpression">//*[starts-with(local-name(), 'BAR_')]</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_85588726_1791358388889" xsi:type="bpmn2:tFormalExpression">//*[starts-with(local-name(), 'BAR_')]</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_85588670" name="Route 3" sourceRef="ExclusiveGateway_85588664" targetRef="CallActivity_85588669">
             <bpmn2:extensionElements>
@@ -2211,7 +2214,7 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_85588670_1788339623335" xsi:type="bpmn2:tFormalExpression">//*[starts-with(local-name(), 'DFT_')]</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_85588670_1791358388889" xsi:type="bpmn2:tFormalExpression">//*[starts-with(local-name(), 'DFT_')]</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_85588667" name="Route 2" sourceRef="ExclusiveGateway_85588664" targetRef="CallActivity_85588663">
             <bpmn2:extensionElements>
@@ -2228,7 +2231,7 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_85588667_1788339623335" xsi:type="bpmn2:tFormalExpression">//*[starts-with(local-name(), 'ORU_')]</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_85588667_1791358388889" xsi:type="bpmn2:tFormalExpression">//*[starts-with(local-name(), 'ORU_')]</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_85588665" name="Route 1" sourceRef="ExclusiveGateway_85588664" targetRef="CallActivity_5">
             <bpmn2:extensionElements>
@@ -2670,7 +2673,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>propertyTable</key>
-                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;//PlanCoberturaID&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;PlanCoberturaIDCurrent&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;//DeudorID&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;DeudorIDCurrent&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;//FechaHoraInicio&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;FechaHoraInicioCurrent&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;X&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;ActivityExists&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;//ActivityID&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;ActivityID&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;//PrestacionExtID&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;PrestacionExtIDCurrent&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;//PlanCoberturaID&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;PlanCoberturaIDCurrent&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;//DeudorID&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;DeudorIDCurrent&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;//FechaHoraInicio&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;FechaHoraInicioCurrent&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;X&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;ActivityExists&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;//ActivityID&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;ActivityID&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
                 </ifl:property>
                 <ifl:property>
                     <key>headerTable</key>
@@ -2785,7 +2788,7 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_109_1788339623337" xsi:type="bpmn2:tFormalExpression">count(//ActivityID)&gt;0</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_109_1791358388891" xsi:type="bpmn2:tFormalExpression">count(//ActivityID)&gt;0</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_106" name="No" sourceRef="ExclusiveGateway_105" targetRef="CallActivity_85588659">
             <bpmn2:extensionElements>

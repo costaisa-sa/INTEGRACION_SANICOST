@@ -1,11 +1,10 @@
-#
-#Sun Oct 18 09:20:45 UTC 2026
+#Sun Oct 18 08:43:00 UTC 2026
 Address=UpdatePatient
 AddressProDir=DeudorS4Private
 Address_S4=DeudorS4Private
 CPILocal=CPILocal
 CPI_LOCAL=https\://fpuigvert-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
-CPI_local=https\://chv-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
+CPI_local=https\://sanicostdemo.it-cpi018-rt.cfapps.eu10-003.hana.ondemand.com/http/
 Credential_name=my301787
 Credential_name_CPI=CPILocal
 System=_DEV
