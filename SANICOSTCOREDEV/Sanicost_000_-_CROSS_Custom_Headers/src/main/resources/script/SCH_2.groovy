@@ -7,7 +7,7 @@ def Message processData(Message message) {
     def headers = message.getHeaders()
     
     // 1. Cabeceras que ya se extrayeron en SCH_1
-    def parentKeys = ["RequesterID", "MessageID", "PatientN", "ActivityID", "Center", "PlanCoberturaID","PrestacionExtID","EpisodioID"]
+    def parentKeys = ["RequesterID", "MessageID", "PatientN", "ActivityID", "Center", "PlanCoberturaID","PrestacionExtID","EpisodioID"]; //test cambio prg
     
     // 2. Cabeceras que vienen del Hijo (Mapeo o Errores)
     def childKeys = ["Status", "DeudorID", "ActivityCheck", "ErrorHIS", "ErrorHISDesc"]
