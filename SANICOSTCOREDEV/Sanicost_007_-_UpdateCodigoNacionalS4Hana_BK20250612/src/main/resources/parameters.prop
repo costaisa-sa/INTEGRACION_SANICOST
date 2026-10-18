@@ -1,0 +1,10 @@
+#
+#Sun Oct 18 10:22:41 UTC 2026
+Address=updatecodigonacionals4hana
+Alias=
+FUNDACIO_PUIGVERT=
+HanaDataBase=HanaDataBase_PRO
+URL_HANA=https\://fp-prd-sanicost-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
+URL_S4=https\://my301810-api.s4hana.ondemand.com
+enviroment=pro/
+user_s4=my301810

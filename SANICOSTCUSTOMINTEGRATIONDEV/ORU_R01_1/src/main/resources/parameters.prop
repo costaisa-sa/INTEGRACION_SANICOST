@@ -1,0 +1,15 @@
+#
+#Sun Oct 18 10:23:09 UTC 2026
+Actividad_Nefrolink=Actividad_Nefrolink
+ActivityStartAddress=ActivityStartWorkflowReprocess
+CPILocal=CPILocal
+CPI_LOCAL=https\://chv-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
+CREDENTIALS_HCI=HCILocal
+CREDENTIALS_SCP=CloudPlatform_DEV
+ExploracionesAddress=Actividad_Exploraciones
+FertilidadAddress=Actividad_Fertilidad
+GuardarMensajeAddress=Actividad_Guardar_Mensaje_DEV
+LaboratorioAddress=Actividad_Laboratorio_DEV
+System=_DEV
+URL_HCI=https\://y100030-iflmap.hcisbp.eu1.hana.ondemand.com
+URL_WF=https\://bpmworkflowruntimea2d6007ea-a76e164cb.hana.ondemand.com

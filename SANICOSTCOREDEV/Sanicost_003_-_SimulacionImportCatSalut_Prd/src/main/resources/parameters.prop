@@ -1,0 +1,6 @@
+#
+#Sun Oct 18 10:22:46 UTC 2026
+Address=/SimulacionImportCatSalut
+URL_API=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
+URL_CREDENTIALS=Sanicost_oAuth_Dev
+environment=prd

@@ -1,0 +1,8 @@
+#
+#Sun Oct 18 10:23:04 UTC 2026
+ActividadGuardarMensaje=Actividad_Guardar_Mensaje
+HANA_BD=
+HANA_DB=Sanicost_oAuth_Dev
+System=_DEV
+URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_HCI=https\://y100030-iflmap.hcisbp.eu1.hana.ondemand.com

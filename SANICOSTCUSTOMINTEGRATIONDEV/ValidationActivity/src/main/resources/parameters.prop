@@ -1,0 +1,11 @@
+#
+#Sun Oct 18 10:23:06 UTC 2026
+HANA_BD=HanaDataBase
+HANA_DB=
+Sender=
+System=_DEV
+Sytem=
+URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_HCI=https\://dbsystema76e164cb.hana.ondemand.com
+ValidationActivity=ValidationActivity
+credential_name=Sanicost_oAuth_Dev

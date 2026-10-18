@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Wed Oct 02 2019 10:07:47 GMT+0200 (hora de verano de Europa central) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="CalculateDays">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="CalculateDaysType">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="HoraIngreso" type="xs:time"></xs:element>
+                                             <xs:element name="HoraAlta" type="xs:time"></xs:element>
+                                             <xs:element name="HoraMin" type="xs:time"></xs:element>
+                                             <xs:element name="FechaHorainicio" type="xs:dateTime"></xs:element>
+                                             <xs:element name="FechaHoraFin" type="xs:dateTime"></xs:element>
+                                        <xs:element nillable="true" minOccurs="0" maxOccurs="unbounded" name="DeudorID">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string" xmlns="">
+                                                    <xs:maxLength value="10"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                       </xs:sequence>
+                                       
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>

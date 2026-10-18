@@ -1,0 +1,34 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BillingDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="ID"/>
+        <xs:element type="xs:string" name="CreationDateTime"/>
+        <xs:element type="xs:string" name="ReferenceDocument"/>
+        <xs:element name="BillableDocumentItem" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="SalesOrganization"/>
+              <xs:element type="xs:string" name="DistributionChannel"/>
+              <xs:element type="xs:string" name="Division"/>
+              <xs:element type="xs:string" name="BillingDocumentDate"/>
+              <xs:element type="xs:string" name="SoldToParty"/>
+              <xs:element type="xs:string" name="BillToParty"/>
+              <xs:element type="xs:string" name="PayerParty"/>
+              <xs:element type="xs:string" name="Material"/>
+              <xs:element type="xs:string" name="Plant"/>
+              <xs:element name="PricingElement" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="ConditionRateValue"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="ProfitCenter"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

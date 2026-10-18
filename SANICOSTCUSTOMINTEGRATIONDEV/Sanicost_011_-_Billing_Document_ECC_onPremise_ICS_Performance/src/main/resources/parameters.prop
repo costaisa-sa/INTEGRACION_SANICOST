@@ -1,0 +1,10 @@
+#Sun Oct 18 10:23:01 UTC 2026
+Address=BillingDocumentICS
+BillingDocumentICS=BillingDocumentICS
+CREDENTIALS_HANA=Sanicost_oAuth_Dev
+HanaDataBase=Sanicost_oAuth_Dev
+Sanicost_oAuth_Dev=Sanicost_oAuth_Dev
+System=_DEV
+URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_HOST=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/
+enviroment=test

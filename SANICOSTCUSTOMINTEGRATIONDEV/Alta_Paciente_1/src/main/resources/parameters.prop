@@ -1,0 +1,11 @@
+#
+#Sun Oct 18 10:23:31 UTC 2026
+AltaPacienteAddress=
+CPILocal=CPILocal
+CPI_LOCAL=https\://chv-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
+DeudorS4PrivateAddress=DeudorS4Private
+FindPlanCoberturaAddress=FindPlanCobertura
+HANA_BD=Sanicost_oAuth_Dev
+System=_DEV
+URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com/odata/v2/
+URL_HCI=https\://fpuigvert-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com

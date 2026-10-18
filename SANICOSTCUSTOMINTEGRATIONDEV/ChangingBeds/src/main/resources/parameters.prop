@@ -1,0 +1,7 @@
+#
+#Sun Oct 18 10:23:29 UTC 2026
+ChangingBeds=ChangingBeds
+HANA_BD=Sanicost_oAuth_Dev
+HanaDataBase=HanaDataBase
+System=_DEV
+URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema Namespace="zsc.fac.serv" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="ActivitiesType">
+				<Key>
+					<PropertyRef Name="ActivityID" />
+				</Key>
+				<Property Name="ActivityID" Type="Edm.String" Nullable="false" MaxLength="50" />
+				<Property Name="ActivityCodExt" Type="Edm.String" MaxLength="30" />
+				<Property Name="EpisodioID" Type="Edm.String" MaxLength="35" />
+				<Property Name="ProcesoID" Type="Edm.String" MaxLength="35" />
+				<Property Name="AsociadoID" Type="Edm.String" MaxLength="20" />
+				<Property Name="Status" Type="Edm.String" MaxLength="1" />
+				<Property Name="CodErrorFacID" Type="Edm.String" MaxLength="6" />
+				<Property Name="InfoOriginID" Type="Edm.String" MaxLength="20" />
+				<Property Name="InfoOriginType" Type="Edm.Int32" />
+				<Property Name="EventTypeMsg" Type="Edm.String" MaxLength="4" />
+				<Property Name="Version" Type="Edm.String" MaxLength="4" />
+				<Property Name="DocumentoVentasID" Type="Edm.String" MaxLength="10" />
+				<Property Name="PosicionDocumentoVentasID" Type="Edm.Int32" />
+				<Property Name="FacturaVentasID" Type="Edm.String" MaxLength="10" />
+				<Property Name="PosicionFacturaID" Type="Edm.Int32" />
+				<Property Name="ModiManualmente" Type="Edm.Int32" />
+				<Property Name="PrestacionExtID" Type="Edm.String" MaxLength="20" />
+				<Property Name="DescPrestaExt" Type="Edm.String" MaxLength="60" />
+				<Property Name="PlanCoberturaID" Type="Edm.String" MaxLength="10" />
+				<Property Name="TipoPrestacionID" Type="Edm.String" MaxLength="4" />
+				<Property Name="DiagnosticoID" Type="Edm.String" MaxLength="6" />
+				<Property Name="ProcPrincipalID" Type="Edm.String" MaxLength="7" />
+				<Property Name="TipoProcedimID" Type="Edm.String" MaxLength="10" />
+				<Property Name="ProcSecundarioID" Type="Edm.String" MaxLength="7" />
+				<Property Name="TipoAnestesiaID" Type="Edm.String" MaxLength="2" />
+				<Property Name="Autorizacion" Type="Edm.String" MaxLength="20" />
+				<Property Name="FechaAutorizacion" Type="Edm.DateTime" />
+				<Property Name="GFH" Type="Edm.String" MaxLength="10" />
+				<Property Name="CodigoTratamientoID" Type="Edm.String" MaxLength="20" />
+				<Property Name="Cantidad" Type="Edm.Decimal" Precision="10" Scale="3" />
+				<Property Name="ProductID" Type="Edm.String" MaxLength="18" />
+				<Property Name="CodigoSanitario" Type="Edm.String" MaxLength="25"/>
+				<Property Name="FechaHoraInicio" Type="Edm.DateTime" />
+				<Property Name="FechaHoraFin" Type="Edm.DateTime" />
+				<Property Name="NumDiasAnteriores" Type="Edm.Int32" />
+				<Property Name="DestinoID" Type="Edm.String" MaxLength="6" />
+				<Property Name="MotivoAltaID" Type="Edm.String" MaxLength="2" />
+				<Property Name="MotivoIngresoID" Type="Edm.String" MaxLength="2" />
+				<Property Name="NumeroPoliza" Type="Edm.String" MaxLength="18" />
+				<Property Name="FechaAccidente" Type="Edm.DateTime" />
+				<Property Name="TitularSeguro" Type="Edm.String" MaxLength="35" />
+				<Property Name="MarcaModelo" Type="Edm.String" MaxLength="35" />
+				<Property Name="Matricula" Type="Edm.String" MaxLength="10" />
+				<Property Name="NombreConductor" Type="Edm.String" MaxLength="35" />
+				<Property Name="NombreEmpresa" Type="Edm.String" MaxLength="35" />
+				<Property Name="SituacionID" Type="Edm.String" MaxLength="4" />
+				<Property Name="ServicioRealizadorID" Type="Edm.String" MaxLength="8" />
+				<Property Name="ServicioSolicitadoID" Type="Edm.String" MaxLength="8" />
+				<Property Name="ServicioPeticionarioID" Type="Edm.String" MaxLength="8" />
+				<Property Name="Center" Type="Edm.String" MaxLength="4" />
+				<Property Name="UPorigenID" Type="Edm.String" MaxLength="5" />
+				<Property Name="UPrealID" Type="Edm.String" MaxLength="5" />
+				<Property Name="UPdestinoID" Type="Edm.String" MaxLength="5" />
+				<Property Name="RegionEconomicaID" Type="Edm.String" MaxLength="2" />
+				<Property Name="UPterritorID" Type="Edm.String" MaxLength="5" />
+				<Property Name="UPasignadaID" Type="Edm.String" MaxLength="5" />
+				<Property Name="ControlHabitacion" Type="Edm.String" MaxLength="4" />
+				<Property Name="Habitacion" Type="Edm.String" MaxLength="2" />
+				<Property Name="Cama" Type="Edm.String" MaxLength="3" />
+				<Property Name="TipoCamaID" Type="Edm.String" MaxLength="2" />
+				<Property Name="PacienteExtID" Type="Edm.String" MaxLength="10" />
+				<Property Name="DeudorID" Type="Edm.String" MaxLength="10" />
+				<Property Name="MedicoResponsableID" Type="Edm.String" MaxLength="10" />
+				<Property Name="MedicoRealizadorID" Type="Edm.String" MaxLength="10" />
+				<Property Name="MedicoSolicitanteID" Type="Edm.String" MaxLength="10" />
+				<Property Name="MedicoAutofacturaID" Type="Edm.String" MaxLength="10" />
+				<Property Name="CirujanoJefeID" Type="Edm.String" MaxLength="10" />
+				<Property Name="AyudanteCirujano1ID" Type="Edm.String" MaxLength="10" />
+				<Property Name="AyudanteCirujano2ID" Type="Edm.String" MaxLength="10" />
+				<Property Name="AnestesistaID" Type="Edm.String" MaxLength="10" />
+				<Property Name="InstrumentistaID" Type="Edm.String" MaxLength="10" />
+				<Property Name="Circulante" Type="Edm.String" MaxLength="10" />
+				<Property Name="ConvenioID" Type="Edm.String" MaxLength="10" />
+				<Property Name="ClausulaID" Type="Edm.Int32" />
+				<Property Name="AgrupacionID" Type="Edm.String" MaxLength="10" />
+				<Property Name="TipoFacturacID" Type="Edm.String" MaxLength="2" />
+				<Property Name="ClasifEconomicaID" Type="Edm.String" MaxLength="2" />
+				<Property Name="Importe" Type="Edm.Decimal" Precision="15" Scale="2" />
+			</EntityType>
+			<EntityType Name="PacExtType">
+				<Key>
+					<PropertyRef Name="PacienteID" />
+				</Key>
+				<Property Name="PacienteID" Type="Edm.String" Nullable="false" MaxLength="10" />
+				<Property Name="FechaNacimiento" Type="Edm.DateTime" />
+				<Property Name="Genero" Type="Edm.String" MaxLength="1" />
+				<Property Name="Poblacion" Type="Edm.String" MaxLength="35" />
+				<Property Name="Apellido1" Type="Edm.String" MaxLength="20" />
+				<Property Name="Apellido2" Type="Edm.String" MaxLength="20" />
+				<Property Name="Nombre" Type="Edm.String" MaxLength="40" />
+				<Property Name="NHC" Type="Edm.String" MaxLength="15" />
+				<Property Name="RegimenEconomico" Type="Edm.String" MaxLength="2" />
+				<Property Name="CodigoColectivo" Type="Edm.String" MaxLength="3" />
+				<Property Name="CIP" Type="Edm.String" MaxLength="18" />
+			</EntityType>
+			<EntityType Name="StatusType">
+				<Key>
+					<PropertyRef Name="Status" />
+				</Key>
+				<Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="1" />
+				<Property Name="Desc" Type="Edm.String" MaxLength="40" />
+			</EntityType>
+			<EntityType Name="ActivitiesExtendedType">
+				<Key>
+					<PropertyRef Name="ActivityID" />
+				</Key>
+				<Property Name="ActivityID" Type="Edm.String" Nullable="false" MaxLength="50" />
+				<Property Name="ActivityCodExt" Type="Edm.String" MaxLength="20" />
+				<Property Name="EpisodioID" Type="Edm.String" MaxLength="35" />
+				<Property Name="ProcesoID" Type="Edm.String" MaxLength="35" />
+				<Property Name="AsociadoID" Type="Edm.String" MaxLength="20" />
+				<Property Name="Status" Type="Edm.String" MaxLength="1" />
+				<Property Name="CodErrorFacID" Type="Edm.String" MaxLength="6" />
+				<Property Name="InfoOriginID" Type="Edm.String" MaxLength="20" />
+				<Property Name="InfoOriginType" Type="Edm.Int32" />
+				<Property Name="EventTypeMsg" Type="Edm.String" MaxLength="4" />
+				<Property Name="Version" Type="Edm.String" MaxLength="4" />
+				<Property Name="FacturaVentasID" Type="Edm.String" MaxLength="10" />
+				<Property Name="PosicionFacturaID" Type="Edm.Int32" />
+				<Property Name="ModiManualmente" Type="Edm.Int32" />
+				<Property Name="PrestacionExtID" Type="Edm.String" MaxLength="20" />
+				<Property Name="DescPrestaExt" Type="Edm.String" MaxLength="60" />
+				<Property Name="PlanCoberturaID" Type="Edm.String" MaxLength="10" />
+				<Property Name="PlanCoberturaDesc" Type="Edm.String" MaxLength="40" />
+				<Property Name="TipoPrestacionID" Type="Edm.String" MaxLength="4" />
+				<Property Name="TipoPrestacionDesc" Type="Edm.String" MaxLength="50" />
+				<Property Name="DiagnosticoID" Type="Edm.String" MaxLength="6" />
+				<Property Name="ProcPrincipalID" Type="Edm.String" MaxLength="7" />
+				<Property Name="TipoProcedimID" Type="Edm.String" MaxLength="10" />
+				<Property Name="TipoProcedimDesc" Type="Edm.String" MaxLength="50" />
+				<Property Name="ProcSecundarioID" Type="Edm.String" MaxLength="7" />
+				<Property Name="TipoAnestesiaID" Type="Edm.String" MaxLength="2" />
+				<Property Name="Autorizacion" Type="Edm.String" MaxLength="20" />
+				<Property Name="FechaAutorizacion" Type="Edm.DateTime" />
+				<Property Name="GFH" Type="Edm.String" MaxLength="10" />
+				<Property Name="CodigoTratamientoID" Type="Edm.String" MaxLength="20" />
+				<Property Name="Cantidad" Type="Edm.Decimal" Precision="10" Scale="3" />
+				<Property Name="ProductID" Type="Edm.String" MaxLength="18" />
+				<Property Name="CodigoSanitario" Type="Edm.String" MaxLength="25"/>
+				<Property Name="ProductDesc" Type="Edm.String" MaxLength="40" />
+				<Property Name="FechaHoraInicio" Type="Edm.DateTime" />
+				<Property Name="FechaHoraFin" Type="Edm.DateTime" />
+				<Property Name="NumDiasAnteriores" Type="Edm.Int32" />
+				<Property Name="DestinoID" Type="Edm.String" MaxLength="6" />
+				<Property Name="MotivoAltaID" Type="Edm.String" MaxLength="2" />
+				<Property Name="MotivoIngresoID" Type="Edm.String" MaxLength="2" />
+				<Property Name="NumeroPoliza" Type="Edm.String" MaxLength="18" />
+				<Property Name="FechaAccidente" Type="Edm.DateTime" />
+				<Property Name="TitularSeguro" Type="Edm.String" MaxLength="35" />
+				<Property Name="MarcaModelo" Type="Edm.String" MaxLength="35" />
+				<Property Name="Matricula" Type="Edm.String" MaxLength="10" />
+				<Property Name="NombreConductor" Type="Edm.String" MaxLength="35" />
+				<Property Name="NombreEmpresa" Type="Edm.String" MaxLength="35" />
+				<Property Name="SituacionID" Type="Edm.String" MaxLength="4" />
+				<Property Name="SituacionDesc" Type="Edm.String" MaxLength="50" />
+				<Property Name="ServicioRealizadorID" Type="Edm.String" MaxLength="8" />
+				<Property Name="ServicioSolicitadoID" Type="Edm.String" MaxLength="8" />
+				<Property Name="ServicioPeticionarioID" Type="Edm.String" MaxLength="8" />
+				<Property Name="Center" Type="Edm.String" MaxLength="4" />
+				<Property Name="UPorigenID" Type="Edm.String" MaxLength="5" />
+				<Property Name="UPorigenDesc" Type="Edm.String" MaxLength="60" />
+				<Property Name="UPrealID" Type="Edm.String" MaxLength="5" />
+				<Property Name="UPdestinoID" Type="Edm.String" MaxLength="5" />
+				<Property Name="RegionEconomicaID" Type="Edm.String" MaxLength="2" />
+				<Property Name="UPterritorID" Type="Edm.String" MaxLength="5" />
+				<Property Name="UPasignadaID" Type="Edm.String" MaxLength="5" />
+				<Property Name="ControlHabitacion" Type="Edm.String" MaxLength="4" />
+				<Property Name="Habitacion" Type="Edm.String" MaxLength="2" />
+				<Property Name="Cama" Type="Edm.String" MaxLength="3" />
+				<Property Name="TipoCamaID" Type="Edm.String" MaxLength="2" />
+				<Property Name="PacienteExtID" Type="Edm.String" MaxLength="10" />
+				<Property Name="DeudorID" Type="Edm.String" MaxLength="10" />
+				<Property Name="DeudorDesc" Type="Edm.String" MaxLength="40" />
+				<Property Name="MedicoResponsableID" Type="Edm.String" MaxLength="10" />
+				<Property Name="MedicoRealizadorID" Type="Edm.String" MaxLength="10" />
+				<Property Name="MedicoSolicitanteID" Type="Edm.String" MaxLength="10" />
+				<Property Name="MedicoAutofacturaID" Type="Edm.String" MaxLength="10" />
+				<Property Name="CirujanoJefeID" Type="Edm.String" MaxLength="10" />
+				<Property Name="AyudanteCirujano1ID" Type="Edm.String" MaxLength="10" />
+				<Property Name="AyudanteCirujano2ID" Type="Edm.String" MaxLength="10" />
+				<Property Name="AnestesistaID" Type="Edm.String" MaxLength="10" />
+				<Property Name="InstrumentistaID" Type="Edm.String" MaxLength="10" />
+				<Property Name="Circulante" Type="Edm.String" MaxLength="10" />
+				<Property Name="ConvenioID" Type="Edm.String" MaxLength="10" />
+				<Property Name="ConvenioDesc" Type="Edm.String" MaxLength="40" />
+				<Property Name="ClausulaID" Type="Edm.Int32" />
+				<Property Name="NumClausulaID" Type="Edm.String" MaxLength="3" />
+				<Property Name="ClausulaDesc" Type="Edm.String" MaxLength="40" />
+				<Property Name="AgrupacionID" Type="Edm.String" MaxLength="10" />
+				<Property Name="TipoFacturacID" Type="Edm.String" MaxLength="2" />
+				<Property Name="TipoFacturacDesc" Type="Edm.String" MaxLength="40" />
+				<Property Name="ClasifEconomicaID" Type="Edm.String" MaxLength="2" />
+				<Property Name="ClasifEconomicaDesc" Type="Edm.String" MaxLength="40" />
+				<Property Name="Importe" Type="Edm.Decimal" Precision="15" Scale="2" />
+			</EntityType>
+			<EntityContainer Name="activities" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="Activities" EntityType="zsc.fac.serv.ActivitiesType" />
+				<EntitySet Name="PacExt" EntityType="zsc.fac.serv.PacExtType" />
+				<EntitySet Name="Status" EntityType="zsc.fac.serv.StatusType" />
+				<EntitySet Name="ActivitiesExtended" EntityType="zsc.fac.serv.ActivitiesExtendedType" />
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

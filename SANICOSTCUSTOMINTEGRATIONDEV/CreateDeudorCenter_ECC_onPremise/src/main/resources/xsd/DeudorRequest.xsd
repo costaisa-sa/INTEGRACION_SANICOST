@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified" 
+	xmlns="urn:hl7-org:v2xml"
+	targetNamespace="urn:hl7-org:v2xml">
+         <!-- XML Schema Generated from XML Document on Fri May 31 2019 08:46:29 GMT+0200 (hora de verano de Europa central) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="AssignDeudorCenterRequest">
+                 <xs:complexType>
+                       <xs:sequence>
+                             <xs:element name="DeudorExtID" type="xs:string"></xs:element>
+                             <xs:element name="Center" type="xs:string"></xs:element>
+                       </xs:sequence>
+                 </xs:complexType>
+
+         </xs:element>
+   </xs:schema>

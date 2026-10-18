@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+          <!-- XML Schema Generated from XML Document on Wed Oct 16 2019 10:26:47 GMT+0200 (hora de verano de Europa central) -->
+          <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+       <xs:element name="LiquidacionHonorarios">
+              <xs:complexType>
+                     <xs:sequence>
+                            <xs:element name="header">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="SupplierID" type="xs:string"></xs:element>
+												 <xs:element name="CompanyCode" type="xs:string"></xs:element>
+												 <xs:element name="Account" type="xs:string"></xs:element>
+												 <xs:element name="CostCenter" type="xs:string"></xs:element>
+												 <xs:element name="ReferenceDocument" type="xs:string"></xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                            <xs:element name="Items" maxOccurs="unbounded">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="ActivityCodExt" type="xs:string"></xs:element>
+												 <xs:element name="Fee" type="xs:decimal"></xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                        </xs:sequence>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>
