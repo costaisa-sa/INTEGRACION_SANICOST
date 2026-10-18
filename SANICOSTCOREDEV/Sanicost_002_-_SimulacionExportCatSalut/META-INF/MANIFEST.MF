@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Sanicost_002_-_SimulacionExportCatSalut
-Bundle-Version: 1.0.9
+Bundle-Version: 1.0.13
 Bundle-Name: Sanicost_002 - SimulacionExportCatSalut Test
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
@@ -41,6 +41,6 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  le:=false
 Origin-Bundle-Name: Sanicost_002 - SimulacionExportCatSalut Test
 Origin-Bundle-SymbolicName: Sanicost_002_-_SimulacionExportCatSalut
-Origin-Bundle-Version: 1.0.9
-Origin-ModifiedDate: 1761839859196
+Origin-Bundle-Version: 1.0.3
+Origin-ModifiedDate: 1732799848849
 

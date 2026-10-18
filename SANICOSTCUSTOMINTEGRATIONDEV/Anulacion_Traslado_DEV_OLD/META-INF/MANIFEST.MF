@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Anulacion_Traslado_DEV_OLD
 Bundle-Name: Anulacion_Traslado_DEV_OLD
-Bundle-Version: 1.0.11
+Bundle-Version: 1.0.10
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -40,7 +40,7 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  multiple:=false,com.sap.esb.camel.security.cms.SignatureSplitter;multip
  le:=false
 Origin-Bundle-Name: Anulacion_Traslado_DEV_OLD
-Origin-Bundle-Version: 1.0.10
+Origin-Bundle-Version: 1.0.9
 Origin-Bundle-SymbolicName: Anulacion_Traslado_DEV_OLD
-Origin-ModifiedDate: 1761568248737
+Origin-ModifiedDate: 1751874990283
 

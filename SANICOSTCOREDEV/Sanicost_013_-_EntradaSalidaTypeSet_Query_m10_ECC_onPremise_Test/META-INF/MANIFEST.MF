@@ -34,6 +34,4 @@ Origin-Bundle-Name: Sanicost_013 - EntradaSalidaTypeSet_Query_m10_ECC_on
  Premise Test
 Origin-Bundle-SymbolicName: Sanicost_013_-_EntradaSalidaTypeSet_Query_m1
  0_ECC_onPremise_Test
-Origin-Bundle-Version: 1.0.2
-Origin-ModifiedDate: 1751968803897
 

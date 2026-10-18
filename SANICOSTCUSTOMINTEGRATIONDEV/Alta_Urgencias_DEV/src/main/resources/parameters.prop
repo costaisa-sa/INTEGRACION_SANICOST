@@ -1,9 +1,9 @@
-#Sun Oct 18 08:59:21 UTC 2026
+#
+#Sun Oct 18 09:21:20 UTC 2026
 AltaUrgencias=Alta_Urgencias_DEV
 AltaUrgenciasAddress=
-CPILocal=
-CPI_LOCAL=https\://sanicostdemo.it-cpi018-rt.cfapps.eu10-003.hana.ondemand.com/http/
-HCILocal=HCILocal
+CPILocal=CPILocal
+CPI_LOCAL=https\://chv-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
 IngresoPaciente=
 IngresoPacienteAddress=Ingreso_Paciente
 System=_DEV

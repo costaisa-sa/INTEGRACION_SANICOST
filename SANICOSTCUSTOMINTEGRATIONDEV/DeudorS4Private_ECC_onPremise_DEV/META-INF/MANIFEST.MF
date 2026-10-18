@@ -42,5 +42,5 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
 Origin-Bundle-Name: DeudorS4Private_ECC_onPremise_DEV
 Origin-Bundle-Version: 1.0.12
 Origin-Bundle-SymbolicName: DeudorS4Private_ECC_onPremise_DEV
-Origin-ModifiedDate: 1751958982201
+Origin-ModifiedDate: 1751612874069
 

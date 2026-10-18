@@ -210,7 +210,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>urlPath</key>
-                    <value>/{{enviroment}}/{{Address}}</value>
+                    <value>/{{enviroment}}{{Address}}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>Name</key>

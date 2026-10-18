@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Pedidos_Reposicion_DEV
-Bundle-Version: 1.0.9
+Bundle-Version: 1.0.8
 Bundle-Name: Pedidos_Reposicion_DEV
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
@@ -42,5 +42,5 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
 Origin-Bundle-Name: Pedidos_Reposicion_DEV
 Origin-Bundle-Version: 1.0.8
 Origin-Bundle-SymbolicName: Pedidos_Reposicion_DEV
-Origin-ModifiedDate: 1751880532722
+Origin-ModifiedDate: 1751623600008
 

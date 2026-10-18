@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Consumos_DEV
-Bundle-Version: 1.0.20
+Bundle-Version: 1.0.19
 Bundle-Name: Consumos_DEV
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
@@ -42,5 +42,5 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
 Origin-Bundle-Name: Consumos_DEV
 Origin-Bundle-Version: 1.0.19
 Origin-Bundle-SymbolicName: Consumos_DEV
-Origin-ModifiedDate: 1751880532245
+Origin-ModifiedDate: 1751554942735
 
