@@ -42,6 +42,6 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
 Origin-Bundle-Name: Sanicost_008 - Billing Document_ECC_onPrimese Test
 Origin-Bundle-SymbolicName: Sanicost_008_-_Billing_Document_ECC_onPrimes
  e_Test
-Origin-Bundle-Version: 1.0.6
-Origin-ModifiedDate: 1751965660761
+Origin-Bundle-Version: 1.0.1
+Origin-ModifiedDate: 1718361265683
 

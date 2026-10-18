@@ -8,14 +8,6 @@
     <additionalMetadata/>
   </parameter><parameter>
     <key/>
-    <name>URL_SCP</name>
-    <type>xsd:string</type>
-    <isRequired>false</isRequired>
-    <constraint/>
-    <description/>
-    <additionalMetadata/>
-  </parameter><parameter>
-    <key/>
     <name>S4HANA</name>
     <type>xsd:string</type>
     <isRequired>false</isRequired>
@@ -32,39 +24,7 @@
     <additionalMetadata/>
   </parameter><parameter>
     <key/>
-    <name>System</name>
-    <type>xsd:string</type>
-    <isRequired>false</isRequired>
-    <constraint/>
-    <description/>
-    <additionalMetadata/>
-  </parameter><parameter>
-    <key/>
-    <name>Certificate_S4</name>
-    <type>xsd:string</type>
-    <isRequired>false</isRequired>
-    <constraint/>
-    <description/>
-    <additionalMetadata/>
-  </parameter><parameter>
-    <key/>
-    <name>certificate_s4</name>
-    <type>xsd:string</type>
-    <isRequired>false</isRequired>
-    <constraint/>
-    <description/>
-    <additionalMetadata/>
-  </parameter><parameter>
-    <key/>
     <name>CreateDeudorBasic</name>
-    <type>xsd:string</type>
-    <isRequired>false</isRequired>
-    <constraint/>
-    <description/>
-    <additionalMetadata/>
-  </parameter><parameter>
-    <key/>
-    <name>S4</name>
     <type>xsd:string</type>
     <isRequired>false</isRequired>
     <constraint/>

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 SAP-RuntimeProfile: iflmap
 Bundle-SymbolicName: Actividad_Consumos_DEV
 Bundle-Name: Actividad_Consumos_DEV
-Bundle-Version: 1.0.16
+Bundle-Version: 1.0.15
 Bundle-ManifestVersion: 2
 SAP-ArtifactTrait: 
 SAP-NodeType: IFLMAP
@@ -42,5 +42,5 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
 Origin-Bundle-Name: Actividad_Consumos_DEV
 Origin-Bundle-Version: 1.0.15
 Origin-Bundle-SymbolicName: Actividad_Consumos_DEV
-Origin-ModifiedDate: 1751880532675
+Origin-ModifiedDate: 1751545908424
 

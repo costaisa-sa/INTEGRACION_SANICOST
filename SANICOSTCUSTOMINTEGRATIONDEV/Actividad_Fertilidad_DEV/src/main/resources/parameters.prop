@@ -1,8 +1,8 @@
-#Sun Oct 18 08:59:37 UTC 2026
+#
+#Sun Oct 18 09:21:22 UTC 2026
 ActividadFertilidad=Actividad_Fertilidad_DEV
-CPILocal=
-CPI_LOCAL=https\://sanicostdemo.it-cpi018-rt.cfapps.eu10-003.hana.ondemand.com/http/
+CPILocal=CPILocal
+CPI_LOCAL=https\://chv-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
 ExploracionesAddress=Actividad_Exploraciones
-HCILocal=HCILocal
 System=_DEV
 URL_HCI=https\://y100030-iflmap.hcisbp.eu1.hana.ondemand.com

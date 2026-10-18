@@ -42,5 +42,5 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
 Origin-Bundle-Name: Fusion_Historias_Clinicas_DEV
 Origin-Bundle-Version: 1.0.7
 Origin-Bundle-SymbolicName: Fusion_Historias_Clinicas_DEV
-Origin-ModifiedDate: 1751880532369
+Origin-ModifiedDate: 1751613544464
 

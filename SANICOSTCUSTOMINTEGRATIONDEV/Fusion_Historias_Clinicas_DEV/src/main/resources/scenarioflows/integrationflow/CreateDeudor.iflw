@@ -361,7 +361,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>httpAddressWithoutQuery</key>
-                    <value>{{URL_HANA}}zscfp-ctivities/ChangeDeudorActivitiy</value>
+                    <value>{{URL_HANA}}zscfp-activities/ChangeDeudorActivitiy</value>
                 </ifl:property>
             </bpmn2:extensionElements>
         </bpmn2:messageFlow>
@@ -1597,7 +1597,7 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_1144_1779970161695" xsi:type="bpmn2:tFormalExpression">${property.DeudorIdNew} = null or ${property.DeudorIdOld} = null</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_1144_1765454201903" xsi:type="bpmn2:tFormalExpression">${property.DeudorIdNew} = null or ${property.DeudorIdOld} = null</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_1117" name="Route 2" sourceRef="ExclusiveGateway_1041" targetRef="CallActivity_1116">
             <bpmn2:extensionElements>

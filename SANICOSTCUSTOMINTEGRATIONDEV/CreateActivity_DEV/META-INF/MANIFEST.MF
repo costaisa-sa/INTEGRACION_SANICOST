@@ -41,6 +41,6 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
  le:=false
 Origin-Bundle-Name: CreateActivity_DEV
 Origin-Bundle-SymbolicName: CreateActivity_DEV
-Origin-Bundle-Version: 1.0.13
-Origin-ModifiedDate: 1761568356437
+Origin-Bundle-Version: 1.0.12
+Origin-ModifiedDate: 1751556509029
 

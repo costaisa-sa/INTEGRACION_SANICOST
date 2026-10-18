@@ -1,9 +1,10 @@
-#Sun Oct 18 08:43:01 UTC 2026
+#
+#Sun Oct 18 09:20:46 UTC 2026
 Address=updatecodigonacionals4hana
 Alias=
 FUNDACIO_PUIGVERT=
 HanaDataBase=Sanicost_oAuth_Dev
-URL_HANA=https\://sapas-sanicostdemo-sanicost-hana0-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
+URL_HANA=https\://consorcio-hospitalario-de-vic-hvic-qa-sanicost-cap-sanicost-srv.cfapps.eu10-004.hana.ondemand.com
 URL_S4=https\://my301787-api.s4hana.ondemand.com
 credential_name=my301787
 enviroment=test

@@ -55,7 +55,7 @@ Require-Capability: sap-HTTP;resolution:=optional,sap-HTTPS;resolution:=
  optional
 SAP-RuntimeProfile: iflmap
 Bundle-Name: ValidationActivity_DEV
-Bundle-Version: 1.0.12
+Bundle-Version: 1.0.11
 Bundle-ClassPath: .,/src/main/resources/lib/json-simple-1.1.jar,/lib/jso
  n-simple-1.1.jar
 SAP-NodeType: IFLMAP
@@ -70,5 +70,5 @@ Import-Service:  com.sap.esb.camel.endpoint.configurator.api.EndpointCon
 Origin-Bundle-Name: ValidationActivity_DEV
 Origin-Bundle-SymbolicName: ValidationActivity_DEV
 Origin-Bundle-Version: 1.0.11
-Origin-ModifiedDate: 1751880532211
+Origin-ModifiedDate: 1751624586604
 

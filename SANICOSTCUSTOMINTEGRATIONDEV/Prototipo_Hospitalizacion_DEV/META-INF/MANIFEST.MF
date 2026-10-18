@@ -70,5 +70,5 @@ Import-Service:  com.sap.esb.camel.endpoint.configurator.api.EndpointCon
 Origin-Bundle-Name: Prototipo_Hospitalizacion_DEV
 Origin-Bundle-SymbolicName: Prototipo_Hospitalizacion_DEV
 Origin-Bundle-Version: 1.0.1
-Origin-ModifiedDate: 1751880532748
+Origin-ModifiedDate: 1739961558490
 

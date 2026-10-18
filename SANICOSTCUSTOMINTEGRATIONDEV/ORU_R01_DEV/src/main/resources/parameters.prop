@@ -1,8 +1,9 @@
-#Sun Oct 18 08:59:14 UTC 2026
+#
+#Sun Oct 18 09:20:59 UTC 2026
 Actividad_Nefrolink=Actividad_Nefrolink
 ActivityStartAddress=ActivityStartWorkflowReprocess
-CPILocal=HCILocal
-CPI_LOCAL=https\://sanicostdemo.it-cpi018-rt.cfapps.eu10-003.hana.ondemand.com/http/
+CPILocal=CPILocal
+CPI_LOCAL=https\://chv-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
 CREDENTIALS_HCI=HCILocal
 CREDENTIALS_SCP=CloudPlatform_DEV
 ExploracionesAddress=Actividad_Exploraciones

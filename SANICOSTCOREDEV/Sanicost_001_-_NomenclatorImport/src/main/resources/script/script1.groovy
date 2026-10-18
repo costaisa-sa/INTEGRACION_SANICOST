@@ -16,57 +16,45 @@ The methods available are:
        public void clearSoapHeaders()
  */
 import com.sap.gateway.ip.core.customdev.util.Message;
-//import java.util.HashMap;
+import java.util.HashMap;
 import groovy.xml.MarkupBuilder;
 
 def Message processData(Message message) {
-    
-    def inputStream = message.getBody(InputStream.class);
-    //El fichero viene en UTF-8, ya que llega dentro de un JSON. 
-    //La conversión se debe hacer en el cliente, antes de incluirlo en el JSON.
-    def multiline = inputStream.getText("utf-8");
-    
+    def multiline = message.getBody(java.lang.String) as String; 
     def writer = new StringWriter();
-    def xml = new MarkupBuilder(writer);
-
+    def xml = new MarkupBuilder(writer); 
+    
     xml.NomenclatorList() {
         multiline.eachLine {line, count-> 
             if (count>0) {
-                buildXMLRecord(xml,line, message);
+                buildXMLRecord(xml,line);
             }
         }
     }
-    
-    message.setHeader("Content-Type", "application/xml; charset=utf-8");
     message.setBody(writer.toString());
-    
     return message;
 }
 
-def buildXMLRecord(xml,line, message){
-    if (line.length() > 7 && line.substring(0,7) == "1000001") {
-            message.setProperty("VersionID",line.substring(24,30));
-    }
-    
+def buildXMLRecord(xml,line){
     if (line.length() > 7 && line.substring(0,7) == "2000001") {
         xml.record(){
+
             CodigoNacional(line.substring(15,21).replaceFirst('^0+(?!$)', ''));
+
             DescCodigoNacional(line.substring(21,121));
+
             FechaInicioVigencia(formatDateVigencia(line.substring(132,142)));
+
             FechaFinVigencia(formatDateVigencia(line.substring(142,152)));
+
             Familia(line.substring(152,157)); 
+            
             Importe(formatImporte(line.substring(157,167)));
             
-            //DescCodigoNacional(line.substring(132,142));
-            //DescCodigoNacional('CECENUñàèíòú40 mg 20 cápsules                                            abcdefghijklmnñopqrstuvwxyz'.substring(0,100));
-            //FechaInicioVigencia(formatDateVigencia('23/11/2021'));
-            //FechaFinVigencia(formatDateVigencia('          '));
-            //Familia('61400');
-            //Importe(formatImporte('0000000050'));
+            
+           
         }
-        
     }
-    
 }
 
 def formatImporte(sImporteIn){

@@ -42,7 +42,7 @@ Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
 Origin-Bundle-Name: ADT_A11_DEV
 Origin-Bundle-Version: 1.0.4
 Origin-Bundle-SymbolicName: ADT_A11_DEV
-Origin-ModifiedDate: 1751880532593
+Origin-ModifiedDate: 1750859032167
 Require-Capability: scriptcollection.Sanicost_000_-_CROSS_Custom_Headers
  ;resolution:=optional;bundleType:String="ScriptCollection";source:Strin
  g="reference"

@@ -1,7 +1,7 @@
-#Sun Oct 18 08:59:37 UTC 2026
-CPILocal=
-CPI_LOCAL=https\://sanicostdemo.it-cpi018-rt.cfapps.eu10-003.hana.ondemand.com/http/
-HCILocal=HCILocal
+#
+#Sun Oct 18 09:21:20 UTC 2026
+CPILocal=CPILocal
+CPI_LOCAL=https\://chv-is.it-cpi026-rt.cfapps.eu10-002.hana.ondemand.com/http/
 IntercambioCamasAddress=Intercambio_Camas
 System=_DEV
 URL_HCI=https\://y100030-iflmap.hcisbp.eu1.hana.ondemand.com
